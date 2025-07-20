@@ -1,5 +1,5 @@
-/* Original Esven.us Design Clone - Vanilla CSS */
-/* Replicating the current site's look and feel */
+/* Esven.us Visual Clone - Wix/Velo Compatible */
+/* Exact replica of https://www.esven.us visual design */
 
 * {
     margin: 0;
@@ -7,284 +7,286 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+html, body {
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 300;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Navigation */
+/* Navigation - exactly like real site */
 .navbar {
-    background-color: #fff;
-    padding: 1rem 0;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: #ffffff;
+    padding: 60px 0 40px 0;
+    position: relative;
+    z-index: 10;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 40px;
+    text-align: center;
 }
 
 .nav-links {
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
     list-style: none;
-    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links a {
+.nav-brand a {
+    color: #b8b8b8;
     text-decoration: none;
-    color: #333;
+    font-size: 18px;
     font-weight: 500;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0.7); /* Match the gray navigation color */
+}
+
+.nav-link {
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #666;
+.nav-link:hover,
+.nav-link.active {
+    color: #888888;
 }
 
-.nav-toggle {
-    cursor: pointer;
-    font-weight: 500;
-}
-
-/* Main Content */
+/* Main Content - black section exactly like real site */
 .main-content {
-    max-width: 1200px;
+    background-color: #000000;
+    min-height: calc(100vh - 160px);
+    position: relative;
+}
+
+.content-container {
+    max-width: 600px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 80px 40px 120px 40px;
+    color: #ffffff;
 }
 
-/* Hero Section */
+/* Hero Section - exact typography */
 .hero {
-    text-align: center;
-    padding: 4rem 0;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    max-width: 800px;
+    margin-bottom: 80px;
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: 300;
-    margin-bottom: 1rem;
-    color: #333;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
-    font-size: 2.5rem;
+    font-size: 48px;
     font-weight: 300;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.hero-description {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #666;
-    margin-bottom: 2rem;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
 .hero-description p {
-    margin-bottom: 1rem;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+}
+
+/* Spacers - exact spacing */
+.spacer {
+    height: 40px;
+}
+
+.spacer-small {
+    height: 20px;
 }
 
 /* Operations Section */
 .operations {
-    padding: 3rem 0;
-    text-align: center;
+    margin-bottom: 80px;
 }
 
 .section-title {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.operations-content {
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    color: #ffffff;
+    letter-spacing: 0.2px;
 }
 
 .operations-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #666;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #ffffff;
+    letter-spacing: 0.2px;
 }
 
 /* Strategy Section */
 .strategy {
-    padding: 3rem 0;
-    text-align: center;
-    background-color: #fafafa;
-}
-
-.strategy-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.strategy-content h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
-    color: #333;
+    margin-bottom: 80px;
 }
 
 .strategy-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    color: #666;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+}
+
+.strategy-title {
+    margin-bottom: 20px !important;
 }
 
 /* Portfolio Section */
 .portfolio {
-    padding: 4rem 0;
-    text-align: center;
+    margin-bottom: 80px;
 }
 
-.portfolio-description {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #666;
+.portfolio-description p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #ffffff;
+    letter-spacing: 0.2px;
 }
 
-.portfolio-companies {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.company-card {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 2rem;
-    text-align: left;
-    transition: box-shadow 0.3s ease;
-}
-
-.company-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.company-name {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.company-description {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.company-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.company-tag {
-    background: #f0f0f0;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.company-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.company-links a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.company-links a:hover {
+.inline-link {
+    color: #ffffff;
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.inline-link:hover {
+    color: #cccccc;
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 3rem 0 2rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #333;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.footer-social {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.social-icon {
+    width: 25px;
+    height: 25px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
 }
 
 .footer-brand h4 {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 300;
-    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
 }
 
 .footer-brand p {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 2rem;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #ffffff;
+    letter-spacing: 0.2px;
 }
 
 .footer-copyright {
-    font-size: 0.9rem;
-    color: #999;
-    border-top: 1px solid #555;
-    padding-top: 1rem;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+}
+
+.footer-copyright p {
+    font-size: 16px;
+    color: #888888;
+    font-weight: 300;
+    text-align: center;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.8rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
+    .navbar {
+        padding: 40px 0 30px 0;
     }
     
     .nav-links {
-        display: none;
+        flex-direction: column;
+        gap: 30px;
     }
     
-    .main-content {
-        padding: 0 1rem;
+    .nav-link {
+        font-size: 16px;
     }
     
-    .portfolio-companies {
-        grid-template-columns: 1fr;
+    .content-container {
+        padding: 60px 20px 80px 20px;
+        max-width: 100%;
+    }
+    
+    .hero-title,
+    .hero-subtitle {
+        font-size: 36px;
+    }
+    
+    .hero-description p,
+    .operations-content p,
+    .strategy-content p,
+    .portfolio-description p,
+    .section-title,
+    .footer-brand h4,
+    .footer-brand p {
+        font-size: 20px;
+    }
+    
+    .footer-copyright p {
+        font-size: 14px;
     }
 }

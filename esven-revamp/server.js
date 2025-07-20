@@ -5,7 +5,13 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 
-// Serve static files
+// Serve static files from designs directories
+app.use('/original', express.static(path.join(__dirname, 'designs/original')));
+app.use('/design1', express.static(path.join(__dirname, 'designs/design1')));
+app.use('/design2', express.static(path.join(__dirname, 'designs/design2')));
+app.use('/design3', express.static(path.join(__dirname, 'designs/design3')));
+app.use('/data', express.static(path.join(__dirname, 'data')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use(express.static('public'));
 app.use('/assets', express.static('assets'));
 

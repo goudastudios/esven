@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esalen Ventures - The Track Record</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Performance Metrics -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Esalen Ventures</h2>
+                </div>
+                <div class="nav-links" id="nav-links">
+                    <!-- Navigation populated by JS -->
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Performance Banner -->
+        <div class="performance-banner">
+            <div class="metrics-container">
+                <div class="metric">
+                    <div class="metric-number">15+</div>
+                    <div class="metric-label">Portfolio Companies</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">$2.5B+</div>
+                    <div class="metric-label">Total Valuation</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">8</div>
+                    <div class="metric-label">Successful Exits</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">12x</div>
+                    <div class="metric-label">Average Return</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" id="hero-title">Proven Track Record</h1>
+                <h2 class="hero-subtitle" id="hero-subtitle">We invest in sure bets</h2>
+                <div class="hero-description" id="hero-description">
+                    <!-- Description populated by JS -->
+                </div>
+                <div class="hero-cta">
+                    <button class="cta-button primary">View Portfolio</button>
+                    <button class="cta-button secondary">Partner With Us</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="success-chart">
+                    <div class="chart-placeholder">
+                        <div class="chart-bar" style="height: 60%"></div>
+                        <div class="chart-bar" style="height: 80%"></div>
+                        <div class="chart-bar" style="height: 95%"></div>
+                        <div class="chart-bar" style="height: 100%"></div>
+                        <div class="chart-bar" style="height: 85%"></div>
+                    </div>
+                    <p>Investment Performance Over Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section class="strategy">
+        <div class="container">
+            <h3 class="section-title">Our Investment Strategy</h3>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-icon">🎯</div>
+                    <h4>Identify Winners</h4>
+                    <p id="operations-point-1">Find the right people with disruptive ideas</p>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-icon">🔧</div>
+                    <h4>Fill the Gaps</h4>
+                    <p id="operations-point-2">Help them find and fill their gaps</p>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-icon">🤝</div>
+                    <h4>Connect & Scale</h4>
+                    <p id="operations-point-3">Connect them to people who will take them further</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <h3 class="section-title" id="portfolio-title">Investment Portfolio</h3>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Companies</button>
+                    <button class="filter-btn" data-filter="technology">Technology</button>
+                    <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                    <button class="filter-btn" data-filter="fintech">FinTech</button>
+                    <button class="filter-btn" data-filter="exits">Exits</button>
+                </div>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolio-companies">
+                <!-- Companies populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h3 class="section-title">What Founders Say</h3>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"Esalen Ventures didn't just invest in our company - they invested in our vision and helped us execute it flawlessly."</div>
+                    <div class="author">
+                        <div class="author-name">Sarah Chen</div>
+                        <div class="author-title">CEO, TechCorp (Acquired by Google)</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"Their network and expertise were invaluable in scaling from startup to IPO."</div>
+                    <div class="author">
+                        <div class="author-name">Michael Rodriguez</div>
+                        <div class="author-title">Founder, DataFlow (IPO 2023)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>Esalen Ventures</h4>
+                    <p>We know people. We invest in winners.</p>
+                </div>
+                <div class="footer-contact">
+                    <h5>Ready to Partner?</h5>
+                    <button class="cta-button primary">Get In Touch</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright">© 2021 by Esalen Ventures</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load shared content and populate page -->
+    <script src="../../data/content.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
