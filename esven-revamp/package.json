@@ -1,0 +1,18 @@
+{
+  "name": "esven-revamp",
+  "version": "1.0.0",
+  "description": "Esven.us website revamp with multiple design concepts",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.6.0"
+  },
+  "keywords": ["venture-capital", "website", "wix", "velo"],
+  "author": "Gouda Studios",
+  "license": "MIT"
+}
