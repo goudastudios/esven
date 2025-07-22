@@ -28,9 +28,9 @@ app.get("/", (req, res) => {
     <p>Choose a design to view:</p>
     <ul>
       <li><a href="/original">Original Site Revamp</a></li>
-      <li><a href="/design1">Design Concept 1: The Track Record Focus</a></li>
-      <li><a href="/design2">Design Concept 2: The Relationship Builder Focus</a></li>
-      <li><a href="/design3">Design Concept 3: The Modern Minimalist Focus</a></li>
+      <li><a href="/design1/intro.html">Design Concept 1: The Track Record Focus</a></li>
+      <li><a href="/design2/intro.html">Design Concept 2: The Relationship Builder Focus</a></li>
+      <li><a href="/design3/intro.html">Design Concept 3: The Modern Minimalist Focus</a></li>
     </ul>
   `);
 });
@@ -70,7 +70,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
     console.log(`Esven Revamp Demo running at http://localhost:${PORT}`);
     console.log("Available routes:");
-    console.log("  /original - Original site revamp");
+    // console.log("  /original - Original site revamp");
     console.log("  /design1 - The Track Record Focus");
     console.log("  /design2 - The Relationship Builder Focus");
     console.log("  /design3 - The Modern Minimalist Focus");
