@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Serve static files from designs directories
 app.use("/original", express.static(path.join(__dirname, "designs/original")));
@@ -27,10 +27,10 @@ app.get("/", (req, res) => {
     <h1>Esven.us Revamp Demo</h1>
     <p>Choose a design to view:</p>
     <ul>
-      <li><a href="http://localhost:3000/original">Original Site Revamp</a></li>
-      <li><a href="http://localhost:3000/design1/intro.html">Design Concept 1: The Track Record Focus</a></li>
-      <li><a href="http://localhost:3000/design2/intro.html">Design Concept 2: The Relationship Builder Focus</a></li>
-      <li><a href="http://localhost:3000/design3/intro.html">Design Concept 3: The Modern Minimalist Focus</a></li>
+      <li><a href="/original">Original Site Revamp</a></li>
+      <li><a href="/design1">Design Concept 1: The Track Record Focus</a></li>
+      <li><a href="/design2">Design Concept 2: The Relationship Builder Focus</a></li>
+      <li><a href="/design3">Design Concept 3: The Modern Minimalist Focus</a></li>
     </ul>
   `);
 });
@@ -65,11 +65,17 @@ app.get("/design3/intro.html", (req, res) => {
   res.sendFile(path.join(__dirname, "designs/design3/intro.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(`Esven Revamp Demo running at http://localhost:${PORT}`);
-  console.log("Available routes:");
-  console.log("  /original - Original site revamp");
-  console.log("  /design1 - The Track Record Focus");
-  console.log("  /design2 - The Relationship Builder Focus");
-  console.log("  /design3 - The Modern Minimalist Focus");
-});
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Esven Revamp Demo running at http://localhost:${PORT}`);
+    console.log("Available routes:");
+    console.log("  /original - Original site revamp");
+    console.log("  /design1 - The Track Record Focus");
+    console.log("  /design2 - The Relationship Builder Focus");
+    console.log("  /design3 - The Modern Minimalist Focus");
+  });
+}
+
+// Export for Vercel
+module.exports = app;
