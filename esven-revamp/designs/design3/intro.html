@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esalen Ventures - Enter</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="/assets/75fbd5_41ff5ec1ca40408583f83f8dce5eaf02_7Emv2.jpg"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: #000000;
+        overflow: hidden;
+      }
+
+      .intro-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .background-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100vw;
+        max-height: 100vh;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+        z-index: 1;
+        opacity: 0.2;
+        filter: blur(1px);
+        transition: all 2s ease;
+      }
+
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at center,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        z-index: 2;
+      }
+
+      .cinematic-scene {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        opacity: 0;
+        transform: scale(0.8) rotateX(15deg);
+        transition: all 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .cinematic-scene.active {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg);
+      }
+
+      .cinematic-scene.exiting {
+        opacity: 0;
+        transform: scale(1.2) rotateX(-15deg);
+        filter: blur(2px);
+      }
+
+      .scene-content {
+        text-align: center;
+        max-width: 900px;
+        padding: 60px;
+        perspective: 1000px;
+      }
+
+      .logo {
+        width: 140px;
+        height: auto;
+        margin-bottom: 60px;
+        filter: drop-shadow(0 8px 30px rgba(255, 255, 255, 0.4));
+        animation: logoGlow 3s ease-in-out infinite alternate;
+      }
+
+      .cinematic-title {
+        font-size: 48px;
+        font-weight: 200;
+        color: #ffffff;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+        transform: translateZ(50px);
+      }
+
+      .cinematic-subtitle {
+        font-size: 24px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.4;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        transform: translateZ(30px);
+      }
+
+      .scene-effects {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 4;
+      }
+
+      .light-ray {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        animation: lightSweep 4s ease-in-out infinite;
+      }
+
+      .light-ray:nth-child(1) {
+        left: 20%;
+        animation-delay: 0s;
+      }
+      .light-ray:nth-child(2) {
+        left: 60%;
+        animation-delay: 1.5s;
+      }
+      .light-ray:nth-child(3) {
+        left: 80%;
+        animation-delay: 3s;
+      }
+
+      .particle {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .enter-portal {
+        position: fixed;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.5s ease;
+        z-index: 10;
+      }
+
+      .enter-portal.visible {
+        opacity: 1;
+        animation: portalPulse 2s ease-in-out infinite;
+      }
+
+      .portal-ring {
+        width: 80px;
+        height: 80px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        position: relative;
+        animation: rotate 10s linear infinite;
+      }
+
+      .portal-ring::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border: 2px solid transparent;
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: rotate 2s linear infinite reverse;
+      }
+
+      .portal-text {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 2px;
+        font-weight: 300;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      @keyframes logoGlow {
+        0% {
+          filter: drop-shadow(0 8px 30px rgba(255, 255, 255, 0.4));
+        }
+        100% {
+          filter: drop-shadow(0 12px 40px rgba(255, 255, 255, 0.6));
+        }
+      }
+
+      @keyframes lightSweep {
+        0%,
+        100% {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        50% {
+          opacity: 1;
+          transform: translateX(100px);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+          opacity: 0.8;
+        }
+        75% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes portalPulse {
+        0%,
+        100% {
+          transform: translateX(-50%) scale(1);
+        }
+        50% {
+          transform: translateX(-50%) scale(1.05);
+        }
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: scale(1.5) rotateY(90deg);
+          filter: blur(10px);
+        }
+      }
+
+      .fade-transition {
+        animation: fadeOut 1.5s ease forwards;
+      }
+
+      @media (max-width: 768px) {
+        .cinematic-title {
+          font-size: 36px;
+        }
+
+        .cinematic-subtitle {
+          font-size: 20px;
+        }
+
+        .scene-content {
+          padding: 40px 20px;
+        }
+
+        .logo {
+          width: 100px;
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro-container">
+      <!-- Background Video -->
+      <video class="background-video" autoplay muted loop playsinline>
+        <source src="/assets/video/backgroundvideo.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+
+      <!-- Scene Effects -->
+      <div class="scene-effects">
+        <div class="light-ray"></div>
+        <div class="light-ray"></div>
+        <div class="light-ray"></div>
+        <div
+          class="particle"
+          style="top: 20%; left: 30%; animation-delay: 0s"
+        ></div>
+        <div
+          class="particle"
+          style="top: 60%; left: 70%; animation-delay: 2s"
+        ></div>
+        <div
+          class="particle"
+          style="top: 80%; left: 20%; animation-delay: 4s"
+        ></div>
+      </div>
+
+      <!-- Cinematic Scenes -->
+      <div class="cinematic-scene active" data-scene="1">
+        <div class="scene-content">
+          <img
+            src="/assets/EsalenLogo_V_wht_edited_edited_edited_ed.png"
+            alt="Esalen Ventures"
+            class="logo"
+          />
+          <div class="cinematic-title">We know people</div>
+          <div class="cinematic-subtitle">
+            The foundation of every great investment
+          </div>
+        </div>
+      </div>
+
+      <div class="cinematic-scene" data-scene="2">
+        <div class="scene-content">
+          <div class="cinematic-title">We invest in people</div>
+          <div class="cinematic-subtitle">
+            Not just ideas, but the visionaries behind them
+          </div>
+        </div>
+      </div>
+
+      <div class="cinematic-scene" data-scene="3">
+        <div class="scene-content">
+          <div class="cinematic-title">We can spot the people</div>
+          <div class="cinematic-subtitle">
+            who will succeed against all odds
+          </div>
+        </div>
+      </div>
+
+      <div class="cinematic-scene" data-scene="4">
+        <div class="scene-content">
+          <div class="cinematic-title">who live, eat and breathe</div>
+          <div class="cinematic-subtitle">their revolutionary ideas</div>
+        </div>
+      </div>
+
+      <div class="cinematic-scene" data-scene="5">
+        <div class="scene-content">
+          <div class="cinematic-title">and will stop at nothing</div>
+          <div class="cinematic-subtitle">
+            to achieve extraordinary outcomes
+          </div>
+        </div>
+      </div>
+
+      <div class="cinematic-scene" data-scene="6">
+        <div class="scene-content">
+          <div class="cinematic-title">who understand</div>
+          <div class="cinematic-subtitle">
+            the power of compounding advantages
+          </div>
+        </div>
+      </div>
+
+      <div class="cinematic-scene" data-scene="7">
+        <div class="scene-content">
+          <div class="cinematic-title">have a compelling vision</div>
+          <div class="cinematic-subtitle">that is disruptive</div>
+        </div>
+      </div>
+
+      <div class="cinematic-scene" data-scene="8">
+        <div class="scene-content">
+          <div class="cinematic-title">who can and will attract</div>
+          <div class="cinematic-subtitle">talent and capital</div>
+        </div>
+      </div>
+
+      <!-- Enter Portal -->
+      <div class="enter-portal" id="enterPortal">
+        <div class="portal-ring"></div>
+        <div class="portal-text">ENTER SITE</div>
+      </div>
+    </div>
+
+    <script>
+      class CinematicIntro {
+        constructor() {
+          this.scenes = document.querySelectorAll(".cinematic-scene");
+          this.enterPortal = document.getElementById("enterPortal");
+          this.currentScene = 0;
+          this.sceneInterval = 750; // 0.75 seconds per scene
+          this.isTransitioning = false;
+
+          this.init();
+        }
+
+        init() {
+          // Start scene transitions
+          setTimeout(() => {
+            this.startSceneTransitions();
+          }, 500);
+
+          // Add click listener for enter portal
+          this.enterPortal.addEventListener(
+            "click",
+            this.handleEnter.bind(this)
+          );
+        }
+
+        startSceneTransitions() {
+          // Simple approach: show each scene for a fixed duration
+          this.scenes.forEach((scene, index) => {
+            setTimeout(() => {
+              // Hide all scenes first
+              this.scenes.forEach((s) => {
+                s.classList.remove("active");
+                s.classList.add("exiting");
+              });
+
+              // Show current scene
+              setTimeout(() => {
+                scene.classList.remove("exiting");
+                scene.classList.add("active");
+
+                // If this is the last scene, show enter portal
+                if (index === this.scenes.length - 1) {
+                  setTimeout(() => {
+                    this.enterPortal.classList.add("visible");
+                  }, 500);
+                }
+              }, 50);
+            }, index * this.sceneInterval);
+          });
+        }
+
+        handleEnter() {
+          // Add fade transition
+          document
+            .querySelector(".intro-container")
+            .classList.add("fade-transition");
+
+          // Navigate to main site after animation
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1500);
+        }
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        new CinematicIntro();
+      });
+    </script>
+  </body>
+</html>

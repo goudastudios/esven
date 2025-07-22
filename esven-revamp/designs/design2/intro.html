@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esalen Ventures - Enter</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="/assets/75fbd5_41ff5ec1ca40408583f83f8dce5eaf02_7Emv2.jpg"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: #000000;
+        overflow-x: hidden;
+      }
+
+      .intro-container {
+        position: relative;
+        width: 100vw;
+        height: 500vh; /* Extended height for scrolling */
+      }
+
+      .background-video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        max-width: 100vw;
+        max-height: 100vh;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+        z-index: 1;
+        opacity: 0.3;
+      }
+
+      .video-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+        z-index: 2;
+      }
+
+      .parallax-layer {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      /* Sequential fade-in delays - 0.25s intervals */
+      .layer-1 {
+        animation-delay: 0.25s;
+      }
+      .layer-2 {
+        animation-delay: 0.5s;
+      }
+      .layer-3 {
+        animation-delay: 0.75s;
+      }
+      .layer-4 {
+        animation-delay: 1s;
+      }
+      .layer-5 {
+        animation-delay: 1.25s;
+      }
+      .layer-6 {
+        animation-delay: 1.5s;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .parallax-layer.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .layer-content {
+        text-align: center;
+        max-width: 800px;
+        padding: 40px;
+      }
+
+      .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 40px;
+        filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.3));
+      }
+
+      .parallax-text {
+        font-size: 36px;
+        font-weight: 300;
+        color: #ffffff;
+        line-height: 1.3;
+        letter-spacing: 0.5px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+      }
+
+      .parallax-subtext {
+        font-size: 20px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.4;
+        letter-spacing: 0.3px;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Layer positioning */
+      .layer-1 {
+        top: 20vh;
+      }
+      .layer-2 {
+        top: 30vh;
+      }
+      .layer-3 {
+        top: 40vh;
+      }
+      .layer-4 {
+        top: 50vh;
+      }
+      .layer-5 {
+        top: 60vh;
+      }
+      .layer-6 {
+        top: 70vh;
+      }
+
+      .enter-section {
+        position: fixed;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+
+      .enter-section.visible {
+        opacity: 1;
+      }
+
+      .enter-content {
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .enter-content:hover {
+        transform: scale(1.05);
+      }
+
+      .enter-text {
+        font-size: 24px;
+        font-weight: 300;
+        color: #ffffff;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+
+      .enter-prompt {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 2px;
+        animation: pulse 2s ease-in-out infinite;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      .scroll-indicator {
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        opacity: 0.7;
+      }
+
+      .scroll-line {
+        width: 2px;
+        height: 100px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(255, 255, 255, 0.5),
+          transparent
+        );
+        margin-bottom: 10px;
+      }
+
+      .scroll-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 2px;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.7;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: scale(1.1);
+        }
+      }
+
+      .fade-transition {
+        animation: fadeOut 1s ease forwards;
+      }
+
+      @media (max-width: 768px) {
+        .parallax-text {
+          font-size: 28px;
+        }
+
+        .parallax-subtext {
+          font-size: 18px;
+        }
+
+        .layer-content {
+          padding: 20px;
+        }
+
+        .logo {
+          width: 80px;
+        }
+
+        .scroll-indicator {
+          display: none;
+        }
+      }
+      .spacer {
+        height: 400vh;
+        pointer-events: none;
+        user-select: none;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro-container">
+      <!-- Background Video -->
+      <video class="background-video" autoplay muted loop playsinline>
+        <source src="/assets/video/backgroundvideo.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+
+      <!-- Parallax Layers -->
+      <div class="parallax-layer layer-1" data-speed="0.5">
+        <div class="layer-content">
+          <img
+            src="/assets/EsalenLogo_V_wht_edited_edited_edited_ed.png"
+            alt="Esalen Ventures"
+            class="logo"
+          />
+          <div class="parallax-text">We know people</div>
+        </div>
+      </div>
+
+      <div class="parallax-layer layer-2" data-speed="0.7">
+        <div class="layer-content">
+          <div class="parallax-text">We invest in people</div>
+        </div>
+      </div>
+
+      <div class="parallax-layer layer-3" data-speed="0.9">
+        <div class="layer-content">
+          <div class="parallax-text">We can spot the people</div>
+          <div class="parallax-subtext">who will succeed</div>
+        </div>
+      </div>
+
+      <div class="parallax-layer layer-4" data-speed="1.1">
+        <div class="layer-content">
+          <div class="parallax-text">who live, eat and breathe</div>
+          <div class="parallax-subtext">their ideas</div>
+        </div>
+      </div>
+
+      <div class="parallax-layer layer-5" data-speed="1.3">
+        <div class="layer-content">
+          <div class="parallax-text">and will stop at nothing</div>
+          <div class="parallax-subtext">to achieve them</div>
+        </div>
+      </div>
+
+      <div class="parallax-layer layer-6" data-speed="1.5">
+        <div class="layer-content">
+          <div class="parallax-text">who understand the need</div>
+          <div class="parallax-subtext">for a compounding advantage</div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <div class="scroll-text">SCROLL</div>
+      </div>
+
+      <!-- Enter Section -->
+      <div class="enter-section" id="enterSection">
+        <div class="enter-content" id="enterContent">
+          <div class="enter-prompt">CLICK TO ENTER</div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+
+    <script>
+      class IntroSequence {
+        constructor() {
+          this.introContainer = document.querySelector(".intro-container");
+          this.enterSection = document.getElementById("enterSection");
+          this.init();
+        }
+
+        init() {
+          // Make entire intro clickable
+          this.introContainer.addEventListener(
+            "click",
+            this.handleEnter.bind(this)
+          );
+
+          // Show enter section after all layers are visible
+          setTimeout(() => {
+            this.enterSection.classList.add("visible");
+          }, 2000); // After all 6 layers + buffer
+        }
+
+        handleEnter() {
+          // Add fade transition
+          this.introContainer.classList.add("fade-transition");
+
+          // Navigate to main site after animation
+          setTimeout(() => {
+            window.location.href = "/design2/";
+          }, 1000);
+        }
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        new IntroSequence();
+      });
+    </script>
+  </body>
+</html>

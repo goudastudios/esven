@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const content = window.EsvenContent;
 
     // Populate all sections
-    populateNavigation(content.navigation);
+    // populateNavigation(content.navigation); // Disabled - using hardcoded navigation with absolute URLs
     populateHero(content.hero);
     populatePhilosophy(content.strategy);
     populateStrategy(content.operations);

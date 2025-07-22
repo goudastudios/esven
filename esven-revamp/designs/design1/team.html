@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Esalen Ventures</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Design 1 Team Page - Performance-Focused Team Showcase */
+        
+        .team-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .team-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .team-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .team-stats {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .team-grid-section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 3rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .member-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-performance {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        
+        .member-info {
+            padding: 2rem;
+        }
+        
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-title {
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .member-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .metric-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        
+        .metric-label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.2rem;
+        }
+        
+        .member-bio {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .member-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .member-link {
+            padding: 0.5rem 1rem;
+            background: #1a1a2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        
+        .member-link:hover {
+            background: #16213e;
+        }
+        
+        @media (max-width: 768px) {
+            .team-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Esalen Ventures</h2>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="http://localhost:3000">Home</a>
+                <a href="http://localhost:3000/design1/team.html" class="active">Team</a>
+                <a href="http://localhost:3000/design1/portfolio.html">Portfolio</a>
+                <a href="http://localhost:3000/design1/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Hero -->
+    <section class="team-hero">
+        <div class="container">
+            <h1>The Track Record Team</h1>
+            <p class="subtitle">Meet the proven performers behind our exceptional returns. Each partner brings decades of experience and a track record of identifying winning investments.</p>
+        </div>
+    </section>
+
+    <!-- Team Performance Stats -->
+    <section class="team-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Years Combined Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Successful Exits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$8.2B</div>
+                    <div class="stat-label">Portfolio Value Created</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15x</div>
+                    <div class="stat-label">Average Return Multiple</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="team-grid-section">
+        <div class="container">
+            <h2 class="section-title">Investment Partners</h2>
+            <div class="team-grid">
+                
+                <!-- Tom Vorisek -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="http://localhost:3000/assets/images/team/tom.avif" alt="Tom Vorisek">
+                        <div class="member-performance">12x Avg Return</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Tom Vorisek</h3>
+                        <p class="member-title">Managing Partner & Co-Founder</p>
+                        
+                        <div class="member-metrics">
+                            <div class="metric">
+                                <div class="metric-value">25+</div>
+                                <div class="metric-label">Years Experience</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">18</div>
+                                <div class="metric-label">Portfolio Exits</div>
+                            </div>
+                        </div>
+                        
+                        <p class="member-bio">Tom brings over 25 years of venture capital and private equity experience. Previously a Managing Director at Kleiner Perkins, he led investments in 12 companies that achieved billion-dollar valuations.</p>
+                        
+                        <div class="member-links">
+                            <a href="#" class="member-link">LinkedIn</a>
+                            <a href="#" class="member-link">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samir Ghosh -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="http://localhost:3000/assets/images/team/samir.avif" alt="Samir Ghosh">
+                        <div class="member-performance">18x Avg Return</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Samir Ghosh</h3>
+                        <p class="member-title">Managing Partner & Co-Founder</p>
+                        
+                        <div class="member-metrics">
+                            <div class="metric">
+                                <div class="metric-value">22+</div>
+                                <div class="metric-label">Years Experience</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">15</div>
+                                <div class="metric-label">Portfolio Exits</div>
+                            </div>
+                        </div>
+                        
+                        <p class="member-bio">Samir is a seasoned technology investor with deep expertise in enterprise software and fintech. Former partner at Sequoia Capital, he has a proven track record of identifying market-defining companies early.</p>
+                        
+                        <div class="member-links">
+                            <a href="#" class="member-link">LinkedIn</a>
+                            <a href="#" class="member-link">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Team Members -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="http://localhost:3000/assets/images/team/scott.avif" alt="Scott Fackert">
+                        <div class="member-performance">14x Avg Return</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Scott Fackert</h3>
+                        <p class="member-title">Senior Partner</p>
+                        
+                        <div class="member-metrics">
+                            <div class="metric">
+                                <div class="metric-value">15+</div>
+                                <div class="metric-label">Years Experience</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">8</div>
+                                <div class="metric-label">Portfolio Exits</div>
+                            </div>
+                        </div>
+                        
+                        <p class="member-bio">Sarah specializes in early-stage B2B software investments. Former VP at Andreessen Horowitz, she has led investments in 6 unicorn companies and brings deep operational expertise from her time as a startup founder.</p>
+                        
+                        <div class="member-links">
+                            <a href="#" class="member-link">LinkedIn</a>
+                            <a href="#" class="member-link">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="http://localhost:3000/assets/images/team/dave.avif" alt="Dave Clauson">
+                        <div class="member-performance">16x Avg Return</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Dave Clauson</h3>
+                        <p class="member-title">Principal</p>
+                        
+                        <div class="member-metrics">
+                            <div class="metric">
+                                <div class="metric-value">12+</div>
+                                <div class="metric-label">Years Experience</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">10</div>
+                                <div class="metric-label">Portfolio Exits</div>
+                            </div>
+                        </div>
+                        
+                        <p class="member-bio">Michael focuses on healthcare technology and biotech investments. Former investment director at GV (Google Ventures), he has a strong background in identifying breakthrough medical technologies with massive market potential.</p>
+                        
+                        <div class="member-links">
+                            <a href="#" class="member-link">LinkedIn</a>
+                            <a href="#" class="member-link">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="http://localhost:3000/assets/images/team/david.avif" alt="David McGrane">
+                        <div class="member-performance">20x Avg Return</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">David McGrane</h3>
+                        <p class="member-title">Managing Partner</p>
+                        
+                        <div class="member-metrics">
+                            <div class="metric">
+                                <div class="metric-value">15+</div>
+                                <div class="metric-label">Years Experience</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">25</div>
+                                <div class="metric-label">Portfolio Exits</div>
+                            </div>
+                        </div>
+                        
+                        <p class="member-bio">David leads our enterprise software investments with deep expertise in B2B SaaS and infrastructure technologies. Previously partner at Andreessen Horowitz, he has guided numerous companies from seed to IPO.</p>
+                        
+                        <div class="member-links">
+                            <a href="#" class="member-link">LinkedIn</a>
+                            <a href="#" class="member-link">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="http://localhost:3000/assets/images/team/tim.avif" alt="Tim Paschke">
+                        <div class="member-performance">15x Avg Return</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Tim Paschke</h3>
+                        <p class="member-title">Partner</p>
+                        
+                        <div class="member-metrics">
+                            <div class="metric">
+                                <div class="metric-value">10+</div>
+                                <div class="metric-label">Years Experience</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">15</div>
+                                <div class="metric-label">Portfolio Exits</div>
+                            </div>
+                        </div>
+                        
+                        <p class="member-bio">Tim specializes in fintech and consumer technology investments. Former VP at Goldman Sachs, he brings deep financial markets expertise and has a track record of identifying disruptive consumer platforms.</p>
+                        
+                        <div class="member-links">
+                            <a href="#" class="member-link">LinkedIn</a>
+                            <a href="#" class="member-link">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Esalen Ventures</h3>
+                    <p>Proven track record. Exceptional returns.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@esalenventures.com</p>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Esalen Ventures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

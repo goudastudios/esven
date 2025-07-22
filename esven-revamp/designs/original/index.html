@@ -27,26 +27,53 @@
 
     <!-- Main Content Area - black section like original -->
     <main class="main-content">
+        <!-- Background Video -->
+        <video class="background-video" autoplay muted loop playsinline>
+            <source src="/assets/video/backgroundvideo.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
         <div class="content-container">
             <!-- Hero Section -->
             <section class="hero">
                 <h1 class="hero-title">We know people</h1>
                 <h2 class="hero-subtitle">We invest in people</h2>
                 <div class="spacer"></div>
-                <div class="hero-description">
-                    <p>We can spot the people</p>
-                    <p>who will succeed</p>
-                    <p>who live</p>
-                    <p>eat and breath</p>
-                    <p>their ideas</p>
-                    <p>and will</p>
-                    <p>stop at nothing</p>
-                    <p>to achieve</p>
-                    <p>them</p>
-                    <div class="spacer-small"></div>
-                    <p>who understand the need for a compounding advantage</p>
-                    <div class="spacer-small"></div>
-                    <p>have a compelling vision that is disruptive; who can and will attract talent and capital.</p>
+                <!-- Dynamic Scroll Text Container -->
+                <div class="scroll-text-container" id="scrollTextContainer">
+                    <div class="scroll-section" data-section="1">
+                        <p>We can spot the people</p>
+                        <p>who will succeed</p>
+                    </div>
+                    
+                    <div class="scroll-section" data-section="2">
+                        <p>who live, eat and breathe</p>
+                        <p>their ideas</p>
+                    </div>
+                    
+                    <div class="scroll-section" data-section="3">
+                        <p>and will stop at nothing</p>
+                        <p>to achieve them</p>
+                    </div>
+                    
+                    <div class="scroll-section" data-section="4">
+                        <p>who understand the need</p>
+                        <p>for a compounding advantage</p>
+                    </div>
+                    
+                    <div class="scroll-section" data-section="5">
+                        <p>have a compelling vision</p>
+                        <p>that is disruptive</p>
+                    </div>
+                    
+                    <div class="scroll-section" data-section="6">
+                        <p>who can and will attract</p>
+                        <p>talent and capital</p>
+                    </div>
+                </div>
+                
+                <!-- Scroll Progress Indicator -->
+                <div class="scroll-progress">
+                    <div class="progress-bar" id="progressBar"></div>
                 </div>
             </section>
 

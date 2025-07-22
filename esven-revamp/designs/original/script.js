@@ -140,6 +140,118 @@ function populateFooter(meta) {
     }
 }
 
+// Dynamic Scroll Text Animation
+class ScrollTextAnimator {
+    constructor() {
+        this.container = document.getElementById('scrollTextContainer');
+        this.progressBar = document.getElementById('progressBar');
+        this.sections = document.querySelectorAll('.scroll-section');
+        this.currentSection = 0;
+        this.scrollThreshold = 100; // pixels to scroll before changing section
+        this.lastScrollY = 0;
+        this.accumulatedScroll = 0;
+        
+        if (this.container && this.sections.length > 0) {
+            this.init();
+        }
+    }
+    
+    init() {
+        // Show first section
+        this.sections[0].classList.add('active');
+        this.updateProgress();
+        
+        // Add scroll listener
+        window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
+        
+        // Add wheel listener for more responsive scrolling
+        window.addEventListener('wheel', this.handleWheel.bind(this), { passive: true });
+    }
+    
+    handleScroll() {
+        const scrollY = window.scrollY;
+        const scrollDelta = scrollY - this.lastScrollY;
+        
+        // Only process if we're in the hero section area
+        if (scrollY < window.innerHeight) {
+            this.accumulatedScroll += Math.abs(scrollDelta);
+            
+            if (this.accumulatedScroll >= this.scrollThreshold) {
+                if (scrollDelta > 0 && this.currentSection < this.sections.length - 1) {
+                    // Scrolling down - next section
+                    this.nextSection();
+                } else if (scrollDelta < 0 && this.currentSection > 0) {
+                    // Scrolling up - previous section
+                    this.previousSection();
+                }
+                this.accumulatedScroll = 0;
+            }
+        }
+        
+        this.lastScrollY = scrollY;
+    }
+    
+    handleWheel(e) {
+        // More responsive wheel handling
+        if (window.scrollY < window.innerHeight) {
+            this.accumulatedScroll += Math.abs(e.deltaY) * 0.5;
+            
+            if (this.accumulatedScroll >= this.scrollThreshold) {
+                if (e.deltaY > 0 && this.currentSection < this.sections.length - 1) {
+                    this.nextSection();
+                } else if (e.deltaY < 0 && this.currentSection > 0) {
+                    this.previousSection();
+                }
+                this.accumulatedScroll = 0;
+            }
+        }
+    }
+    
+    nextSection() {
+        if (this.currentSection < this.sections.length - 1) {
+            this.sections[this.currentSection].classList.add('exiting');
+            this.sections[this.currentSection].classList.remove('active');
+            
+            this.currentSection++;
+            
+            setTimeout(() => {
+                this.sections[this.currentSection].classList.add('active');
+                this.sections[this.currentSection - 1].classList.remove('exiting');
+            }, 200);
+            
+            this.updateProgress();
+        }
+    }
+    
+    previousSection() {
+        if (this.currentSection > 0) {
+            this.sections[this.currentSection].classList.add('exiting');
+            this.sections[this.currentSection].classList.remove('active');
+            
+            this.currentSection--;
+            
+            setTimeout(() => {
+                this.sections[this.currentSection].classList.add('active');
+                this.sections[this.currentSection + 1].classList.remove('exiting');
+            }, 200);
+            
+            this.updateProgress();
+        }
+    }
+    
+    updateProgress() {
+        const progress = ((this.currentSection + 1) / this.sections.length) * 100;
+        if (this.progressBar) {
+            this.progressBar.style.width = `${progress}%`;
+        }
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    new ScrollTextAnimator();
+});
+
 // Add some basic interactivity
 document.addEventListener('click', function(e) {
     // Handle navigation dropdown

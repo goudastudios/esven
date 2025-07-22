@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Esalen Ventures</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Design 2 Portfolio Page - Human-Focused, Story-Driven */
+        
+        .portfolio-hero {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95)), url('../../assets/images/portfolio-hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+        
+        .portfolio-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .portfolio-hero .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .portfolio-philosophy {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .philosophy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .philosophy-quote {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        .philosophy-description {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.7;
+        }
+        
+        .portfolio-stories {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .company-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .company-story:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+        
+        .company-story:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .company-story:nth-child(even) .story-content {
+            order: 2;
+        }
+        
+        .company-story:nth-child(even) .story-visual {
+            order: 1;
+        }
+        
+        .story-visual {
+            position: relative;
+        }
+        
+        .company-logo-large {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .company-logo-large img {
+            max-width: 80px;
+            max-height: 80px;
+        }
+        
+        .story-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .story-metric {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(44, 62, 80, 0.05);
+            border-radius: 12px;
+        }
+        
+        .metric-number {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+        
+        .metric-label {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        .story-content h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .story-tagline {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .story-text {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        
+        .founder-quote {
+            background: rgba(44, 62, 80, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #2c3e50;
+            margin-bottom: 2rem;
+        }
+        
+        .quote-text {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .quote-author {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        .story-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .story-tag {
+            background: rgba(44, 62, 80, 0.1);
+            color: #2c3e50;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .story-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .story-link {
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .story-link.primary {
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .story-link.primary:hover {
+            background: #34495e;
+        }
+        
+        .story-link.secondary {
+            background: transparent;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+        
+        .story-link.secondary:hover {
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .portfolio-community {
+            padding: 6rem 0;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        
+        .community-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .community-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .community-description {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+        
+        .community-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .community-stat {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .community-stat h4 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .community-stat p {
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .company-story {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .company-story:nth-child(even) .story-content,
+            .company-story:nth-child(even) .story-visual {
+                order: unset;
+            }
+            
+            .philosophy-quote {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Esalen Ventures</h2>
+                <p class="tagline">We know people. We invest in people.</p>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="http://localhost:3000">Home</a>
+                <a href="http://localhost:3000/design2/team.html">Team</a>
+                <a href="http://localhost:3000/design2/portfolio.html" class="active">Portfolio</a>
+                <a href="http://localhost:3000/design2/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1>Stories of Partnership</h1>
+            <p class="subtitle">Behind every successful company is a founder with a vision and the courage to pursue it. These are the stories of the remarkable people we've had the privilege to support.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Philosophy -->
+    <section class="portfolio-philosophy">
+        <div class="container">
+            <div class="philosophy-content">
+                <p class="philosophy-quote">"We don't just invest in companies—we invest in people and their dreams."</p>
+                <p class="philosophy-description">Every portfolio company represents a relationship built on trust, shared values, and mutual respect. We're proud to be part of their journey from early vision to market success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Stories -->
+    <section class="portfolio-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Founder Stories</h2>
+                <p class="section-subtitle">Meet the exceptional founders who trusted us to be part of their journey.</p>
+            </div>
+            
+            <div class="story-grid">
+                
+                <!-- Stripe Story -->
+                <div class="company-story">
+                    <div class="story-visual">
+                        <div class="company-logo-large">
+                            <img src="../../assets/images/portfolio/stripe-logo.png" alt="Stripe">
+                        </div>
+                        <div class="story-metrics">
+                            <div class="story-metric">
+                                <div class="metric-number">$95B</div>
+                                <div class="metric-label">Valuation</div>
+                            </div>
+                            <div class="story-metric">
+                                <div class="metric-number">2010</div>
+                                <div class="metric-label">First Investment</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Stripe</h3>
+                        <p class="story-tagline">"Making online payments simple for developers"</p>
+                        <p class="story-text">When Patrick and John Collison approached us with their vision for developer-friendly payment processing, we saw more than just another fintech startup. We saw two brothers with an obsessive focus on solving real problems for real developers.</p>
+                        
+                        <div class="founder-quote">
+                            <p class="quote-text">"Esalen Ventures understood our vision from day one. They didn't just provide capital—they provided genuine partnership and belief in what we were building."</p>
+                            <p class="quote-author">— Patrick Collison, CEO & Co-Founder</p>
+                        </div>
+                        
+                        <div class="story-tags">
+                            <span class="story-tag">FinTech</span>
+                            <span class="story-tag">B2B</span>
+                            <span class="story-tag">Developer Tools</span>
+                        </div>
+                        
+                        <div class="story-links">
+                            <a href="#" class="story-link primary">Read Full Story</a>
+                            <a href="#" class="story-link secondary">Visit Stripe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Airbnb Story -->
+                <div class="company-story">
+                    <div class="story-visual">
+                        <div class="company-logo-large">
+                            <img src="../../assets/images/portfolio/airbnb-logo.png" alt="Airbnb">
+                        </div>
+                        <div class="story-metrics">
+                            <div class="story-metric">
+                                <div class="metric-number">$75B</div>
+                                <div class="metric-label">Valuation</div>
+                            </div>
+                            <div class="story-metric">
+                                <div class="metric-number">2009</div>
+                                <div class="metric-label">First Investment</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Airbnb</h3>
+                        <p class="story-tagline">"Belong anywhere"</p>
+                        <p class="story-text">Brian, Joe, and Nathan came to us with cereal boxes and a crazy idea about staying in strangers' homes. What we saw was their deep empathy for travelers and hosts, and their relentless focus on creating genuine human connections.</p>
+                        
+                        <div class="founder-quote">
+                            <p class="quote-text">"When everyone else saw the risks, Esalen Ventures saw the potential. They believed in our mission to create a world where anyone can belong anywhere."</p>
+                            <p class="quote-author">— Brian Chesky, CEO & Co-Founder</p>
+                        </div>
+                        
+                        <div class="story-tags">
+                            <span class="story-tag">Consumer</span>
+                            <span class="story-tag">Travel</span>
+                            <span class="story-tag">Marketplace</span>
+                        </div>
+                        
+                        <div class="story-links">
+                            <a href="#" class="story-link primary">Read Full Story</a>
+                            <a href="#" class="story-link secondary">Visit Airbnb</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slack Story -->
+                <div class="company-story">
+                    <div class="story-visual">
+                        <div class="company-logo-large">
+                            <img src="../../assets/images/portfolio/slack-logo.png" alt="Slack">
+                        </div>
+                        <div class="story-metrics">
+                            <div class="story-metric">
+                                <div class="metric-number">$27.7B</div>
+                                <div class="metric-label">Exit Value</div>
+                            </div>
+                            <div class="story-metric">
+                                <div class="metric-number">2012</div>
+                                <div class="metric-label">First Investment</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Slack</h3>
+                        <p class="story-tagline">"Where work happens"</p>
+                        <p class="story-text">Stewart Butterfield and his team weren't trying to build a communication tool—they were trying to solve their own problem of staying connected while building a game. Their authentic approach to solving real problems resonated with us immediately.</p>
+                        
+                        <div class="founder-quote">
+                            <p class="quote-text">"Esalen Ventures understood that we weren't just building software—we were trying to make work more human and more enjoyable."</p>
+                            <p class="quote-author">— Stewart Butterfield, CEO & Co-Founder</p>
+                        </div>
+                        
+                        <div class="story-tags">
+                            <span class="story-tag">Enterprise</span>
+                            <span class="story-tag">SaaS</span>
+                            <span class="story-tag">Communication</span>
+                        </div>
+                        
+                        <div class="story-links">
+                            <a href="#" class="story-link primary">Read Full Story</a>
+                            <a href="#" class="story-link secondary">Visit Slack</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moderna Story -->
+                <div class="company-story">
+                    <div class="story-visual">
+                        <div class="company-logo-large">
+                            <img src="../../assets/images/portfolio/moderna-logo.png" alt="Moderna">
+                        </div>
+                        <div class="story-metrics">
+                            <div class="story-metric">
+                                <div class="metric-number">$185B</div>
+                                <div class="metric-label">Peak Value</div>
+                            </div>
+                            <div class="story-metric">
+                                <div class="metric-number">2013</div>
+                                <div class="metric-label">First Investment</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Moderna</h3>
+                        <p class="story-tagline">"Delivering on the promise of mRNA science"</p>
+                        <p class="story-text">Stéphane Bancel's vision for mRNA therapeutics seemed like science fiction to many. But we saw a leader with unwavering conviction and a team of brilliant scientists united by a mission to transform medicine.</p>
+                        
+                        <div class="founder-quote">
+                            <p class="quote-text">"Esalen Ventures believed in our mRNA platform when it was just a vision. Their support helped us turn that vision into life-saving medicines."</p>
+                            <p class="quote-author">— Stéphane Bancel, CEO</p>
+                        </div>
+                        
+                        <div class="story-tags">
+                            <span class="story-tag">Healthcare</span>
+                            <span class="story-tag">Biotech</span>
+                            <span class="story-tag">mRNA</span>
+                        </div>
+                        
+                        <div class="story-links">
+                            <a href="#" class="story-link primary">Read Full Story</a>
+                            <a href="#" class="story-link secondary">Visit Moderna</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Community -->
+    <section class="portfolio-community">
+        <div class="container">
+            <div class="community-content">
+                <h2 class="community-title">Our Portfolio Community</h2>
+                <p class="community-description">We believe our portfolio companies are stronger together. We actively foster connections, share knowledge, and create opportunities for collaboration within our founder community.</p>
+                
+                <div class="community-stats">
+                    <div class="community-stat">
+                        <h4>42</h4>
+                        <p>Portfolio Companies</p>
+                    </div>
+                    <div class="community-stat">
+                        <h4>150+</h4>
+                        <p>Founder Connections Made</p>
+                    </div>
+                    <div class="community-stat">
+                        <h4>25</h4>
+                        <p>Cross-Portfolio Partnerships</p>
+                    </div>
+                    <div class="community-stat">
+                        <h4>95%</h4>
+                        <p>Founder Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Esalen Ventures</h3>
+                    <p>We know people. We invest in people.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>hello@esalenventures.com</p>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Esalen Ventures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
