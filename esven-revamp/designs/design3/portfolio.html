@@ -1,648 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Esalen Ventures</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        /* Design 3 Portfolio Page - Modern Minimalist, Premium VC Aesthetic */
-        
-        .portfolio-hero {
-            padding: 12rem 0 8rem;
-            background: var(--background-color);
-            text-align: center;
-        }
-        
+      /* Design 3 Portfolio Page - Modern Minimalist, Premium VC Aesthetic */
+
+      .portfolio-hero {
+        padding: 12rem 0 8rem;
+        background: var(--background-color);
+        text-align: center;
+      }
+
+      .portfolio-hero h1 {
+        font-size: 4rem;
+        font-weight: 300;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        letter-spacing: -0.03em;
+      }
+
+      .portfolio-hero .subtitle {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        font-weight: 300;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+
+      .portfolio-metrics {
+        padding: 6rem 0;
+        background: var(--light-gray);
+      }
+
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .metric-item {
+        padding: 2rem 0;
+      }
+
+      .metric-number {
+        font-size: 3rem;
+        font-weight: 300;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .metric-label {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+      }
+
+      .portfolio-filters {
+        padding: 4rem 0;
+        background: var(--background-color);
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .filter-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-tab {
+        padding: 0.8rem 0;
+        background: transparent;
+        border: none;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        border-bottom: 2px solid transparent;
+      }
+
+      .filter-tab.active {
+        color: var(--primary-color);
+        border-bottom-color: var(--accent-color);
+      }
+
+      .filter-tab:hover {
+        color: var(--primary-color);
+      }
+
+      .portfolio-grid-section {
+        padding: 6rem 0;
+        background: var(--background-color);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .portfolio-company {
+        background: var(--background-color);
+        transition: transform 0.4s ease;
+        cursor: pointer;
+      }
+
+      .portfolio-company:hover {
+        transform: translateY(-8px);
+      }
+
+      .company-logo-container {
+        width: 100%;
+        height: 200px;
+        background: var(--light-gray);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .company-logo-container img {
+        max-width: 120px;
+        max-height: 80px;
+        filter: grayscale(100%);
+        transition: filter 0.4s ease;
+      }
+
+      .portfolio-company:hover .company-logo-container img {
+        filter: grayscale(0%);
+      }
+
+      .company-status {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 2px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .company-status.exit {
+        background: #28a745;
+      }
+
+      .company-info {
+        padding: 0 1rem;
+      }
+
+      .company-name {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .company-description {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
+      .company-metrics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .company-metric {
+        text-align: center;
+        padding: 1rem;
+        background: var(--light-gray);
+        border-radius: 2px;
+      }
+
+      .company-metric-value {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        margin-bottom: 0.3rem;
+      }
+
+      .company-metric-label {
+        font-size: 0.7rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .company-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .company-tag {
+        background: var(--light-gray);
+        color: var(--text-primary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 2px;
+        font-size: 0.8rem;
+        font-weight: 400;
+      }
+
+      .company-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .company-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease;
+      }
+
+      .company-link:hover {
+        color: var(--accent-color);
+      }
+
+      .portfolio-cta {
+        padding: 8rem 0;
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+      }
+
+      .cta-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .cta-title {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+      }
+
+      .cta-description {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: white;
+        color: var(--primary-color);
+        text-decoration: none;
+        border-radius: 2px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: transform 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
         .portfolio-hero h1 {
-            font-size: 4rem;
-            font-weight: 300;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            letter-spacing: -0.03em;
+          font-size: 2.5rem;
         }
-        
-        .portfolio-hero .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            font-weight: 300;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
-        
-        .portfolio-metrics {
-            padding: 6rem 0;
-            background: var(--light-gray);
-        }
-        
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .metric-item {
-            padding: 2rem 0;
-        }
-        
-        .metric-number {
-            font-size: 3rem;
-            font-weight: 300;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .metric-label {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 400;
-        }
-        
-        .portfolio-filters {
-            padding: 4rem 0;
-            background: var(--background-color);
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .filter-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .filter-tab {
-            padding: 0.8rem 0;
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-            border-bottom: 2px solid transparent;
-        }
-        
-        .filter-tab.active {
-            color: var(--primary-color);
-            border-bottom-color: var(--accent-color);
-        }
-        
-        .filter-tab:hover {
-            color: var(--primary-color);
-        }
-        
-        .portfolio-grid-section {
-            padding: 6rem 0;
-            background: var(--background-color);
-        }
-        
+
         .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
+          grid-template-columns: 1fr;
         }
-        
-        .portfolio-company {
-            background: var(--background-color);
-            transition: transform 0.4s ease;
-            cursor: pointer;
+
+        .metrics-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
-        
-        .portfolio-company:hover {
-            transform: translateY(-8px);
+
+        .filter-tabs {
+          gap: 1rem;
         }
-        
-        .company-logo-container {
-            width: 100%;
-            height: 200px;
-            background: var(--light-gray);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .company-logo-container img {
-            max-width: 120px;
-            max-height: 80px;
-            filter: grayscale(100%);
-            transition: filter 0.4s ease;
-        }
-        
-        .portfolio-company:hover .company-logo-container img {
-            filter: grayscale(0%);
-        }
-        
-        .company-status {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--accent-color);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 2px;
-            font-size: 0.7rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .company-status.exit {
-            background: #28a745;
-        }
-        
-        .company-info {
-            padding: 0 1rem;
-        }
-        
-        .company-name {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .company-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-        
-        .company-metrics {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .company-metric {
-            text-align: center;
-            padding: 1rem;
-            background: var(--light-gray);
-            border-radius: 2px;
-        }
-        
-        .company-metric-value {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 0.3rem;
-        }
-        
-        .company-metric-label {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .company-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .company-tag {
-            background: var(--light-gray);
-            color: var(--text-primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 2px;
-            font-size: 0.8rem;
-            font-weight: 400;
-        }
-        
-        .company-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .company-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
-        }
-        
-        .company-link:hover {
-            color: var(--accent-color);
-        }
-        
-        .portfolio-cta {
-            padding: 8rem 0;
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
-        
-        .cta-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-        }
-        
-        .cta-description {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 3rem;
-            line-height: 1.6;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: white;
-            color: var(--primary-color);
-            text-decoration: none;
-            border-radius: 2px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: transform 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-        
-        @media (max-width: 768px) {
-            .portfolio-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .metrics-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .filter-tabs {
-                gap: 1rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h2>Esalen Ventures</h2>
-            </div>
-            <div class="nav-links" id="nav-links">
-                <a href="/">Home</a>
-                <a href="/design3/team.html">Team</a>
-                <a href="/design3/portfolio.html" class="active">Portfolio</a>
-                <a href="/design3/contact.html">Contact</a>
-            </div>
+      <div class="nav-container">
+        <div class="logo">
+          <h2>Esalen Ventures</h2>
         </div>
+        <div class="nav-links" id="nav-links">
+          <a href="/">Home</a>
+          <a href="/design3/team.html">Team</a>
+          <a href="/design3/portfolio.html" class="active">Portfolio</a>
+          <!--     <a href="/design3/contact.html">Contact</a> -->
+        </div>
+      </div>
     </nav>
 
     <!-- Portfolio Hero -->
     <section class="portfolio-hero">
-        <div class="container">
-            <h1>Portfolio</h1>
-            <p class="subtitle">Companies defining the future across enterprise, consumer, and healthcare technology.</p>
-        </div>
+      <div class="container">
+        <h1>Portfolio</h1>
+        <p class="subtitle">
+          Companies defining the future across enterprise, consumer, and
+          healthcare technology.
+        </p>
+      </div>
     </section>
 
     <!-- Portfolio Metrics -->
     <section class="portfolio-metrics">
-        <div class="container">
-            <div class="metrics-grid">
-                <div class="metric-item">
-                    <div class="metric-number">42</div>
-                    <div class="metric-label">Companies</div>
-                </div>
-                <div class="metric-item">
-                    <div class="metric-number">18</div>
-                    <div class="metric-label">Exits</div>
-                </div>
-                <div class="metric-item">
-                    <div class="metric-number">$12.8B</div>
-                    <div class="metric-label">Portfolio Value</div>
-                </div>
-                <div class="metric-item">
-                    <div class="metric-number">14.2x</div>
-                    <div class="metric-label">Avg Multiple</div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-number">42</div>
+            <div class="metric-label">Companies</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">18</div>
+            <div class="metric-label">Exits</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">$12.8B</div>
+            <div class="metric-label">Portfolio Value</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">14.2x</div>
+            <div class="metric-label">Avg Multiple</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Portfolio Filters -->
     <section class="portfolio-filters">
-        <div class="container">
-            <div class="filter-tabs">
-                <button class="filter-tab active" data-filter="all">All</button>
-                <button class="filter-tab" data-filter="exits">Exits</button>
-                <button class="filter-tab" data-filter="unicorns">Unicorns</button>
-                <button class="filter-tab" data-filter="enterprise">Enterprise</button>
-                <button class="filter-tab" data-filter="consumer">Consumer</button>
-                <button class="filter-tab" data-filter="fintech">FinTech</button>
-                <button class="filter-tab" data-filter="healthcare">Healthcare</button>
-            </div>
+      <div class="container">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="exits">Exits</button>
+          <button class="filter-tab" data-filter="unicorns">Unicorns</button>
+          <button class="filter-tab" data-filter="enterprise">
+            Enterprise
+          </button>
+          <button class="filter-tab" data-filter="consumer">Consumer</button>
+          <button class="filter-tab" data-filter="fintech">FinTech</button>
+          <button class="filter-tab" data-filter="healthcare">
+            Healthcare
+          </button>
         </div>
+      </div>
     </section>
 
     <!-- Portfolio Grid -->
     <section class="portfolio-grid-section">
-        <div class="container">
-            <div class="portfolio-grid" id="portfolio-grid">
-                
-                <!-- Stripe -->
-                <div class="portfolio-company" data-category="fintech exits unicorns">
-                    <div class="company-logo-container">
-                        <img src="../../assets/images/portfolio/stripe-logo.png" alt="Stripe">
-                        <div class="company-status exit">Exit</div>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">Stripe</h3>
-                        <p class="company-description">Online payment processing platform for internet businesses of all sizes.</p>
-                        
-                        <div class="company-metrics">
-                            <div class="company-metric">
-                                <div class="company-metric-value">$95B</div>
-                                <div class="company-metric-label">Exit Value</div>
-                            </div>
-                            <div class="company-metric">
-                                <div class="company-metric-value">47x</div>
-                                <div class="company-metric-label">Multiple</div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-tags">
-                            <span class="company-tag">FinTech</span>
-                            <span class="company-tag">B2B</span>
-                            <span class="company-tag">Payments</span>
-                        </div>
-                        
-                        <div class="company-links">
-                            <a href="#" class="company-link">Details</a>
-                            <a href="#" class="company-link">Visit</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Airbnb -->
-                <div class="portfolio-company" data-category="consumer exits unicorns">
-                    <div class="company-logo-container">
-                        <img src="../../assets/images/portfolio/airbnb-logo.png" alt="Airbnb">
-                        <div class="company-status exit">Exit</div>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">Airbnb</h3>
-                        <p class="company-description">Global marketplace for unique accommodations and travel experiences.</p>
-                        
-                        <div class="company-metrics">
-                            <div class="company-metric">
-                                <div class="company-metric-value">$75B</div>
-                                <div class="company-metric-label">Exit Value</div>
-                            </div>
-                            <div class="company-metric">
-                                <div class="company-metric-value">38x</div>
-                                <div class="company-metric-label">Multiple</div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-tags">
-                            <span class="company-tag">Consumer</span>
-                            <span class="company-tag">Travel</span>
-                            <span class="company-tag">Platform</span>
-                        </div>
-                        
-                        <div class="company-links">
-                            <a href="#" class="company-link">Details</a>
-                            <a href="#" class="company-link">Visit</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slack -->
-                <div class="portfolio-company" data-category="enterprise exits unicorns">
-                    <div class="company-logo-container">
-                        <img src="../../assets/images/portfolio/slack-logo.png" alt="Slack">
-                        <div class="company-status exit">Exit</div>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">Slack</h3>
-                        <p class="company-description">Business communication platform for modern teams.</p>
-                        
-                        <div class="company-metrics">
-                            <div class="company-metric">
-                                <div class="company-metric-value">$27.7B</div>
-                                <div class="company-metric-label">Exit Value</div>
-                            </div>
-                            <div class="company-metric">
-                                <div class="company-metric-value">22x</div>
-                                <div class="company-metric-label">Multiple</div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-tags">
-                            <span class="company-tag">Enterprise</span>
-                            <span class="company-tag">SaaS</span>
-                            <span class="company-tag">Communication</span>
-                        </div>
-                        
-                        <div class="company-links">
-                            <a href="#" class="company-link">Details</a>
-                            <a href="#" class="company-link">Visit</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Moderna -->
-                <div class="portfolio-company" data-category="healthcare unicorns">
-                    <div class="company-logo-container">
-                        <img src="../../assets/images/portfolio/moderna-logo.png" alt="Moderna">
-                        <div class="company-status">Active</div>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">Moderna</h3>
-                        <p class="company-description">Pioneer in messenger RNA therapeutics and vaccines.</p>
-                        
-                        <div class="company-metrics">
-                            <div class="company-metric">
-                                <div class="company-metric-value">$185B</div>
-                                <div class="company-metric-label">Peak Value</div>
-                            </div>
-                            <div class="company-metric">
-                                <div class="company-metric-value">31x</div>
-                                <div class="company-metric-label">Multiple</div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-tags">
-                            <span class="company-tag">Healthcare</span>
-                            <span class="company-tag">Biotech</span>
-                            <span class="company-tag">mRNA</span>
-                        </div>
-                        
-                        <div class="company-links">
-                            <a href="#" class="company-link">Details</a>
-                            <a href="#" class="company-link">Visit</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Snowflake -->
-                <div class="portfolio-company" data-category="enterprise unicorns">
-                    <div class="company-logo-container">
-                        <img src="../../assets/images/portfolio/snowflake-logo.png" alt="Snowflake">
-                        <div class="company-status">Active</div>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">Snowflake</h3>
-                        <p class="company-description">Cloud data platform enabling data-driven organizations.</p>
-                        
-                        <div class="company-metrics">
-                            <div class="company-metric">
-                                <div class="company-metric-value">$45B</div>
-                                <div class="company-metric-label">Valuation</div>
-                            </div>
-                            <div class="company-metric">
-                                <div class="company-metric-value">18x</div>
-                                <div class="company-metric-label">Multiple</div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-tags">
-                            <span class="company-tag">Enterprise</span>
-                            <span class="company-tag">Cloud</span>
-                            <span class="company-tag">Data</span>
-                        </div>
-                        
-                        <div class="company-links">
-                            <a href="#" class="company-link">Details</a>
-                            <a href="#" class="company-link">Visit</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Robinhood -->
-                <div class="portfolio-company" data-category="fintech consumer unicorns">
-                    <div class="company-logo-container">
-                        <img src="../../assets/images/portfolio/robinhood-logo.png" alt="Robinhood">
-                        <div class="company-status">Active</div>
-                    </div>
-                    <div class="company-info">
-                        <h3 class="company-name">Robinhood</h3>
-                        <p class="company-description">Commission-free investing platform democratizing finance.</p>
-                        
-                        <div class="company-metrics">
-                            <div class="company-metric">
-                                <div class="company-metric-value">$8.2B</div>
-                                <div class="company-metric-label">Valuation</div>
-                            </div>
-                            <div class="company-metric">
-                                <div class="company-metric-value">12x</div>
-                                <div class="company-metric-label">Multiple</div>
-                            </div>
-                        </div>
-                        
-                        <div class="company-tags">
-                            <span class="company-tag">FinTech</span>
-                            <span class="company-tag">Consumer</span>
-                            <span class="company-tag">Trading</span>
-                        </div>
-                        
-                        <div class="company-links">
-                            <a href="#" class="company-link">Details</a>
-                            <a href="#" class="company-link">Visit</a>
-                        </div>
-                    </div>
-                </div>
-
+      <div class="container">
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Stripe -->
+          <div class="portfolio-company" data-category="fintech exits unicorns">
+            <div class="company-logo-container">
+              <img
+                src="../../assets/images/portfolio/stripe-logo.png"
+                alt="Stripe"
+              />
+              <div class="company-status exit">Exit</div>
             </div>
+            <div class="company-info">
+              <h3 class="company-name">Stripe</h3>
+              <p class="company-description">
+                Online payment processing platform for internet businesses of
+                all sizes.
+              </p>
+
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="company-metric-value">$95B</div>
+                  <div class="company-metric-label">Exit Value</div>
+                </div>
+                <div class="company-metric">
+                  <div class="company-metric-value">47x</div>
+                  <div class="company-metric-label">Multiple</div>
+                </div>
+              </div>
+
+              <div class="company-tags">
+                <span class="company-tag">FinTech</span>
+                <span class="company-tag">B2B</span>
+                <span class="company-tag">Payments</span>
+              </div>
+
+              <div class="company-links">
+                <a href="#" class="company-link">Details</a>
+                <a href="#" class="company-link">Visit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Airbnb -->
+          <div
+            class="portfolio-company"
+            data-category="consumer exits unicorns"
+          >
+            <div class="company-logo-container">
+              <img
+                src="../../assets/images/portfolio/airbnb-logo.png"
+                alt="Airbnb"
+              />
+              <div class="company-status exit">Exit</div>
+            </div>
+            <div class="company-info">
+              <h3 class="company-name">Airbnb</h3>
+              <p class="company-description">
+                Global marketplace for unique accommodations and travel
+                experiences.
+              </p>
+
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="company-metric-value">$75B</div>
+                  <div class="company-metric-label">Exit Value</div>
+                </div>
+                <div class="company-metric">
+                  <div class="company-metric-value">38x</div>
+                  <div class="company-metric-label">Multiple</div>
+                </div>
+              </div>
+
+              <div class="company-tags">
+                <span class="company-tag">Consumer</span>
+                <span class="company-tag">Travel</span>
+                <span class="company-tag">Platform</span>
+              </div>
+
+              <div class="company-links">
+                <a href="#" class="company-link">Details</a>
+                <a href="#" class="company-link">Visit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slack -->
+          <div
+            class="portfolio-company"
+            data-category="enterprise exits unicorns"
+          >
+            <div class="company-logo-container">
+              <img
+                src="../../assets/images/portfolio/slack-logo.png"
+                alt="Slack"
+              />
+              <div class="company-status exit">Exit</div>
+            </div>
+            <div class="company-info">
+              <h3 class="company-name">Slack</h3>
+              <p class="company-description">
+                Business communication platform for modern teams.
+              </p>
+
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="company-metric-value">$27.7B</div>
+                  <div class="company-metric-label">Exit Value</div>
+                </div>
+                <div class="company-metric">
+                  <div class="company-metric-value">22x</div>
+                  <div class="company-metric-label">Multiple</div>
+                </div>
+              </div>
+
+              <div class="company-tags">
+                <span class="company-tag">Enterprise</span>
+                <span class="company-tag">SaaS</span>
+                <span class="company-tag">Communication</span>
+              </div>
+
+              <div class="company-links">
+                <a href="#" class="company-link">Details</a>
+                <a href="#" class="company-link">Visit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moderna -->
+          <div class="portfolio-company" data-category="healthcare unicorns">
+            <div class="company-logo-container">
+              <img
+                src="../../assets/images/portfolio/moderna-logo.png"
+                alt="Moderna"
+              />
+              <div class="company-status">Active</div>
+            </div>
+            <div class="company-info">
+              <h3 class="company-name">Moderna</h3>
+              <p class="company-description">
+                Pioneer in messenger RNA therapeutics and vaccines.
+              </p>
+
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="company-metric-value">$185B</div>
+                  <div class="company-metric-label">Peak Value</div>
+                </div>
+                <div class="company-metric">
+                  <div class="company-metric-value">31x</div>
+                  <div class="company-metric-label">Multiple</div>
+                </div>
+              </div>
+
+              <div class="company-tags">
+                <span class="company-tag">Healthcare</span>
+                <span class="company-tag">Biotech</span>
+                <span class="company-tag">mRNA</span>
+              </div>
+
+              <div class="company-links">
+                <a href="#" class="company-link">Details</a>
+                <a href="#" class="company-link">Visit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Snowflake -->
+          <div class="portfolio-company" data-category="enterprise unicorns">
+            <div class="company-logo-container">
+              <img
+                src="../../assets/images/portfolio/snowflake-logo.png"
+                alt="Snowflake"
+              />
+              <div class="company-status">Active</div>
+            </div>
+            <div class="company-info">
+              <h3 class="company-name">Snowflake</h3>
+              <p class="company-description">
+                Cloud data platform enabling data-driven organizations.
+              </p>
+
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="company-metric-value">$45B</div>
+                  <div class="company-metric-label">Valuation</div>
+                </div>
+                <div class="company-metric">
+                  <div class="company-metric-value">18x</div>
+                  <div class="company-metric-label">Multiple</div>
+                </div>
+              </div>
+
+              <div class="company-tags">
+                <span class="company-tag">Enterprise</span>
+                <span class="company-tag">Cloud</span>
+                <span class="company-tag">Data</span>
+              </div>
+
+              <div class="company-links">
+                <a href="#" class="company-link">Details</a>
+                <a href="#" class="company-link">Visit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Robinhood -->
+          <div
+            class="portfolio-company"
+            data-category="fintech consumer unicorns"
+          >
+            <div class="company-logo-container">
+              <img
+                src="../../assets/images/portfolio/robinhood-logo.png"
+                alt="Robinhood"
+              />
+              <div class="company-status">Active</div>
+            </div>
+            <div class="company-info">
+              <h3 class="company-name">Robinhood</h3>
+              <p class="company-description">
+                Commission-free investing platform democratizing finance.
+              </p>
+
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="company-metric-value">$8.2B</div>
+                  <div class="company-metric-label">Valuation</div>
+                </div>
+                <div class="company-metric">
+                  <div class="company-metric-value">12x</div>
+                  <div class="company-metric-label">Multiple</div>
+                </div>
+              </div>
+
+              <div class="company-tags">
+                <span class="company-tag">FinTech</span>
+                <span class="company-tag">Consumer</span>
+                <span class="company-tag">Trading</span>
+              </div>
+
+              <div class="company-links">
+                <a href="#" class="company-link">Details</a>
+                <a href="#" class="company-link">Visit</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Portfolio CTA -->
     <section class="portfolio-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Building the Future</h2>
-                <p class="cta-description">We partner with exceptional founders creating category-defining companies. If you're building something extraordinary, we'd like to meet you.</p>
-                <a href="contact.html" class="cta-button">Get in Touch</a>
-            </div>
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Building the Future</h2>
+          <p class="cta-description">
+            We partner with exceptional founders creating category-defining
+            companies. If you're building something extraordinary, we'd like to
+            meet you.
+          </p>
+          <a href="contact.html" class="cta-button">Get in Touch</a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Esalen Ventures</h3>
-                </div>
-                <div class="footer-section">
-                    <p>info@esalenventures.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Esalen Ventures</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Esalen Ventures</h3>
+          </div>
+          <div class="footer-section">
+            <p>info@esalenventures.com</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Esalen Ventures</p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Portfolio filtering functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterTabs = document.querySelectorAll('.filter-tab');
-            const portfolioItems = document.querySelectorAll('.portfolio-company');
+      // Portfolio filtering functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterTabs = document.querySelectorAll(".filter-tab");
+        const portfolioItems = document.querySelectorAll(".portfolio-company");
 
-            filterTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    filterTabs.forEach(t => t.classList.remove('active'));
-                    // Add active class to clicked tab
-                    this.classList.add('active');
+        filterTabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            // Remove active class from all tabs
+            filterTabs.forEach((t) => t.classList.remove("active"));
+            // Add active class to clicked tab
+            this.classList.add("active");
 
-                    const filter = this.getAttribute('data-filter');
+            const filter = this.getAttribute("data-filter");
 
-                    portfolioItems.forEach(item => {
-                        if (filter === 'all') {
-                            item.style.display = 'block';
-                        } else {
-                            const categories = item.getAttribute('data-category');
-                            if (categories && categories.includes(filter)) {
-                                item.style.display = 'block';
-                            } else {
-                                item.style.display = 'none';
-                            }
-                        }
-                    });
-                });
+            portfolioItems.forEach((item) => {
+              if (filter === "all") {
+                item.style.display = "block";
+              } else {
+                const categories = item.getAttribute("data-category");
+                if (categories && categories.includes(filter)) {
+                  item.style.display = "block";
+                } else {
+                  item.style.display = "none";
+                }
+              }
             });
+          });
         });
+      });
     </script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

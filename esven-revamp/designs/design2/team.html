@@ -1,527 +1,606 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team - Esalen Ventures</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        /* Design 2 Team Page - Human-Focused, Relationship-Driven */
-        
-        .team-hero {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95)), url('../../assets/images/team-hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 8rem 0 6rem;
-            text-align: center;
-        }
-        
+      /* Design 2 Team Page - Human-Focused, Relationship-Driven */
+
+      .team-hero {
+        background: linear-gradient(
+            135deg,
+            rgba(44, 62, 80, 0.95),
+            rgba(52, 73, 94, 0.95)
+          ),
+          url("../../assets/images/team-hero-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 8rem 0 6rem;
+        text-align: center;
+      }
+
+      .team-hero h1 {
+        font-size: 3.2rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .team-hero .subtitle {
+        font-size: 1.4rem;
+        font-weight: 300;
+        opacity: 0.95;
+        max-width: 650px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .team-philosophy {
+        padding: 6rem 0;
+        background: #f8f9fa;
+      }
+
+      .philosophy-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .philosophy-quote {
+        font-size: 2rem;
+        font-weight: 300;
+        color: #2c3e50;
+        margin-bottom: 2rem;
+        font-style: italic;
+        line-height: 1.4;
+      }
+
+      .philosophy-author {
+        color: #7f8c8d;
+        font-size: 1.1rem;
+      }
+
+      .team-grid-section {
+        padding: 6rem 0;
+        background: white;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.2rem;
+        color: #7f8c8d;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .team-member {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .team-member:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      }
+
+      .member-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .member-image {
+        width: 100%;
+        height: 320px;
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        position: relative;
+      }
+
+      .member-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .team-member:hover .member-image img {
+        transform: scale(1.05);
+      }
+
+      .member-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        color: white;
+        padding: 2rem;
+        transform: translateY(100%);
+        transition: transform 0.4s ease;
+      }
+
+      .team-member:hover .member-overlay {
+        transform: translateY(0);
+      }
+
+      .member-quote {
+        font-style: italic;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .member-info {
+        padding: 2.5rem;
+      }
+
+      .member-name {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+
+      .member-title {
+        color: #7f8c8d;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+      }
+
+      .member-story {
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+      }
+
+      .member-values {
+        margin-bottom: 2rem;
+      }
+
+      .values-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .values-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .value-tag {
+        background: rgba(44, 62, 80, 0.1);
+        color: #2c3e50;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      .member-contact {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .contact-link {
+        flex: 1;
+        padding: 0.8rem;
+        text-align: center;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .contact-link.primary {
+        background: #2c3e50;
+        color: white;
+      }
+
+      .contact-link.primary:hover {
+        background: #34495e;
+      }
+
+      .contact-link.secondary {
+        background: transparent;
+        color: #2c3e50;
+        border: 2px solid #2c3e50;
+      }
+
+      .contact-link.secondary:hover {
+        background: #2c3e50;
+        color: white;
+      }
+
+      .team-culture {
+        padding: 6rem 0;
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+      }
+
+      .culture-content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .culture-title {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+      }
+
+      .culture-description {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        opacity: 0.9;
+        margin-bottom: 3rem;
+      }
+
+      .culture-values {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .culture-value {
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+      }
+
+      .culture-value h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+
+      .culture-value p {
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
         .team-hero h1 {
-            font-size: 3.2rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+          font-size: 2.5rem;
         }
-        
-        .team-hero .subtitle {
-            font-size: 1.4rem;
-            font-weight: 300;
-            opacity: 0.95;
-            max-width: 650px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        
-        .team-philosophy {
-            padding: 6rem 0;
-            background: #f8f9fa;
-        }
-        
-        .philosophy-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .philosophy-quote {
-            font-size: 2rem;
-            font-weight: 300;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-            font-style: italic;
-            line-height: 1.4;
-        }
-        
-        .philosophy-author {
-            color: #7f8c8d;
-            font-size: 1.1rem;
-        }
-        
-        .team-grid-section {
-            padding: 6rem 0;
-            background: white;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-        
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
+
         .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
+          grid-template-columns: 1fr;
         }
-        
-        .team-member {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+        .philosophy-quote {
+          font-size: 1.5rem;
         }
-        
-        .team-member:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-        }
-        
-        .member-image-container {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .member-image {
-            width: 100%;
-            height: 320px;
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            position: relative;
-        }
-        
-        .member-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        
-        .team-member:hover .member-image img {
-            transform: scale(1.05);
-        }
-        
-        .member-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-            color: white;
-            padding: 2rem;
-            transform: translateY(100%);
-            transition: transform 0.4s ease;
-        }
-        
-        .team-member:hover .member-overlay {
-            transform: translateY(0);
-        }
-        
-        .member-quote {
-            font-style: italic;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        .member-info {
-            padding: 2.5rem;
-        }
-        
-        .member-name {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-        
-        .member-title {
-            color: #7f8c8d;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-        
-        .member-story {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-        }
-        
-        .member-values {
-            margin-bottom: 2rem;
-        }
-        
-        .values-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .values-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .value-tag {
-            background: rgba(44, 62, 80, 0.1);
-            color: #2c3e50;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .member-contact {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .contact-link {
-            flex: 1;
-            padding: 0.8rem;
-            text-align: center;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-link.primary {
-            background: #2c3e50;
-            color: white;
-        }
-        
-        .contact-link.primary:hover {
-            background: #34495e;
-        }
-        
-        .contact-link.secondary {
-            background: transparent;
-            color: #2c3e50;
-            border: 2px solid #2c3e50;
-        }
-        
-        .contact-link.secondary:hover {
-            background: #2c3e50;
-            color: white;
-        }
-        
-        .team-culture {
-            padding: 6rem 0;
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-        }
-        
-        .culture-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .culture-title {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-        }
-        
-        .culture-description {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            opacity: 0.9;
-            margin-bottom: 3rem;
-        }
-        
-        .culture-values {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .culture-value {
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .culture-value h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        
-        .culture-value p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        @media (max-width: 768px) {
-            .team-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .philosophy-quote {
-                font-size: 1.5rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h2>Esalen Ventures</h2>
-                <p class="tagline">We know people. We invest in people.</p>
-            </div>
-            <div class="nav-links" id="nav-links">
-                <a href="/">Home</a>
-                <a href="/design2/team.html" class="active">Team</a>
-                <a href="/design2/portfolio.html">Portfolio</a>
-                <a href="/design2/contact.html">Contact</a>
-            </div>
+      <div class="nav-container">
+        <div class="logo">
+          <h2>Esalen Ventures</h2>
+          <p class="tagline">We know people. We invest in people.</p>
         </div>
+        <div class="nav-links" id="nav-links">
+          <a href="/">Home</a>
+          <a href="/design2/team.html" class="active">Team</a>
+          <a href="/design2/portfolio.html">Portfolio</a>
+          <!--    <a href="/design2/contact.html">Contact</a> -->
+        </div>
+      </div>
     </nav>
 
     <!-- Team Hero -->
     <section class="team-hero">
-        <div class="container">
-            <h1>The People Behind the Vision</h1>
-            <p class="subtitle">Every great investment starts with understanding people. Our team brings together diverse backgrounds, shared values, and a deep commitment to building lasting relationships with founders.</p>
-        </div>
+      <div class="container">
+        <h1>The People Behind the Vision</h1>
+        <p class="subtitle">
+          Every great investment starts with understanding people. Our team
+          brings together diverse backgrounds, shared values, and a deep
+          commitment to building lasting relationships with founders.
+        </p>
+      </div>
     </section>
 
     <!-- Team Philosophy -->
     <section class="team-philosophy">
-        <div class="container">
-            <div class="philosophy-content">
-                <p class="philosophy-quote">"The best investments are built on trust, understanding, and genuine human connection. We don't just fund companies—we partner with people."</p>
-                <p class="philosophy-author">— Esalen Ventures Investment Philosophy</p>
-            </div>
+      <div class="container">
+        <div class="philosophy-content">
+          <p class="philosophy-quote">
+            "The best investments are built on trust, understanding, and genuine
+            human connection. We don't just fund companies—we partner with
+            people."
+          </p>
+          <p class="philosophy-author">
+            — Esalen Ventures Investment Philosophy
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Team Grid -->
     <section class="team-grid-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Meet Our Partners</h2>
-                <p class="section-subtitle">Each member of our team brings unique perspectives, experiences, and a shared passion for supporting exceptional founders.</p>
-            </div>
-            
-            <div class="team-grid">
-                
-                <!-- Tom Vorisek -->
-                <div class="team-member">
-                    <div class="member-image-container">
-                        <div class="member-image">
-                            <img src="http://localhost:3000/assets/images/team/tom.avif" alt="Tom Vorisek">
-                        </div>
-                        <div class="member-overlay">
-                            <p class="member-quote">"I believe the best founders are those who genuinely care about solving real problems for real people."</p>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Tom Vorisek</h3>
-                        <p class="member-title">Managing Partner & Co-Founder</p>
-                        
-                        <p class="member-story">Tom's journey began as a software engineer, giving him deep empathy for the challenges founders face. Over 25 years, he's built lasting relationships with entrepreneurs, often becoming their trusted advisor long after investment. His approach is simple: understand the person, believe in their vision, then provide unwavering support.</p>
-                        
-                        <div class="member-values">
-                            <p class="values-title">Core Values</p>
-                            <div class="values-list">
-                                <span class="value-tag">Authenticity</span>
-                                <span class="value-tag">Long-term Thinking</span>
-                                <span class="value-tag">Founder-First</span>
-                            </div>
-                        </div>
-                        
-                        <div class="member-contact">
-                            <a href="#" class="contact-link primary">Connect</a>
-                            <a href="#" class="contact-link secondary">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Samir Ghosh -->
-                <div class="team-member">
-                    <div class="member-image-container">
-                        <div class="member-image">
-                            <img src="http://localhost:3000/assets/images/team/samir.avif" alt="Samir Ghosh">
-                        </div>
-                        <div class="member-overlay">
-                            <p class="member-quote">"Every entrepreneur has a story. My job is to listen, understand, and help them write the next chapter."</p>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Samir Ghosh</h3>
-                        <p class="member-title">Managing Partner & Co-Founder</p>
-                        
-                        <p class="member-story">Samir combines analytical rigor with genuine human connection. Having immigrated to build his own startup, he understands the courage it takes to pursue a vision. He's known for his ability to see potential where others see risk, and for maintaining relationships that span decades.</p>
-                        
-                        <div class="member-values">
-                            <p class="values-title">Core Values</p>
-                            <div class="values-list">
-                                <span class="value-tag">Empathy</span>
-                                <span class="value-tag">Global Perspective</span>
-                                <span class="value-tag">Courage</span>
-                            </div>
-                        </div>
-                        
-                        <div class="member-contact">
-                            <a href="#" class="contact-link primary">Connect</a>
-                            <a href="#" class="contact-link secondary">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sarah Chen -->
-                <div class="team-member">
-                    <div class="member-image-container">
-                        <div class="member-image">
-                            <img src="http://localhost:3000/assets/images/team/scott.avif" alt="Scott Fackert">
-                        </div>
-                        <div class="member-overlay">
-                            <p class="member-quote">"The best partnerships are built on mutual respect, shared values, and genuine care for each other's success."</p>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Scott Fackert</h3>
-                        <p class="member-title">Senior Partner</p>
-                        
-                        <p class="member-story">Sarah brings a unique blend of operational experience and investment acumen. As a former founder herself, she understands the emotional rollercoaster of building a company. She's passionate about supporting underrepresented founders and believes diverse teams build better products.</p>
-                        
-                        <div class="member-values">
-                            <p class="values-title">Core Values</p>
-                            <div class="values-list">
-                                <span class="value-tag">Diversity</span>
-                                <span class="value-tag">Operational Excellence</span>
-                                <span class="value-tag">Mentorship</span>
-                            </div>
-                        </div>
-                        
-                        <div class="member-contact">
-                            <a href="#" class="contact-link primary">Connect</a>
-                            <a href="#" class="contact-link secondary">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Michael Rodriguez -->
-                <div class="team-member">
-                    <div class="member-image-container">
-                        <div class="member-image">
-                            <img src="http://localhost:3000/assets/images/team/dave.avif" alt="Dave Clauson">
-                        </div>
-                        <div class="member-overlay">
-                            <p class="member-quote">"Great healthcare innovations come from founders who have experienced the problems they're solving firsthand."</p>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Dave Clauson</h3>
-                        <p class="member-title">Principal</p>
-                        
-                        <p class="member-story">Michael's passion for healthcare stems from personal experience caring for aging parents. He seeks founders who combine deep domain expertise with genuine empathy for patients. His approach is collaborative—he works alongside founders as a strategic partner, not just a financial backer.</p>
-                        
-                        <div class="member-values">
-                            <p class="values-title">Core Values</p>
-                            <div class="values-list">
-                                <span class="value-tag">Patient-Centric</span>
-                                <span class="value-tag">Scientific Rigor</span>
-                                <span class="value-tag">Collaboration</span>
-                            </div>
-                        </div>
-                        
-                        <div class="member-contact">
-                            <a href="#" class="contact-link primary">Connect</a>
-                            <a href="#" class="contact-link secondary">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Meet Our Partners</h2>
+          <p class="section-subtitle">
+            Each member of our team brings unique perspectives, experiences, and
+            a shared passion for supporting exceptional founders.
+          </p>
         </div>
+
+        <div class="team-grid">
+          <!-- Tom Vorisek -->
+          <div class="team-member">
+            <div class="member-image-container">
+              <div class="member-image">
+                <img
+                  src="http://localhost:3000/assets/images/team/tom.avif"
+                  alt="Tom Vorisek"
+                />
+              </div>
+              <div class="member-overlay">
+                <p class="member-quote">
+                  "I believe the best founders are those who genuinely care
+                  about solving real problems for real people."
+                </p>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Tom Vorisek</h3>
+              <p class="member-title">Managing Partner & Co-Founder</p>
+
+              <p class="member-story">
+                Tom's journey began as a software engineer, giving him deep
+                empathy for the challenges founders face. Over 25 years, he's
+                built lasting relationships with entrepreneurs, often becoming
+                their trusted advisor long after investment. His approach is
+                simple: understand the person, believe in their vision, then
+                provide unwavering support.
+              </p>
+
+              <div class="member-values">
+                <p class="values-title">Core Values</p>
+                <div class="values-list">
+                  <span class="value-tag">Authenticity</span>
+                  <span class="value-tag">Long-term Thinking</span>
+                  <span class="value-tag">Founder-First</span>
+                </div>
+              </div>
+
+              <div class="member-contact">
+                <a href="#" class="contact-link primary">Connect</a>
+                <a href="#" class="contact-link secondary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Samir Ghosh -->
+          <div class="team-member">
+            <div class="member-image-container">
+              <div class="member-image">
+                <img
+                  src="http://localhost:3000/assets/images/team/samir.avif"
+                  alt="Samir Ghosh"
+                />
+              </div>
+              <div class="member-overlay">
+                <p class="member-quote">
+                  "Every entrepreneur has a story. My job is to listen,
+                  understand, and help them write the next chapter."
+                </p>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Samir Ghosh</h3>
+              <p class="member-title">Managing Partner & Co-Founder</p>
+
+              <p class="member-story">
+                Samir combines analytical rigor with genuine human connection.
+                Having immigrated to build his own startup, he understands the
+                courage it takes to pursue a vision. He's known for his ability
+                to see potential where others see risk, and for maintaining
+                relationships that span decades.
+              </p>
+
+              <div class="member-values">
+                <p class="values-title">Core Values</p>
+                <div class="values-list">
+                  <span class="value-tag">Empathy</span>
+                  <span class="value-tag">Global Perspective</span>
+                  <span class="value-tag">Courage</span>
+                </div>
+              </div>
+
+              <div class="member-contact">
+                <a href="#" class="contact-link primary">Connect</a>
+                <a href="#" class="contact-link secondary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sarah Chen -->
+          <div class="team-member">
+            <div class="member-image-container">
+              <div class="member-image">
+                <img
+                  src="http://localhost:3000/assets/images/team/scott.avif"
+                  alt="Scott Fackert"
+                />
+              </div>
+              <div class="member-overlay">
+                <p class="member-quote">
+                  "The best partnerships are built on mutual respect, shared
+                  values, and genuine care for each other's success."
+                </p>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Scott Fackert</h3>
+              <p class="member-title">Senior Partner</p>
+
+              <p class="member-story">
+                Sarah brings a unique blend of operational experience and
+                investment acumen. As a former founder herself, she understands
+                the emotional rollercoaster of building a company. She's
+                passionate about supporting underrepresented founders and
+                believes diverse teams build better products.
+              </p>
+
+              <div class="member-values">
+                <p class="values-title">Core Values</p>
+                <div class="values-list">
+                  <span class="value-tag">Diversity</span>
+                  <span class="value-tag">Operational Excellence</span>
+                  <span class="value-tag">Mentorship</span>
+                </div>
+              </div>
+
+              <div class="member-contact">
+                <a href="#" class="contact-link primary">Connect</a>
+                <a href="#" class="contact-link secondary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Michael Rodriguez -->
+          <div class="team-member">
+            <div class="member-image-container">
+              <div class="member-image">
+                <img
+                  src="http://localhost:3000/assets/images/team/dave.avif"
+                  alt="Dave Clauson"
+                />
+              </div>
+              <div class="member-overlay">
+                <p class="member-quote">
+                  "Great healthcare innovations come from founders who have
+                  experienced the problems they're solving firsthand."
+                </p>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Dave Clauson</h3>
+              <p class="member-title">Principal</p>
+
+              <p class="member-story">
+                Michael's passion for healthcare stems from personal experience
+                caring for aging parents. He seeks founders who combine deep
+                domain expertise with genuine empathy for patients. His approach
+                is collaborative—he works alongside founders as a strategic
+                partner, not just a financial backer.
+              </p>
+
+              <div class="member-values">
+                <p class="values-title">Core Values</p>
+                <div class="values-list">
+                  <span class="value-tag">Patient-Centric</span>
+                  <span class="value-tag">Scientific Rigor</span>
+                  <span class="value-tag">Collaboration</span>
+                </div>
+              </div>
+
+              <div class="member-contact">
+                <a href="#" class="contact-link primary">Connect</a>
+                <a href="#" class="contact-link secondary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Team Culture -->
     <section class="team-culture">
-        <div class="container">
-            <div class="culture-content">
-                <h2 class="culture-title">Our Culture & Values</h2>
-                <p class="culture-description">We believe that great investments come from great relationships. Our culture is built on trust, transparency, and a genuine commitment to helping founders succeed.</p>
-                
-                <div class="culture-values">
-                    <div class="culture-value">
-                        <h4>Relationship First</h4>
-                        <p>We invest time in understanding founders as people, not just business plans. Long-term relationships matter more than short-term gains.</p>
-                    </div>
-                    <div class="culture-value">
-                        <h4>Authentic Partnership</h4>
-                        <p>We're honest about challenges and transparent about our decision-making. Founders deserve partners who tell the truth.</p>
-                    </div>
-                    <div class="culture-value">
-                        <h4>Diverse Perspectives</h4>
-                        <p>The best solutions come from diverse teams. We actively seek out founders from all backgrounds and experiences.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="culture-content">
+          <h2 class="culture-title">Our Culture & Values</h2>
+          <p class="culture-description">
+            We believe that great investments come from great relationships. Our
+            culture is built on trust, transparency, and a genuine commitment to
+            helping founders succeed.
+          </p>
+
+          <div class="culture-values">
+            <div class="culture-value">
+              <h4>Relationship First</h4>
+              <p>
+                We invest time in understanding founders as people, not just
+                business plans. Long-term relationships matter more than
+                short-term gains.
+              </p>
             </div>
+            <div class="culture-value">
+              <h4>Authentic Partnership</h4>
+              <p>
+                We're honest about challenges and transparent about our
+                decision-making. Founders deserve partners who tell the truth.
+              </p>
+            </div>
+            <div class="culture-value">
+              <h4>Diverse Perspectives</h4>
+              <p>
+                The best solutions come from diverse teams. We actively seek out
+                founders from all backgrounds and experiences.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Esalen Ventures</h3>
-                    <p>We know people. We invest in people.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <p>hello@esalenventures.com</p>
-                    <p>(555) 123-4567</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Esalen Ventures. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Esalen Ventures</h3>
+            <p>We know people. We invest in people.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <p>hello@esalenventures.com</p>
+            <p>(555) 123-4567</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Esalen Ventures. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

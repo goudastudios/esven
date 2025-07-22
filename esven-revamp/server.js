@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve static files from designs directories
-app.use("/original", express.static(path.join(__dirname, "designs/original")));
+// app.use("/original", express.static(path.join(__dirname, "designs/original")));
 app.use("/design1", express.static(path.join(__dirname, "designs/design1")));
 app.use("/design2", express.static(path.join(__dirname, "designs/design2")));
 app.use("/design3", express.static(path.join(__dirname, "designs/design3")));
@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
     <h1>Esven.us Revamp Demo</h1>
     <p>Choose a design to view:</p>
     <ul>
-      <li><a href="/original">Original Site Revamp</a></li>
+      <!-- <li><a href="/original">Original Site Revamp</a></li> -->
       <li><a href="/design1/intro.html">Design Concept 1: The Track Record Focus</a></li>
       <li><a href="/design2/intro.html">Design Concept 2: The Relationship Builder Focus</a></li>
       <li><a href="/design3/intro.html">Design Concept 3: The Modern Minimalist Focus</a></li>
@@ -35,9 +35,9 @@ app.get("/", (req, res) => {
   `);
 });
 
-app.get("/original", (req, res) => {
-  res.sendFile(path.join(__dirname, "designs/original/index.html"));
-});
+// app.get("/original", (req, res) => {
+//   res.sendFile(path.join(__dirname, "designs/original/index.html"));
+// });
 
 // Design routes - serve intro pages by default
 app.get("/design1", (req, res) => {
