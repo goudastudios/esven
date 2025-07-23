@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Serve static files from designs directories
 // app.use("/original", express.static(path.join(__dirname, "designs/original")));
@@ -66,7 +66,7 @@ app.get("/design3/intro.html", (req, res) => {
 });
 
 // For local development
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
     console.log(`Esven Revamp Demo running at http://localhost:${PORT}`);
     console.log("Available routes:");

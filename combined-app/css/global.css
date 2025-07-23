@@ -1,0 +1,673 @@
+/* CSS Locations    
+Design 1 CSS is here: esven-revamp/designs/design1/styles.css
+Design 2 CSS is here: esven-revamp/designs/design2/styles.css
+Design 3 CSS is here: esven-revamp/designs/design3/styles.css
+Now we can use this schema for our css = .[page]-[section]-[item]-[originaldesign#] , 
+this will keep all of our css from ever having a duplicate name */
+
+
+
+/* Global styles for Esven Combined App */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .approach-timeline {
+    gap: 2rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 700px) {
+  .hero-container {
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  display: inline-block;
+}
+.btn-primary {
+  background: #fff;
+  color: #1553a6;
+  border: 2px solid #fff;
+}
+.btn-primary:hover {
+  background: #e0eaff;
+  color: #1553a6;
+}
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-outline:hover {
+  background: #1553a6;
+  color: #fff;
+}
+
+.hero-visual {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.connection-network {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.network-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.network-node.central {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a72c8;
+  color: #fff;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(21,83,166,0.15);
+  z-index: 2;
+}
+.network-node.central .node-avatar {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.network-node.central .node-label {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+.network-node.founder {
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -20%);
+}
+.network-node.investor {
+  right: 0%;
+  top: 50%;
+  transform: translate(20%, -50%);
+}
+.network-node.advisor {
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 20%);
+}
+.network-node.talent {
+  left: 0%;
+  top: 50%;
+  transform: translate(-20%, -50%);
+}
+.node-avatar {
+  background: #fff;
+  color: #1553a6;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(21,83,166,0.10);
+  margin-bottom: 0.2rem;
+}
+.node-label {
+  font-size: 0.97rem;
+  color: #e0eaff;
+}
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    min-height: 360px;
+  }
+  .hero-content, .hero-visual {
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+  }
+  .connection-network {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+    min-height: 300px;
+    padding: 2rem 0;
+  }
+  .approach-timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .approach-timeline::before {
+    display: none;
+  }
+}
+
+
+
+/* =============================
+   Header/Nav Section | design1 (color), design2/design3 (sticky)
+   ============================= */
+.header {
+  background: linear-gradient(90deg, #1553a6 0%, #1a72c8 100%);
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+.navbar {
+  background: rgba(21, 83, 166, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  transition: box-shadow 0.25s;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.logo img {
+  height: 40px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #b8b8b8;
+}
+.performance-banner {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background: rgba(255,255,255,0.08);
+  padding: 0.5rem 0;
+}
+.metric {
+  text-align: center;
+}
+.metric-number {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.metric-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
+/* =============================
+   Footer Styles | Origin: design1 
+   ============================= */
+
+.footer {
+  background: linear-gradient(90deg, #1553a6 0%, #1a72c8 100%);
+  color: #fff;
+  padding: 2.5rem 0 1.2rem 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.footer-section h3, .footer-section h4 {
+  margin: 0 0 1rem 0;
+}
+.footer-section p, .footer-section a {
+  color: #fff;
+  opacity: 0.92;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.97rem;
+  opacity: 0.75;
+}
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+/* =============================
+   Intro/Index  Page | Origin: design1 
+   ============================= */
+
+
+
+
+
+/* =============================
+   Home/ Landing Page | Origin: design2/design3
+   ============================= */
+
+
+/* Hero Section | Origin: design2 */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-background {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #1553a6 0%, #1a72c8 100%);
+  z-index: 1;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(21, 83, 166, 0.5);
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #1553a6 0%, #1a72c8 100%);
+  opacity: 0.95;
+  z-index: 1;
+}
+.hero-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 440px;
+  padding: 3rem 2rem 2rem 2rem;
+}
+.hero-content {
+  flex: 1 1 50%;
+  text-align: left;
+  color: #fff;
+  z-index: 4;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #e0eaff;
+}
+.hero-description {
+  font-size: 1.25rem;
+  margin-bottom: 2.2rem;
+  opacity: 0.93;
+}
+.hero-actions {
+  display: flex;
+  gap: 1.2rem;
+}
+.btn {
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  display: inline-block;
+}
+.btn-primary {
+  background: #fff;
+  color: #1553a6;
+  border: 2px solid #fff;
+}
+.btn-primary:hover {
+  background: #e0eaff;
+  color: #1553a6;
+}
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-outline:hover {
+  background: #1553a6;
+  color: #fff;
+}
+
+.hero-visual {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.connection-network {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.network-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.network-node.central {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a72c8;
+  color: #fff;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(21,83,166,0.15);
+  z-index: 2;
+}
+.network-node.central .node-avatar {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.network-node.central .node-label {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+.network-node.founder {
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -20%);
+}
+.network-node.investor {
+  right: 0%;
+  top: 50%;
+  transform: translate(20%, -50%);
+}
+.network-node.advisor {
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 20%);
+}
+.network-node.talent {
+  left: 0%;
+  top: 50%;
+  transform: translate(-20%, -50%);
+}
+.node-avatar {
+  background: #fff;
+  color: #1553a6;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(21,83,166,0.10);
+  margin-bottom: 0.2rem;
+}
+.node-label {
+  font-size: 0.97rem;
+  color: #e0eaff;
+}
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    min-height: 360px;
+  }
+  .hero-content, .hero-visual {
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+  }
+  .connection-network {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Approach Section | Origin: design2 */
+.approach {
+  padding: 5rem 0 3rem 0;
+  background: #f8f9fa;
+  color: #1553a6;
+  padding: 4rem 0 3rem 0;
+}
+.approach-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+  position: relative;
+}
+.timeline-item {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(21,83,166,0.07);
+  padding: 2.2rem 2rem 1.6rem 2rem;
+  text-align: center;
+  width: 30%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-icon {
+  font-size: 2.1rem;
+  margin-bottom: 1.1rem;
+  background: linear-gradient(90deg, #1553a6 0%, #1a72c8 100%);
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(21,83,166,0.10);
+}
+.timeline-content h4 {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1553a6;
+}
+.timeline-content p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #1a72c8;
+  opacity: 0.95;
+}
+.approach-timeline:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  right: 8%;
+  height: 6px;
+  background: linear-gradient(90deg, #1553a6 0%, #1a72c8 100%);
+  border-radius: 3px;
+  z-index: 1;
+}
+.timeline-item:first-child {
+  margin-left: 0;
+}
+.timeline-item:last-child {
+  margin-right: 0;
+}
+@media (max-width: 900px) {
+  .approach-timeline {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 2rem;
+  }
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .approach-timeline:before {
+    top: unset;
+    left: 50%;
+    right: unset;
+    width: 6px;
+    height: 80%;
+    min-height: 180px;
+    background: linear-gradient(180deg, #1553a6 0%, #1a72c8 100%);
+    border-radius: 3px;
+    z-index: 1;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #f8fafc;
+  color: #1553a6;
+  padding: 4rem 0 3rem 0;
+}
+.testimonial-grid {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+.testimonial-card {
+  background: #fff;
+  color: #1553a6;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px rgba(21,83,166,0.07);
+  padding: 2rem 2.2rem;
+  max-width: 340px;
+  min-width: 240px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonial-card .quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+.testimonial-card .author {
+  margin-top: 1.2rem;
+}
+.testimonial-card .author-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.testimonial-card .author-title {
+  font-size: 0.97rem;
+  color: #1a72c8;
+}
+
+/* Contact Section */
+.contact {
+  background: linear-gradient(90deg, #1553a6 0%, #1a72c8 100%);
+  color: #fff;
+  padding: 4rem 0 3rem 0;
+}
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-subtitle {
+  font-size: 1.25rem;
+  margin: 1.3rem 0 2.5rem 0;
+  color: #e0eaff;
+}
+.contact-actions {
+  margin-top: 2.5rem;
+}
+.contact-actions .btn {
+  font-size: 1.2rem;
+  padding: 1.1rem 2.6rem;
+  border-radius: 32px;
+}
+
+
+/* =============================
+   Portfolio Page | Origin: design1/design2/design3
+   ============================= */
+
+  /* Portfolio Hero Section | Origin: design2 */ 
+
+  /* Portfolio Stats Section | Origin: design1 */
+
+  /* Portfolio Filters Section | Origin: design1 */
+
+  /* Portfolio Grid Section | Origin: design3 */
+
+/* =============================
+   Team Page | Origin: design2/design3
+   ============================= */
+
+
+   /* Team Hero Section | Origin: design2 */
+
+   /* Team Principles Section | Origin: design3 */
+
+   /* Team Grid | Origin: design1 */
+
+
+/* =============================
+   Contact Page | Origin: Nonw
+   ============================= */
+
+ 
+
+

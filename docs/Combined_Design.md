@@ -202,11 +202,12 @@ esven-revamp/designs/design1/index.html
       </div>
     </section>
 
-D. Contact sectino component
+D. Contact section component
 
 esven-revamp/designs/design3/index.html
 
-​ <!-- Contact Section -->
+ <!-- Contact Section -->
+
 ​ <section class="contact">
 ​ <div class="container">
 ​ <div class="contact-content">
@@ -334,10 +335,11 @@ But i think using nextjs, react, tailwinds, and typescriot. instead of hardcodin
                 <a href="#" class="company-link">Visit</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
-​ <!-- Airbnb -->
+ <!-- Airbnb -->
+
 ​ <div
 ​ class="portfolio-company"
 ​ data-category="consumer exits unicorns"
@@ -378,10 +380,11 @@ But i think using nextjs, react, tailwinds, and typescriot. instead of hardcodin
                 <a href="#" class="company-link">Visit</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
-​ <!-- Slack -->
+ <!-- Slack -->
+
 ​ <div
 ​ class="portfolio-company"
 ​ data-category="enterprise exits unicorns"
@@ -421,10 +424,11 @@ But i think using nextjs, react, tailwinds, and typescriot. instead of hardcodin
                 <a href="#" class="company-link">Visit</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
-​ <!-- Moderna -->
+ <!-- Moderna -->
+
 ​ <div class="portfolio-company" data-category="healthcare unicorns">
 ​ <div class="company-logo-container">
 ​ <img
@@ -461,10 +465,11 @@ But i think using nextjs, react, tailwinds, and typescriot. instead of hardcodin
                 <a href="#" class="company-link">Visit</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
-​ <!-- Snowflake -->
+ <!-- Snowflake -->
+
 ​ <div class="portfolio-company" data-category="enterprise unicorns">
 ​ <div class="company-logo-container">
 ​ <img
@@ -501,10 +506,11 @@ But i think using nextjs, react, tailwinds, and typescriot. instead of hardcodin
                 <a href="#" class="company-link">Visit</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
-​ <!-- Robinhood -->
+ <!-- Robinhood -->
+
 ​ <div
 ​ class="portfolio-company"
 ​ data-category="fintech consumer unicorns"
@@ -544,7 +550,7 @@ But i think using nextjs, react, tailwinds, and typescriot. instead of hardcodin
                 <a href="#" class="company-link">Visit</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 ​ </div>
 ​ </div>
@@ -558,7 +564,8 @@ A. team hero component
 
 esven-revamp/designs/design2/team.html
 
-​ <!-- Team Hero -->
+ <!-- Team Hero -->
+
 ​ <section class="team-hero">
 ​ <div class="container">
 ​ <h1>The People Behind the Vision</h1>
@@ -655,10 +662,11 @@ esven-revamp/designs/design1/team.html
                 <a href="#" class="member-link">Portfolio</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
-​ <!-- Samir Ghosh -->
+ <!-- Samir Ghosh -->
+
 ​ <div class="team-member">
 ​ <div class="member-image">
 ​ <img
@@ -694,10 +702,11 @@ esven-revamp/designs/design1/team.html
                 <a href="#" class="member-link">Portfolio</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
-​ <!-- Additional Team Members -->
+ <!-- Additional Team Members -->
+
 ​ <div class="team-member">
 ​ <div class="member-image">
 ​ <img
@@ -733,7 +742,7 @@ esven-revamp/designs/design1/team.html
                 <a href="#" class="member-link">Portfolio</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
           <div class="team-member">
@@ -771,7 +780,7 @@ esven-revamp/designs/design1/team.html
                 <a href="#" class="member-link">Portfolio</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
           <div class="team-member">
@@ -809,7 +818,7 @@ esven-revamp/designs/design1/team.html
                 <a href="#" class="member-link">Portfolio</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 
           <div class="team-member">
@@ -847,7 +856,7 @@ esven-revamp/designs/design1/team.html
                 <a href="#" class="member-link">Portfolio</a>
               </div>
 
-​ </div>
+ </div>
 ​ </div>
 ​ </div>
 ​ </div>
@@ -861,6 +870,7 @@ here is a potential example
 
 export default function Example() {
 return (
+
 <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
 <svg
         aria-hidden="true"
