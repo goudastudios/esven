@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esalen Ventures - Enter</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="/assets/75fbd5_41ff5ec1ca40408583f83f8dce5eaf02_7Emv2.jpg"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: #000000;
+        overflow: hidden;
+        cursor: none;
+      }
+      .intro-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .background-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100vw;
+        max-height: 100vh;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+        z-index: 1;
+        opacity: 0.6;
+      }
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        );
+        z-index: 2;
+      }
+      .content {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        max-width: 800px;
+        padding: 40px;
+      }
+      .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 60px;
+        opacity: 0;
+        animation: fadeInUp 1s ease 0.5s forwards;
+      }
+      .typewriter-container {
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .typewriter-text {
+        font-size: 32px;
+        font-weight: 300;
+        color: #ffffff;
+        line-height: 1.4;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+        opacity: 0;
+      }
+      .typewriter-text.typing {
+        opacity: 1;
+      }
+      .cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1.2em;
+        background: #ffffff;
+        margin-left: 2px;
+        animation: blink 1s infinite;
+      }
+      .enter-prompt {
+        position: absolute;
+        bottom: 60px;
+
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: fadeInUp 1s ease 8s forwards,
+          pulse 2s ease-in-out 9s infinite;
+      }
+      .click-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        cursor: pointer;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.7;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: scale(1.1);
+        }
+      }
+      .fade-transition {
+        animation: fadeOut 1s ease forwards;
+      }
+      @media (max-width: 768px) {
+        .typewriter-text {
+          font-size: 24px;
+        }
+        .content {
+          padding: 20px;
+        }
+        .logo {
+          width: 80px;
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro-container">
+      <!-- Background Video -->
+      <video class="background-video" autoplay muted loop playsinline>
+        <source src="/assets/video/backgroundvideo.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+      <!-- Content -->
+      <div class="content">
+        <img
+          src="/assets/EsalenLogo_V_wht_edited_edited_edited_ed.png"
+          alt="Esalen Ventures"
+          class="logo"
+        />
+        <div class="typewriter-container" id="typewriterContainer">
+          <!-- Text will be dynamically inserted here -->
+        </div>
+      </div>
+      <!-- Enter Prompt -->
+      <div class="enter-prompt">CLICK TO ENTER</div>
+      <!-- Click Area -->
+      <div class="click-area" id="clickArea"></div>
+    </div>
+    <script>
+      class TypewriterIntro {
+        constructor() {
+          this.texts = [
+            "We know people.",
+            "We invest in people.",
+            "Welcome to Esalen Ventures.",
+          ];
+          this.index = 0;
+          this.container = document.getElementById("typewriterContainer");
+          this.typing = false;
+          this.init();
+        }
+        init() {
+          this.startTyping();
+          document
+            .getElementById("clickArea")
+            .addEventListener("click", () => this.handleClick());
+        }
+        startTyping() {
+          if (this.index >= this.texts.length) {
+            document.querySelector(".enter-prompt").style.opacity = 1;
+            document.querySelector(".click-area").style.cursor = "pointer";
+            return;
+          }
+          this.typeText(this.texts[this.index]).then(() => {
+            this.index++;
+            setTimeout(() => this.startTyping(), 1000);
+          });
+        }
+        typeText(text) {
+          return new Promise((resolve) => {
+            this.container.innerHTML = "";
+            const textEl = document.createElement("div");
+            textEl.className = "typewriter-text typing";
+            this.container.appendChild(textEl);
+            let i = 0;
+            const cursor = document.createElement("span");
+            cursor.className = "cursor";
+            textEl.appendChild(cursor);
+            const typeChar = () => {
+              if (i < text.length) {
+                textEl.insertBefore(
+                  document.createTextNode(text.charAt(i)),
+                  cursor
+                );
+                i++;
+                setTimeout(typeChar, 50);
+              } else {
+                cursor.style.display = "none";
+                resolve();
+              }
+            };
+            typeChar();
+          });
+        }
+        handleClick() {
+          document
+            .querySelector(".intro-container")
+            .classList.add("fade-transition");
+          setTimeout(() => {
+            window.location.href = "/home.html";
+          }, 1000);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        new TypewriterIntro();
+      });
+    </script>
+  </body>
+</html>

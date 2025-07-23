@@ -4,32 +4,35 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // Serve static files
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use("/css", express.static(path.join(__dirname, "css")));
 app.use("/components", express.static(path.join(__dirname, "components")));
-app.use(express.static(__dirname));
 
 // Route for intro page as entry point
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "intro.html"));
+  res.render("index");
 });
 
 // Home, Portfolio, Team, Contact
 app.get("/home.html", (req, res) => {
-  res.sendFile(path.join(__dirname, "home.html"));
+  res.render("home");
 });
 
 app.get("/portfolio.html", (req, res) => {
-  res.sendFile(path.join(__dirname, "portfolio.html"));
+  res.render("portfolio");
 });
 
 app.get("/team.html", (req, res) => {
-  res.sendFile(path.join(__dirname, "team.html"));
+  res.render("team");
 });
 
 app.get("/contact.html", (req, res) => {
-  res.sendFile(path.join(__dirname, "contact.html"));
+  res.render("contact");
 });
 
 if (process.env.NODE_ENV !== "production") {
