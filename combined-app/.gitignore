@@ -1,2 +1,74 @@
-esven-revamp/node_modules/
-combined-app/node_modules/
+# Dependencies
+node_modules/
+.pnpm-store/
+.pnp.*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+.next/
+out/
+dist/
+build/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE and editor files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Local development
+.cache/
+.temp/
+.tmp/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional package-lock.json (using pnpm)
+package-lock.json
+yarn.lock
+
+# Local development server
+.vercel/
+
+# Debug logs from the server
+logs/
+*.log
+
+# Local development environment
+.env.local
+
+# Build output
+.next/
+
+# Vercel specific
+.vercel/
+
+# System Files
+.DS_Store
+Thumbs.db
