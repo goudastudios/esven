@@ -1,7 +1,15 @@
-const express = require("express");
-const path = require("path");
-const portfolioData = require("./data/portfolio");
-const teamData = require("./data/team");
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// ES modules fix for __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Import data
+import portfolioData from './data/portfolio.js';
+import teamData from './data/team.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
