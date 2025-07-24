@@ -1,131 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esven Combined App</title>
-  <link rel="stylesheet" href="/css/global.css">
-</head>
-<body>
-  <%- include('partials/header') %>
-  <main>
-    <!-- Hero Section | Origin: design2 (layout), design3 (network visual & buttons) -->
-    <section class="hero">
-      <div class="hero-background">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title" id="hero-title">We Know People</h1>
-          <h2 class="hero-subtitle" id="hero-subtitle">We Invest in People</h2>
-          <div class="hero-description" id="hero-description">
-            Backing brilliant founders and connecting them to the right network for exponential growth.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esven Combined App</title>
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main>
+      <!-- Hero Section | Origin: design2 (layout), design3 (network visual & buttons) -->
+      <section class="hero">
+        <div></div>
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title" id="hero-title">We Know People</h1>
+            <h2 class="hero-subtitle" id="hero-subtitle">
+              We Invest in People
+            </h2>
+            <div class="hero-description" id="hero-description">
+              Backing brilliant founders and connecting them to the right
+              network for exponential growth.
+            </div>
+            <div class="hero-actions">
+              <a href="/portfolio.html" class="btn btn-primary"
+                >Explore Portfolio</a
+              >
+              <a href="/contact.html" class="btn btn-outline"
+                >Partner With Us</a
+              >
+            </div>
           </div>
-          <div class="hero-actions">
-            <a href="/portfolio.html" class="btn btn-primary">Explore Portfolio</a>
-            <a href="/contact.html" class="btn btn-outline">Partner With Us</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="connection-network">
-            <div class="network-node central">
-              <div class="node-avatar">EV</div>
-              <div class="node-label">Esalen Ventures</div>
-            </div>
-            <div class="network-node founder">
-              <div class="node-avatar">👤</div>
-              <div class="node-label">Founders</div>
-            </div>
-            <div class="network-node investor">
-              <div class="node-avatar">💼</div>
-              <div class="node-label">Co-Investors</div>
-            </div>
-            <div class="network-node advisor">
-              <div class="node-avatar">🎯</div>
-              <div class="node-label">Advisors</div>
-            </div>
-            <div class="network-node talent">
-              <div class="node-avatar">⭐</div>
-              <div class="node-label">Talent</div>
-            </div>
-            <!-- Connection lines will be added via CSS -->
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="hero-visual">
+            <div class="home-hero-connection-network">
+              <!-- Connection Lines (SVG) -->
+              <svg class="connection-lines" width="100%" height="100%">
+                <line
+                  class="connection-line founder-line"
+                  x1="50%"
+                  y1="50%"
+                  x2="20%"
+                  y2="20%"
+                />
+                <line
+                  class="connection-line investor-line"
+                  x1="50%"
+                  y1="50%"
+                  x2="80%"
+                  y2="20%"
+                />
+                <line
+                  class="connection-line advisor-line"
+                  x1="50%"
+                  y1="50%"
+                  x2="80%"
+                  y2="80%"
+                />
+                <line
+                  class="connection-line talent-line"
+                  x1="50%"
+                  y1="50%"
+                  x2="20%"
+                  y2="80%"
+                />
+              </svg>
 
-    <!-- Our Approach Section | Origin: design2 -->
-    <section class="approach">
-      <div class="container">
-        <h3 class="section-title">How We Build Success Together</h3>
-        <div class="approach-timeline">
-          <div class="timeline-item">
-            <div class="timeline-icon">🔍</div>
-            <div class="timeline-content">
-              <h4>Discover</h4>
-              <p id="operations-point-1">Find the right people with disruptive ideas</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon">🤝</div>
-            <div class="timeline-content">
-              <h4>Connect</h4>
-              <p id="operations-point-2">Help them find and fill their gaps</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon">🚀</div>
-            <div class="timeline-content">
-              <h4>Scale</h4>
-              <p id="operations-point-3">Connect them to people who will take them further</p>
+              <!-- Network Nodes -->
+              <div class="home-hero-network-node central">
+                <div class="home-hero-node-avatar">
+                  <img
+                    src="/assets/EsalenLogo_V_wht_edited_edited_edited_ed.png"
+                    alt="Esalen Ventures"
+                    class="esalen-logo"
+                    onerror="console.error('Failed to load logo image')"
+                  />
+                </div>
+              </div>
+              <div class="home-hero-network-node founder">
+                <div class="home-hero-node-avatar">👤</div>
+                <div class="home-hero-node-label">Founders</div>
+              </div>
+              <div class="home-hero-network-node investor">
+                <div class="home-hero-node-avatar">💼</div>
+                <div class="home-hero-node-label">Investors</div>
+              </div>
+              <div class="home-hero-network-node advisor">
+                <div class="home-hero-node-avatar">🎯</div>
+                <div class="home-hero-node-label">Advisors</div>
+              </div>
+              <div class="home-hero-network-node talent">
+                <div class="home-hero-node-avatar">🌟</div>
+                <div class="home-hero-node-label">Talent</div>
+              </div>
+              <!-- Connection lines will be added via CSS -->
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Section | Origin: design1 -->
-    <section class="testimonials">
-      <div class="container">
-        <h3 class="section-title">What Founders Say</h3>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <div class="quote">
-              "Esalen Ventures didn't just invest in our company - they invested in our vision and helped us execute it flawlessly."
+      <!-- Our Approach Section | Origin: design2 -->
+      <section class="home-approach">
+        <div class="home-approach-container">
+          <h3 class="home-section-title">How We Build Success Together</h3>
+          <div class="home-approach-timeline">
+            <div class="home-timeline-item">
+              <div class="home-timeline-icon">🔍</div>
+              <div class="home-timeline-content" style="margin-top: 100px">
+                <h4>Discover</h4>
+                <p id="operations-point-1">
+                  Find the right people with disruptive ideas
+                </p>
+              </div>
             </div>
-            <div class="author">
-              <div class="author-name">Sarah Chen</div>
-              <div class="author-title">CEO, TechCorp (Acquired by Google)</div>
+            <div class="home-timeline-item">
+              <div class="home-timeline-icon">🤝</div>
+              <div class="home-timeline-content" style="margin-top: 100px">
+                <h4>Connect</h4>
+                <p id="operations-point-2">
+                  Help them find and fill their gaps
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="quote">
-              "Their network and expertise were invaluable in scaling from startup to IPO."
-            </div>
-            <div class="author">
-              <div class="author-name">Michael Rodriguez</div>
-              <div class="author-title">Founder, DataFlow (IPO 2023)</div>
+            <div class="home-timeline-item">
+              <div class="home-timeline-icon">🚀</div>
+              <div class="home-timeline-content" style="margin-top: 100px">
+                <h4>Scale</h4>
+                <p id="operations-point-3">
+                  Connect them to people who will take them further
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section | Origin: design3 -->
-    <section class="contact">
-      <div class="container">
-        <div class="contact-content">
-          <h3 class="section-title">Let's Build Something Extraordinary</h3>
-          <p class="contact-subtitle">
-            Ready to join our portfolio of exceptional companies?
-          </p>
-          <div class="contact-actions">
-            <a href="/contact.html" class="btn btn-primary large">Start a Conversation</a>
+      <!-- Testimonials Section | Origin: design1 -->
+      <section class="home-testimonials">
+        <div class="home-container">
+          <h3 class="home-section-title">What Founders Say</h3>
+          <div class="home-testimonial-grid">
+            <div class="home-testimonial-card">
+              <div class="home-quote">
+                "Esalen Ventures didn't just invest in our company - they
+                invested in our vision and helped us execute it flawlessly."
+              </div>
+              <div class="home-author">
+                <div class="home-author-name">Sarah Chen</div>
+                <div class="home-author-title">
+                  CEO, TechCorp (Acquired by Google)
+                </div>
+              </div>
+            </div>
+            <div class="home-testimonial-card">
+              <div class="home-quote">
+                "Their network and expertise were invaluable in scaling from
+                startup to IPO."
+              </div>
+              <div class="home-author">
+                <div class="home-author-name">Michael Rodriguez</div>
+                <div class="home-author-title">
+                  Founder, DataFlow (IPO 2023)
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <%- include('partials/footer') %>
-</body>
+      </section>
+
+      <!-- Contact Section | Origin: design3 -->
+      <section class="home-contact">
+        <div class="home-container">
+          <div class="home-contact-content">
+            <h3 class="home-section-title">
+              Let's Build Something Extraordinary
+            </h3>
+            <p class="home-contact-subtitle">
+              Ready to join our portfolio of exceptional companies?
+            </p>
+            <div class="home-contact-actions">
+              <a href="/contact.html" class="btn btn-primary large"
+                >Start a Conversation</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('partials/footer') %>
+
+    <script>
+      // Update connection lines based on node positions
+      function updateConnectionLines() {
+        const container = document.querySelector(
+          ".home-hero-connection-network"
+        );
+        if (!container) return;
+
+        const centralNode = container.querySelector(".central");
+        const founderNode = container.querySelector(".founder");
+        const investorNode = container.querySelector(".investor");
+        const advisorNode = container.querySelector(".advisor");
+        const talentNode = container.querySelector(".talent");
+
+        const lines = {
+          founder: document.querySelector(".founder-line"),
+          investor: document.querySelector(".investor-line"),
+          advisor: document.querySelector(".advisor-line"),
+          talent: document.querySelector(".talent-line"),
+        };
+
+        function updateLine(central, node, line) {
+          if (!central || !node || !line) return;
+
+          const containerRect = container.getBoundingClientRect();
+          const centralRect = central.getBoundingClientRect();
+          const nodeRect = node.getBoundingClientRect();
+
+          // Calculate center points relative to container
+          const centralX =
+            centralRect.left + centralRect.width / 2 - containerRect.left;
+          const centralY =
+            centralRect.top + centralRect.height / 2 - containerRect.top;
+          const nodeX = nodeRect.left + nodeRect.width / 2 - containerRect.left;
+          const nodeY = nodeRect.top + nodeRect.height / 2 - containerRect.top;
+
+          // Calculate angle for connection point
+          const angle = Math.atan2(nodeY - centralY, nodeX - centralX);
+          const centralRadius = 50; // Half of central node width
+          const nodeRadius = 30; // Half of other nodes width
+
+          // Calculate connection points on the edge of the circles
+          const startX = centralX + Math.cos(angle) * centralRadius;
+          const startY = centralY + Math.sin(angle) * centralRadius;
+          const endX = nodeX - Math.cos(angle) * nodeRadius;
+          const endY = nodeY - Math.sin(angle) * nodeRadius;
+
+          // Update line coordinates
+          line.setAttribute("x1", startX);
+          line.setAttribute("y1", startY);
+          line.setAttribute("x2", endX);
+          line.setAttribute("y2", endY);
+        }
+
+        // Update all lines
+        updateLine(centralNode, founderNode, lines.founder);
+        updateLine(centralNode, investorNode, lines.investor);
+        updateLine(centralNode, advisorNode, lines.advisor);
+        updateLine(centralNode, talentNode, lines.talent);
+      }
+
+      // Initial update
+      document.addEventListener("DOMContentLoaded", () => {
+        updateConnectionLines();
+
+        // Update on window resize
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(updateConnectionLines, 250);
+        });
+
+        // Update after animations complete
+        setTimeout(updateConnectionLines, 1000);
+      });
+    </script>
+  </body>
 </html>

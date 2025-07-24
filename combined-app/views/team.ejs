@@ -3,13 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team | Esven</title>
+  <title><%= title || 'Team | Esven' %></title>
   <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/team.css">
 </head>
 <body>
   <%- include('partials/header') %>
   <main>
-    <!-- Team content goes here -->
+    <!-- Team Hero -->
+    <section class="team-hero">
+      <div class="container">
+        <h1>The People Behind the Vision</h1>
+        <p class="subtitle">
+          Every great investment starts with understanding people. Our team
+          brings together diverse backgrounds, shared values, and a deep
+          commitment to building lasting relationships with founders.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Principles -->
+    <section class="team-principles">
+      <div class="container">
+        <div class="principles-grid">
+          <div class="principle">
+            <div class="principle-icon">⚡</div>
+            <h3>Speed</h3>
+            <p>
+              Quick decisions, fast execution. We respect founders' time and
+              move at startup speed.
+            </p>
+          </div>
+          <div class="principle">
+            <div class="principle-icon">🎯</div>
+            <h3>Focus</h3>
+            <p>
+              Deep expertise in select sectors. We invest where we can add the
+              most value.
+            </p>
+          </div>
+          <div class="principle">
+            <div class="principle-icon">🚀</div>
+            <h3>Scale</h3>
+            <p>
+              Building companies that define categories and create lasting value
+              at global scale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="team-grid-section">
+      <div class="container">
+        <h2 class="section-title">Investment Partners</h2>
+        <div class="team-grid">
+          <% if (typeof teamMembers !== 'undefined' && Array.isArray(teamMembers)) { %>
+            <% teamMembers.forEach(member => { %>
+            <div class="team-member">
+              <div class="member-image">
+                <img src="<%= member.image %>" alt="<%= member.name %>" />
+                <div class="member-performance"><%= member.performance %></div>
+              </div>
+              <div class="member-info">
+                <h3 class="member-name"><%= member.name %></h3>
+                <p class="member-title"><%= member.title %></p>
+
+                <div class="member-metrics">
+                  <% member.metrics.forEach(metric => { %>
+                    <div class="metric">
+                      <div class="metric-value"><%= metric.value %></div>
+                      <div class="metric-label"><%= metric.label %></div>
+                    </div>
+                  <% }); %>
+                </div>
+
+                <p class="member-bio"><%= member.bio %></p>
+
+                <div class="member-links">
+                  <% member.links.forEach(link => { %>
+                    <a href="<%= link.url %>" class="member-link"><%= link.text %></a>
+                  <% }); %>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          <% } else { %>
+            <p>No team members found.</p>
+          <% } %>
+        </div>
+      </div>
+    </section>
   </main>
   <%- include('partials/footer') %>
 </body>
