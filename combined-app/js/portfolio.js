@@ -15,11 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemTags = itemData.tags.map(tag => tag.toLowerCase());
     const itemCategories = itemData.categories.map(cat => cat.toLowerCase());
     
-    // Special case for 'exit' tag which is a status in the data
+    // Check for special tag filters
     if (activeFilters.tag === 'exit') {
-      if (itemData.status !== 'exit') return false;
+      // Check both status field and tags array for backward compatibility
+      if (itemData.status !== 'Exit' && !itemTags.includes('exit')) return false;
     } else if (activeFilters.tag === 'unicorn') {
-      if (!itemCategories.includes('unicorns')) return false;
+      if (!itemTags.includes('unicorn')) return false;
     }
     
     // Check category filter

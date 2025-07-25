@@ -1,91 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Esven</title>
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/portfolio.css">
-</head>
-<body>
-  <%- include('partials/header') %>
-  
-  <main>
-    <!-- Portfolio Hero -->
-    <section class="portfolio-hero">
-      <div class="container">
-        <h1>Stories of Partnership</h1>
-        <p class="subtitle">
-          Behind every successful company is a founder with a vision and the
-          courage to pursue it. These are the stories of the remarkable people
-          we've had the privilege to support.
-        </p>
-      </div>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Esven</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/portfolio.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
 
-    <!-- Portfolio Stats -->
-    <section class="portfolio-stats">
-      <div class="container">
-        <div class="stats-overview">
-          <div class="overview-card">
-            <div class="overview-number"><%= metrics.totalCompanies %></div>
-            <div class="overview-label">Portfolio Companies</div>
-          </div>
-          <div class="overview-card">
-            <div class="overview-number"><%= metrics.successfulExits %></div>
-            <div class="overview-label">Successful Exits</div>
-          </div>
-          <div class="overview-card">
-            <div class="overview-number"><%= metrics.totalPortfolioValue %></div>
-            <div class="overview-label">Total Portfolio Value</div>
-          </div>
-          <div class="overview-card">
-            <div class="overview-number"><%= metrics.averageMultiple %></div>
-            <div class="overview-label">Average Return Multiple</div>
+    <main>
+      <!-- Portfolio Hero -->
+      <section class="portfolio-hero">
+        <div class="container">
+          <h1>Stories of Partnership</h1>
+          <p class="subtitle">
+            Behind every successful company is a founder with a vision and the
+            courage to pursue it. These are the stories of the remarkable people
+            we've had the privilege to support.
+          </p>
+        </div>
+      </section>
+
+      <!-- Portfolio Stats -->
+      <section class="portfolio-stats">
+        <div class="container">
+          <div class="stats-overview">
+            <div class="overview-card">
+              <div class="overview-number"><%= metrics.totalCompanies %></div>
+              <div class="overview-label">Portfolio Companies</div>
+            </div>
+            <div class="overview-card">
+              <div class="overview-number"><%= metrics.successfulExits %></div>
+              <div class="overview-label">Successful Exits</div>
+            </div>
+            <div class="overview-card">
+              <div class="overview-number">
+                <%= metrics.totalPortfolioValue %>
+              </div>
+              <div class="overview-label">Total Portfolio Value</div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Portfolio Filters -->
-    <section class="portfolio-filters">
-      <div class="filter-container">
-        <!-- Tags (Exits, Unicorns) -->
-        <div class="filter-group">
-          <div class="filter-label">Filter by Status:</div>
-          <div class="filter-tabs">
-            <div class="filter-tab active" data-filter="all" data-type="all">All Companies</div>
-            <div class="filter-tab" data-filter="exit" data-type="tag">Exits</div>
-            <div class="filter-tab" data-filter="unicorn" data-type="tag">Unicorns ($1B+)</div>
+      <!-- Portfolio Filters -->
+      <section class="portfolio-filters">
+        <div class="filter-container">
+          <!-- Tags (Exits, Unicorns) -->
+          <div class="filter-group">
+            <div class="filter-label">Filter by Status:</div>
+            <div class="filter-tabs">
+              <div class="filter-tab active" data-filter="all" data-type="all">
+                All Companies
+              </div>
+              <div class="filter-tab" data-filter="exit" data-type="tag">
+                Exits
+              </div>
+              <div class="filter-tab" data-filter="unicorn" data-type="tag">
+                Unicorns ($1B+)
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories (Industry/Sector) -->
+          <div class="filter-group">
+            <div class="filter-label">Filter by Sector:</div>
+            <div class="filter-tabs">
+              <div class="filter-tab" data-filter="ai" data-type="category">
+                AI
+              </div>
+              <div
+                class="filter-tab"
+                data-filter="biotech"
+                data-type="category"
+              >
+                Biotech
+              </div>
+              <div
+                class="filter-tab"
+                data-filter="consumer"
+                data-type="category"
+              >
+                Consumer
+              </div>
+              <div class="filter-tab" data-filter="crypto" data-type="category">
+                Crypto
+              </div>
+              <div
+                class="filter-tab"
+                data-filter="enterprise"
+                data-type="category"
+              >
+                Enterprise
+              </div>
+              <div
+                class="filter-tab"
+                data-filter="fintech"
+                data-type="category"
+              >
+                Fintech
+              </div>
+              <div class="filter-tab" data-filter="games" data-type="category">
+                Games
+              </div>
+              <div
+                class="filter-tab"
+                data-filter="infrastructure"
+                data-type="category"
+              >
+                Infrastructure
+              </div>
+            </div>
           </div>
         </div>
-        
-        <!-- Categories (Industry/Sector) -->
-        <div class="filter-group">
-          <div class="filter-label">Filter by Sector:</div>
-          <div class="filter-tabs">
-            <div class="filter-tab" data-filter="enterprise" data-type="category">Enterprise</div>
-            <div class="filter-tab" data-filter="consumer" data-type="category">Consumer</div>
-            <div class="filter-tab" data-filter="fintech" data-type="category">FinTech</div>
-            <div class="filter-tab" data-filter="healthcare" data-type="category">Healthcare</div>
+      </section>
+
+      <!-- Portfolio Grid -->
+      <section class="portfolio-grid-section">
+        <div class="container">
+          <div class="portfolio-grid" id="portfolio-grid">
+            <% portfolioCompanies.forEach(company => { %> <%-
+            include('partials/portfolio-card', { company }) %> <% }) %>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Portfolio Grid -->
-    <section class="portfolio-grid-section">
-      <div class="container">
-        <div class="portfolio-grid" id="portfolio-grid">
-          <% portfolioCompanies.forEach(company => { %>
-            <%- include('partials/portfolio-card', { company }) %>
-          <% }) %>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <%- include('partials/footer') %>
-  <script src="/js/portfolio.js"></script>
-</body>
+    <%- include('partials/footer') %>
+    <script src="/js/portfolio.js"></script>
+  </body>
 </html>

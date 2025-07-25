@@ -24,7 +24,7 @@ const teamData = [
     image: "/assets/images/team/samir.avif",
     performance: "18x Avg Return",
     metrics: [
-      { value: "22+", label: "Years Experience" },
+      { value: "25+", label: "Years Experience" },
       { value: "15", label: "Portfolio Exits" },
     ],
     about:
@@ -42,7 +42,7 @@ const teamData = [
     image: "/assets/images/team/scott.avif",
     performance: "14x Avg Return",
     metrics: [
-      { value: "15+", label: "Years Experience" },
+      { value: "25+", label: "Years Experience" },
       { value: "8", label: "Portfolio Exits" },
     ],
     about:
@@ -63,7 +63,7 @@ const teamData = [
     image: "/assets/images/team/dave.avif",
     performance: "16x Avg Return",
     metrics: [
-      { value: "12+", label: "Years Experience" },
+      { value: "25+", label: "Years Experience" },
       { value: "10", label: "Portfolio Exits" },
     ],
     about:
@@ -84,7 +84,7 @@ const teamData = [
     image: "/assets/images/team/david.avif",
     performance: "20x Avg Return",
     metrics: [
-      { value: "15+", label: "Years Experience" },
+      { value: "25+", label: "Years Experience" },
       { value: "25", label: "Portfolio Exits" },
     ],
     about:
@@ -102,7 +102,7 @@ const teamData = [
     image: "/assets/images/team/tim.avif",
     performance: "15x Avg Return",
     metrics: [
-      { value: "10+", label: "Years Experience" },
+      { value: "25+", label: "Years Experience" },
       { value: "15", label: "Portfolio Exits" },
     ],
     about:

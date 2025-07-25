@@ -204,13 +204,13 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: #f8f9fa;
+  background: #ffffff;
   border-bottom: 1px solid #e9ecef;
 }
 
 .company-logo-container img {
-  max-width: 100%;
-  max-height: 80px;
+  max-width: 125%;
+  max-height: 125%;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -373,27 +373,27 @@
   .portfolio-hero {
     padding: 5rem 0 3rem;
   }
-  
+
   .portfolio-hero h1 {
     font-size: 2.2rem;
   }
-  
+
   .portfolio-hero .subtitle {
     font-size: 1.1rem;
   }
-  
+
   .stats-overview {
     grid-template-columns: 1fr;
     max-width: 400px;
   }
-  
+
   .portfolio-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .filter-tabs {
     padding: 0 1rem;
   }

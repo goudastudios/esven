@@ -18,16 +18,6 @@ const parseCurrency = (value) => {
 };
 
 /**
- * Parses a multiple string (e.g., "12.5x") into a number
- * @param {string} value - The multiple string to parse
- * @returns {number} - The parsed number
- */
-const parseMultiple = (value) => {
-  if (!value) return 0;
-  return parseFloat(value.replace('x', '')) || 0;
-};
-
-/**
  * Calculates portfolio metrics from the portfolio data
  * @param {Array} portfolioData - The portfolio data array
  * @returns {Object} - Object containing the calculated metrics
@@ -38,24 +28,16 @@ const calculatePortfolioMetrics = (portfolioData) => {
   }
 
   let totalPortfolioValue = 0;
-  let totalMultiples = 0;
-  let exitCount = 0;
   
+  // Calculate total portfolio value from exits
   portfolioData.forEach(company => {
-    if (company.status === 'exit' && Array.isArray(company.metrics)) {
-      const exitMetric = company.metrics.find(m => m.label === 'Exit Value');
-      const multipleMetric = company.metrics.find(m => m.label === 'Multiple');
-      
-      if (exitMetric) {
+    if (company.status && company.status.toLowerCase() === 'exit' && Array.isArray(company.metrics)) {
+      // Look for either 'Exit Value' or 'Value' label (case insensitive)
+      const exitMetric = company.metrics.find(m => 
+        m.label && (m.label.toLowerCase() === 'exit value' || m.label.toLowerCase() === 'value')
+      );
+      if (exitMetric && exitMetric.value) {
         totalPortfolioValue += parseCurrency(exitMetric.value);
-      }
-      
-      if (multipleMetric) {
-        const multiple = parseMultiple(multipleMetric.value);
-        if (multiple > 0) {
-          totalMultiples += multiple;
-          exitCount++;
-        }
       }
     }
   });
@@ -71,14 +53,10 @@ const calculatePortfolioMetrics = (portfolioData) => {
     return `$${value.toFixed(1)}`;
   };
 
-  // Calculate average multiple (only for companies with valid multiples)
-  const averageMultiple = exitCount > 0 ? totalMultiples / exitCount : 0;
-
   return {
     totalCompanies: portfolioData.length,
-    successfulExits: portfolioData.filter(company => company.status === 'exit').length,
-    totalPortfolioValue: formatCurrency(totalPortfolioValue),
-    averageMultiple: averageMultiple > 0 ? averageMultiple.toFixed(1) + 'x' : 'N/A'
+    successfulExits: portfolioData.filter(company => company.status && company.status.toLowerCase() === 'exit').length,
+    totalPortfolioValue: formatCurrency(totalPortfolioValue)
   };
 };
 
