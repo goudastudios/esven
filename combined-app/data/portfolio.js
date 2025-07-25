@@ -1,4 +1,4 @@
-module.exports = [
+const portfolioData = [
   {
     id: "aether",
     name: "Aether",
@@ -1208,3 +1208,5 @@ module.exports = [
     categories: ["Fintech", "Cryptocurrency", "Payments", "B2B"],
   },
 ];
+
+export default portfolioData;
