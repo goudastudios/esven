@@ -1,4 +1,4 @@
-module.exports = [
+const teamData = [
   {
     id: "tom",
     name: "Tom Vorisek",
@@ -96,3 +96,5 @@ module.exports = [
     ]
   }
 ];
+
+export default teamData;
