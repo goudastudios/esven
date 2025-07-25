@@ -24,8 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Serve static assets from various directories
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
-app.use('/js', express.static(path.join(__dirname, 'public/js')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/components', express.static(path.join(__dirname, 'components')));
+
+// Serve node_modules for client-side dependencies if needed
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
 // Log all requests for debugging
 app.use((req, res, next) => {
@@ -77,4 +80,4 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 // Export for Vercel
-module.exports = app;
+export default app;
