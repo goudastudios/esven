@@ -21,15 +21,19 @@
 
 /* Team Principles */
 .team-principles {
-  padding: 60px 0;
+  padding: 60px 24px;
   background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .principles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  padding: 0 20px;
 }
 
 .principle {
@@ -65,7 +69,8 @@
 /* Team Grid */
 .team-grid-section {
   padding: 80px 0;
-  background-color: #f8f9fa;
+
+  margin: 0 10%;
 }
 
 .section-title {
@@ -77,7 +82,7 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   margin-top: 2rem;
 }
@@ -88,6 +93,9 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .team-member:hover {
@@ -99,12 +107,14 @@
   position: relative;
   height: 300px;
   overflow: hidden;
+  flex-shrink: 0; /* Prevents the image container from shrinking */
 }
 
 .member-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center; /* Aligns image to the top */
   transition: transform 0.5s ease;
 }
 
@@ -142,14 +152,21 @@
 
 .member-metrics {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #eee;
+  margin: 0 0 1.5rem;
+  max-width: 100%;
 }
 
 .metric {
   text-align: center;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
+  flex: 1;
+  max-width: 160px;
 }
 
 .metric-value {
@@ -164,7 +181,7 @@
   color: #666;
 }
 
-.member-bio {
+.member-about {
   color: #555;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -173,18 +190,95 @@
 .member-links {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 .member-link {
   color: #2563eb;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
 
 .member-link:hover {
   color: #1d4ed8;
-  text-decoration: underline;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* LinkedIn Button - Matching portfolio card style */
+.member-link.linkedin-btn {
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+}
+
+.member-link.linkedin-btn:hover {
+  background: #edf2f7;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.member-link.linkedin-btn .linkedin-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.member-link.linkedin-btn:hover .linkedin-icon {
+  transform: scale(1.05);
+}
+
+/* Portfolio company links - imported from portfolio.css */
+.portfolio-company-link {
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  min-width: 100px;
+  text-align: center;
+}
+
+.portfolio-company-link:hover {
+  background-color: #edf2f7;
+  color: #2c3e50;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-company-link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-company-link:hover svg {
+  transform: translateX(2px);
 }
 
 /* Responsive Design */
@@ -198,19 +292,19 @@
   .team-hero h1 {
     font-size: 2.5rem;
   }
-  
+
   .team-hero .subtitle {
     font-size: 1.1rem;
   }
-  
+
   .principles-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .team-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .member-metrics {
     justify-content: center;
   }
@@ -220,22 +314,205 @@
   .team-hero {
     padding: 80px 0 60px;
   }
-  
+
   .team-hero h1 {
     font-size: 2rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .member-metrics {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .member-links {
     flex-direction: column;
     gap: 0.75rem;
+  }
+}
+
+/* Team Member Modal */
+.team-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.team-modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.team-modal.show .team-modal-content {
+  transform: translateY(0);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+.modal-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.modal-image {
+  flex: 0 0 300px;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.modal-info {
+  flex: 1;
+}
+
+.modal-title {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.modal-metrics {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.modal-metrics .metric {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.modal-bio {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.member-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Style for the Bio button */
+.bio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #1a1a1a;
+  border-radius: 30px;
+  background: transparent;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.bio-btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+/* LinkedIn button */
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  transition: all 0.2s ease;
+}
+
+.linkedin-btn:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Modal links */
+.modal-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .modal-container {
+    flex-direction: column;
+  }
+
+  .modal-image {
+    flex: 0 0 250px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .modal-metrics {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
