@@ -28,19 +28,19 @@
       <div class="container">
         <div class="stats-overview">
           <div class="overview-card">
-            <div class="overview-number">42</div>
+            <div class="overview-number"><%= metrics.totalCompanies %></div>
             <div class="overview-label">Portfolio Companies</div>
           </div>
           <div class="overview-card">
-            <div class="overview-number">18</div>
+            <div class="overview-number"><%= metrics.successfulExits %></div>
             <div class="overview-label">Successful Exits</div>
           </div>
           <div class="overview-card">
-            <div class="overview-number">$12.8B</div>
+            <div class="overview-number"><%= metrics.totalPortfolioValue %></div>
             <div class="overview-label">Total Portfolio Value</div>
           </div>
           <div class="overview-card">
-            <div class="overview-number">14.2x</div>
+            <div class="overview-number"><%= metrics.averageMultiple %></div>
             <div class="overview-label">Average Return Multiple</div>
           </div>
         </div>

@@ -10,6 +10,7 @@ const __dirname = dirname(__filename);
 // Import data
 import portfolioData from './data/portfolio.js';
 import teamData from './data/team.js';
+import { calculatePortfolioMetrics } from './utils/portfolioUtils.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -47,7 +48,11 @@ app.get("/home.html", (req, res) => {
 });
 
 app.get("/portfolio.html", (req, res) => {
-  res.render("portfolio", { portfolioCompanies: portfolioData });
+  const metrics = calculatePortfolioMetrics(portfolioData);
+  res.render("portfolio", { 
+    portfolioCompanies: portfolioData,
+    metrics
+  });
 });
 
 app.get("/team.html", (req, res) => {
