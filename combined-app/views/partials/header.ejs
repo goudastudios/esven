@@ -1,4 +1,4 @@
-<!-- Header partial: Combined sticky header | Origin: design1 (color), design2/design3 (sticky) -->
+<!-- Header partial: Combined sticky header with mobile menu -->
 <header class="header">
   <nav class="navbar">
     <div class="nav-container">
@@ -7,11 +7,20 @@
           src="/assets/EsalenLogo_V_wht_edited_edited_edited_ed.png"
           alt="Esalen Ventures Logo"
           height="40"
+          class="logo-img"
         />
       </div>
+      
+      <!-- Mobile menu button -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      
+      <!-- Navigation links -->
       <div class="nav-links" id="nav-links">
         <a href="/home.html">Home</a>
-
         <a href="/portfolio.html">Portfolio</a>
         <a href="/team.html">Team</a>
         <a href="/contact.html">Contact</a>
@@ -19,3 +28,24 @@
     </div>
   </nav>
 </header>
+
+<script>
+  // Toggle mobile menu
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  });
+</script>

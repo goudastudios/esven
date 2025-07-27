@@ -68,6 +68,7 @@ const portfolioData = [
       { value: "2014", label: "Founded" },
     ],
     tags: [
+      "exit",
       "Fintech",
       "Mortgage",
       "Digital Lending",
@@ -211,6 +212,7 @@ const portfolioData = [
       { value: "2018", label: "Founded" },
     ],
     tags: [
+      "exit",
       "PropTech",
       "Property Management",
       "Real Estate Tech",
@@ -351,6 +353,7 @@ const portfolioData = [
       { value: "2018", label: "Founded" },
     ],
     tags: [
+      "exit",
       "Men's Skincare",
       "Personalized Care",
       "Dermatology",
@@ -380,7 +383,13 @@ const portfolioData = [
       { value: "2021", label: "Exit Year" },
       { value: "2014", label: "Founded" },
     ],
-    tags: ["Sustainable Products", "E-commerce", "B-Corp", "Plastic Neutral"],
+    tags: [
+      "exit",
+      "Sustainable Products",
+      "E-commerce",
+      "B-Corp",
+      "Plastic Neutral",
+    ],
     links: [
       { text: "Website", url: "https://www.grove.co/" },
       { text: "News", url: "https://investors.grove.co/news-events" },
@@ -508,7 +517,18 @@ const portfolioData = [
       { value: "$400M", label: "Value" },
       { value: "2012", label: "Founded" },
     ],
-    tags: ["exit"],
+    tags: [
+      "exit",
+      "DTC",
+      "Intimate Apparel",
+      "Body Positivity",
+      "Leak-Proof Technology",
+      "Women's Health",
+      "Acquired",
+      "E-commerce",
+      "Loungewear",
+      "Inclusive Sizing",
+    ],
     links: [
       { text: "Website", url: "https://knix.com/" },
       { text: "News", url: "https://knix.com/blogs/knix-blog" },
@@ -621,6 +641,7 @@ const portfolioData = [
       { value: "2017", label: "Founded" },
     ],
     tags: [
+      "exit",
       "Location Intelligence",
       "AI",
       "Retail Analytics",
@@ -649,7 +670,16 @@ const portfolioData = [
       { value: "8.5B", label: "Value" },
       { value: "2016", label: "Founded" },
     ],
-    tags: ["unicorn", "IPO", "AI", "Fintech", "Banking", "Credit", "AI"],
+    tags: [
+      "exit",
+      "unicorn",
+      "IPO",
+      "AI",
+      "Fintech",
+      "Banking",
+      "Credit",
+      "AI",
+    ],
     links: [
       { text: "Website", url: "https://pagaya.com/" },
       {
@@ -1050,6 +1080,7 @@ const portfolioData = [
       { value: "2020", label: "Founded" },
     ],
     tags: [
+      "exit",
       "Drone Delivery",
       "Logistics",
       "Autonomous Vehicles",
@@ -1108,6 +1139,7 @@ const portfolioData = [
       { value: "2013", label: "Founded" },
     ],
     tags: [
+      "exit",
       "unicorn",
       "Crypto Payments",
       "Blockchain",

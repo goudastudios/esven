@@ -18,6 +18,10 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2024 Esalen Ventures. All rights reserved.</p>
+    <p>&copy; <span id="current-year">2024</span> Esalen Ventures. All rights reserved.</p>
   </div>
+  <script>
+    // Update the current year dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </footer>
