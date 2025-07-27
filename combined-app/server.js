@@ -55,6 +55,11 @@ app.get("/portfolio.html", (req, res) => {
   });
 });
 
+// Privacy Policy page
+app.get("/privacy", (req, res) => {
+  res.render("privacy");
+});
+
 app.get("/team.html", (req, res) => {
   console.log("Team data:", teamData); // Log the team data
   try {

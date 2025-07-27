@@ -9,40 +9,61 @@
 /* Mobile styles */
 @media (max-width: 767px) {
   .contact-hero {
-    padding: 4rem 1rem;
+    padding: 4vh 2vw;
   }
 
   .contact-form {
-    padding: 1.5rem;
+    padding: 2vh 0;
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5vh;
   }
 
   .form-input,
   .form-textarea {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
+    padding: 1vh 2.5vw;
+    font-size: 0.95rem;
+    min-height: 6vh;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .form-textarea {
+    min-height: 15vh;
   }
 
   .contact-title {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.5vh;
+    line-height: 1.2;
   }
 
   .contact-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 3vh;
+    line-height: 1.4;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .contact-grid {
-    margin-top: 2rem;
+    margin-top: 3vh;
   }
 
   .submit-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 1.25vh 3vw;
+    font-size: 0.95rem;
+    min-height: 6vh;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
   }
 }
 

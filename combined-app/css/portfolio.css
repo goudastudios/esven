@@ -257,6 +257,11 @@
   background: #6f42c1;
 }
 
+.company-status.inactive {
+  background: #6c757d;
+  color: #fff;
+}
+
 .company-info {
   padding: 1.5rem;
   flex: 1;

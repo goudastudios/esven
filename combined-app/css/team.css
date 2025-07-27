@@ -186,10 +186,11 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 6px; /* Slightly rounded corners for a square button */
   background: #f8f9fa;
   color: #0a66c2;
   transition: all 0.2s ease;
+  overflow: hidden; /* Ensure the icon stays within the rounded corners */
 }
 
 .team-social-link:hover {

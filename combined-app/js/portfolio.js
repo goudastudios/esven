@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (itemData.status !== 'Exit' && !itemTags.includes('exit')) return false;
     } else if (activeFilters.tag === 'unicorn') {
       if (!itemTags.includes('unicorn')) return false;
+    } else if (activeFilters.tag === 'funds') {
+      // Check if item has 'funds' in its categories
+      if (!itemCategories.includes('funds')) return false;
     }
     
     // Check category filter
@@ -72,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const filterType = this.getAttribute('data-type');
       const filterValue = this.getAttribute('data-filter').toLowerCase();
       
-      // Reset all tabs of the same type
+      // If this is the 'All' tab, reset all filters
       if (filterType === 'all') {
         // Reset all filters and deactivate all tabs
         document.querySelectorAll('.filter-tab').forEach(t => {
@@ -80,31 +83,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         this.classList.add('active');
         activeFilters = { tag: null, category: null };
-      } else {
-        // For other filter types, only reset tabs of the same type
-        document.querySelectorAll(`.filter-tab[data-type="${filterType}"]`).forEach(t => {
+      } 
+      // If this is a status filter (tag type)
+      else if (filterType === 'tag') {
+        // First reset all status filters (tag type) and the 'All' tab
+        document.querySelectorAll('.filter-tab[data-type="tag"], .filter-tab[data-type="all"]').forEach(t => {
           t.classList.remove('active');
         });
         
+        // Toggle the clicked tab
+        if (this.classList.contains('active') && activeFilters.tag === filterValue) {
+          // If clicking the active tab, deactivate it and show all
+          this.classList.remove('active');
+          activeFilters.tag = null;
+        } else {
+          // Otherwise, activate the clicked tab and set the filter
+          this.classList.add('active');
+          activeFilters.tag = filterValue;
+        }
+      } 
+      // For category filters (sectors)
+      else if (filterType === 'category') {
         // Toggle active state and update filters
         if (this.classList.contains('active')) {
           this.classList.remove('active');
-          activeFilters[filterType] = null;
+          activeFilters.category = null;
         } else {
+          // First deactivate all category filters
+          document.querySelectorAll('.filter-tab[data-type="category"]').forEach(t => {
+            t.classList.remove('active');
+          });
+          
+          // Then activate the clicked one
           this.classList.add('active');
-          activeFilters[filterType] = filterValue;
-        }
-        
-        // Ensure 'All Companies' is active only when no other filters
-        const allTab = document.querySelector('.filter-tab[data-type="all"]');
-        if (activeFilters.tag !== null || activeFilters.category !== null) {
-          allTab.classList.remove('active');
-        } else {
-          allTab.classList.add('active');
+          activeFilters.category = filterValue;
         }
       }
       
+      // Update the filtered items
       updateFilteredItems();
+      
+      // If no filters are active, activate the 'All' tab
+      if (activeFilters.tag === null && activeFilters.category === null) {
+        const allTab = document.querySelector('.filter-tab[data-type="all"]');
+        if (allTab) allTab.classList.add('active');
+      }
     });
   });
   

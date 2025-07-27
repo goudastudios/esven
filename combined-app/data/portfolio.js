@@ -34,7 +34,7 @@ const portfolioData = [
     description:
       "Almanac is a modern document collaboration platform designed for remote teams, offering version control, automated workflows, and structured knowledge management. It serves as a next-generation alternative to traditional office suites, focusing on async collaboration and productivity for distributed teams.",
     logo: "/assets/images/portfolio/almanac.jpg",
-    status: "Inactive",
+    status: "inactive",
     metrics: [
       { value: "2025", label: "Inactive Date" },
 
@@ -319,7 +319,7 @@ const portfolioData = [
     description:
       "Fuzzy is a digital pet care company that provides subscription-based veterinary services through a mobile application. The platform connects pet parents with licensed veterinarians 24/7 for virtual consultations, offering convenient access to pet healthcare. Fuzzy also provides home delivery of medications, supplements, and pet essentials, creating a comprehensive ecosystem for pet wellness. The company aims to make veterinary care more accessible and affordable while reducing strain on traditional veterinary clinics.",
     logo: "/assets/images/portfolio/fuzzy.jpg",
-    status: "Inactive",
+    status: "inactive",
     metrics: [
       { value: "2023", label: "Inactive Date" },
 
@@ -1156,6 +1156,289 @@ const portfolioData = [
       },
     ],
     categories: ["crypto"],
+  },
+  {
+    id: "8bit",
+    name: "8-Bit Capital",
+    description:
+      "8-Bit Capital invests in startups that connect people and businesses in new ways. We invest in software tools and platforms that use the power of networksAether provides a molecular assembler platform that combines high-throughput robotics, machine learning, and synthetic biology to map millions of enzyme-reaction combinations, enabling the engineering of new classes of nanoscale machines using protein building blocks called molecular assemblers.",
+    logo: "/assets/images/portfolio/8bitcapital.jpg",
+    status: "Active",
+    metrics: [
+      { value: "28", label: "Portfolio Companies" },
+      { value: "Seed - Series A", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "AI",
+      "Cloud",
+      "Cybersecurity",
+      "Enterprise",
+      "Fintech",
+      "Social",
+    ],
+    links: [
+      { text: "Website", url: "https://8bitcapital.com/" },
+      {
+        text: "News",
+        url: "https://jabrams.com/its-all-about-connecting-people/",
+      },
+    ],
+    categories: ["ai", "consumer", "enterprise", "fintech", "infrastructure"],
+  },
+  {
+    id: "blitzscaling",
+    name: "Blitzscaling Ventures",
+    description:
+      "The Experts on Scale. We partner with tech founders to apply the principles of blitzscaling that we developed at Stanford University with Chris Yeh and Reid Hoffman.",
+    logo: "/assets/images/portfolio/blitzscalingventures.jpg",
+    status: "Active",
+    metrics: [
+      { value: "23", label: "Portfolio Companies" },
+      { value: "Pre-Seed - Series B", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "machine learning",
+      "marketplaces",
+      "payments",
+      "services",
+      "platforms",
+    ],
+    links: [
+      { text: "Website", url: "https://www.blitzscalingvc.com/" },
+      {
+        text: "News",
+        url: "https://www.blitzscalingvc.com/blog",
+      },
+    ],
+    categories: ["fintech", "ai", "consumer"],
+  },
+  {
+    id: "championhill",
+    name: "Champion Hill Ventures",
+    description:
+      "Champion Hill Ventures seeks founders solving large problems hiding in plain sight. To find them, we look for non-consensus ideas, pre-category behavior, or innovation that is structurally underserved by the capital markets. ",
+    logo: "/assets/images/portfolio/championhillventures.jpg",
+    status: "Active",
+    metrics: [
+      { value: "45", label: "Portfolio Companies" },
+      { value: "Seed - Series A", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "Defense",
+      "Hard Technology",
+      "New Computing",
+      "Digital Sovereignty",
+      "Curveballs",
+    ],
+    links: [
+      { text: "Website", url: "https://www.championhillventures.com/" },
+      {
+        text: "News",
+        url: "https://www.championhillventures.com/insights",
+      },
+    ],
+    categories: [
+      "ai",
+      "biotech",
+      "consumer",
+      "crypto",
+      "fintech",
+      "infrastructure",
+      "games",
+    ],
+  },
+  {
+    id: "frontures",
+    name: "Frontier Technology Partners",
+    description: "Disrupting the Status Quo to Build a Better Future",
+    logo: "/assets/images/portfolio/frontures.jpg",
+    status: "Active",
+    metrics: [
+      { value: "21", label: "Portfolio Companies" },
+      { value: "Pre-Seed - Seed", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "Manufacturing technology",
+      "Software",
+      "Information Technology (IT)",
+      "Engineering sectors",
+      "Payments",
+    ],
+    links: [
+      { text: "Website", url: "https://www.frontures.com/" },
+      {
+        text: "News",
+        url: "https://frontures.com/blog/",
+      },
+    ],
+    categories: ["fintech", "ai", "enterprise"],
+  },
+  {
+    id: "fuel",
+    name: "Fuel Ventures",
+    description: "Fueling the growth of ambitious tech companies.",
+    logo: "/assets/images/portfolio/fuelventures.jpg",
+    status: "Active",
+    metrics: [
+      { value: "200+", label: "Portfolio Companies" },
+      { value: "Pre-Seed - Series A", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "B2B",
+      "Marketplaces",
+      "SaaS",
+      "E-commerce",
+      "Marketplaces",
+      "Food & Delivery",
+    ],
+    links: [
+      { text: "Website", url: "https://www.fuel.ventures/" },
+      {
+        text: "News",
+        url: "https://www.fuel.ventures/news",
+      },
+    ],
+    categories: ["fintech", "consumer"],
+  },
+  {
+    id: "gaingels",
+    name: "Gaingels",
+    description:
+      "Gaingels is amongst the largest investors in the world aiming to show the world that equity of access and representation in venture capital delivers positive returns.",
+    logo: "/assets/images/portfolio/gaingels.jpg",
+    status: "Active",
+    metrics: [
+      { value: "2,000+", label: "Portfolio Companies" },
+      { value: "Seed - Pre-IPO", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "Digital Assets & Web 3.0",
+      "Climate & Greentech",
+      "Healthcare",
+      "Robotics",
+      "Proptech",
+      "Media & Entertainment",
+      "Space & Aviation",
+    ],
+    links: [
+      { text: "Website", url: "https://gaingels.com/" },
+      {
+        text: "Talent Network",
+        url: "https://jobs.gaingels.com/jobs",
+      },
+    ],
+    categories: [
+      "fintech",
+      "ai",
+      "consumer",
+      "games",
+      "enterprise",
+      "infrastructure",
+      "biotech",
+      "crypto",
+      "enterprise",
+    ],
+  },
+  {
+    id: "greencow",
+    name: "Green Cow Ventures",
+    description:
+      "We are a seed-stage fund seeking diverse founding teams leveraging deep tech to solve problems in foundational, global industries from farming to finance.",
+    logo: "/assets/images/portfolio/greencowvc.jpg",
+    status: "Active",
+    metrics: [
+      { value: "10", label: "Portfolio Companies" },
+      { value: "Seed", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "Deep Tech",
+      "Robotics",
+      "Financial Services",
+      "Food & Agriculture",
+      "IT Infrastructure",
+    ],
+    links: [
+      { text: "Website", url: "https://www.greencow.vc/" },
+      {
+        text: "News",
+        url: "https://medium.com/greencowvc",
+      },
+    ],
+    categories: ["fintech", "ai", "enterprise", "infrastructure", "consumer"],
+  },
+  {
+    id: "humanventures",
+    name: "Human Ventures",
+    description:
+      "We are a next generation venture capital firm, one that takes a human-first approach to investing. Builders ourselves, we invest in the humans as much as their companies. No matter where we invest, our founders embody the diversity, resilience, and ambition of New York.",
+    logo: "/assets/images/portfolio/humanventures.jpg",
+    status: "Active",
+    metrics: [
+      { value: "60+", label: "Portfolio Companies" },
+      { value: "Pre-Seed - Seed", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "Health & Wellness",
+      "Future of Work",
+      "Future of Money",
+      "Community",
+      "Media",
+    ],
+    links: [
+      { text: "Website", url: "https://human.vc/" },
+      {
+        text: "News",
+        url: "https://medium.com/human-ventures",
+      },
+    ],
+    categories: ["ai", "consumer", "enterprise", "fintech"],
+  },
+  {
+    id: "untapped",
+    name: "Untapped Capital",
+    description:
+      "We invest in earliest of pre-seed startups, led by founders outside of typical networks, selling into large and growing markets, with a unique approach or insight.",
+    logo: "/assets/images/portfolio/untappedcapital.jpg",
+    status: "Active",
+    metrics: [
+      { value: "27", label: "Portfolio Companies" },
+      { value: "Pre-Seed", label: "Investment Stages" },
+    ],
+    tags: [
+      "funds",
+      "Web 3",
+      "Blockchain",
+      "Deep Tech",
+      "B2B",
+      "Life Sciences",
+      "Healthcare",
+      "E-commmerce",
+    ],
+    links: [
+      { text: "Website", url: "https://www.untapped.vc/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: [
+      "ai",
+      "consumer",
+      "fintech",
+      "consumer",
+      "crypto",
+      "enterprise",
+      "games",
+      "infrastructure",
+    ],
   },
 ];
 

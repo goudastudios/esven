@@ -10,8 +10,10 @@
   <div class="company-logo-container">
     <img src="<%= company.logo %>" alt="<%= company.name %>" />
     <% if (company.status) { %>
-      <div class="company-status <%= company.status === 'exit' ? 'exit' : '' %>">
-        <%= company.status === 'exit' ? 'Exit' : 'Active' %>
+      <div class="company-status 
+        <%= company.status === 'exit' ? 'exit' : '' %>
+        <%= company.status.toLowerCase() === 'inactive' ? 'inactive' : '' %>">
+        <%= company.status === 'exit' ? 'Exit' : company.status === 'inactive' ? 'Inactive' : 'Active' %>
       </div>
     <% } %>
   </div>
