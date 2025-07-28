@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (activeFilters.tag === 'unicorn') {
       if (!itemTags.includes('unicorn')) return false;
     } else if (activeFilters.tag === 'funds') {
-      // Check if item has 'funds' in its categories
-      if (!itemCategories.includes('funds')) return false;
+      // Check if item has 'funds' in its tags
+      if (!itemTags.includes('funds')) return false;
     }
     
     // Check category filter

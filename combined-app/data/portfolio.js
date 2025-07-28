@@ -406,7 +406,7 @@ const portfolioData = [
     status: "Active",
     metrics: [
       { value: "2021", label: "Stage" },
-      { value: "500M", label: "Value" },
+      { value: "$500M", label: "Value" },
       { value: "2013", label: "Founded" },
     ],
     tags: [
@@ -433,7 +433,7 @@ const portfolioData = [
     status: "Active",
     metrics: [
       { value: "Series E", label: "Stage" },
-      { value: "400M", label: "Value" },
+      { value: "$400M", label: "Value" },
       { value: "2014", label: "Founded" },
     ],
     tags: [
@@ -460,7 +460,7 @@ const portfolioData = [
     status: "Active",
     metrics: [
       { value: "2023", label: "Stage" },
-      { value: "18M", label: "Value" },
+      { value: "$18M", label: "Value" },
       { value: "2020", label: "Founded" },
     ],
     tags: [
@@ -487,7 +487,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series D", label: "Stage" },
-      { value: "1BM", label: "Value" },
+      { value: "$1B", label: "Value" },
       { value: "2015", label: "Founded" },
     ],
     tags: [
@@ -667,7 +667,7 @@ const portfolioData = [
     status: "exit",
     metrics: [
       { value: "2022", label: "Exit Date" },
-      { value: "8.5B", label: "Value" },
+      { value: "$8.5B", label: "Value" },
       { value: "2016", label: "Founded" },
     ],
     tags: [
@@ -722,7 +722,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series D", label: "Stage" },
-      { value: "1.1B", label: "Value" },
+      { value: "$1.1B", label: "Value" },
       { value: "2016", label: "Founded" },
     ],
     tags: [
@@ -749,7 +749,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
-      { value: "500M", label: "Value" },
+      { value: "$500M", label: "Value" },
       { value: "2017", label: "Founded" },
     ],
     tags: [
@@ -831,7 +831,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series D", label: "Stage" },
-      { value: "1B", label: "Value" },
+      { value: "$1B", label: "Value" },
       { value: "2011", label: "Founded" },
     ],
     tags: [
@@ -858,7 +858,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Pre-Seed", label: "Stage" },
-      { value: "4M", label: "Value" },
+      { value: "$4M", label: "Value" },
       { value: "2021", label: "Founded" },
     ],
     tags: [
@@ -884,7 +884,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
-      { value: "294M", label: "Value" },
+      { value: "$294M", label: "Value" },
       { value: "2020", label: "Founded" },
     ],
     tags: [
@@ -910,7 +910,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Angel", label: "Stage" },
-      { value: "6.6M", label: "Value" },
+      { value: "$6.6M", label: "Value" },
       { value: "2019", label: "Founded" },
     ],
     tags: [
@@ -936,7 +936,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
-      { value: "9.4M", label: "Value" },
+      { value: "$9.4M", label: "Value" },
       { value: "2015", label: "Founded" },
     ],
     tags: [
@@ -961,7 +961,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
-      { value: "168M", label: "Value" },
+      { value: "$168M", label: "Value" },
       { value: "2017", label: "Founded" },
     ],
     tags: [
@@ -989,7 +989,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series C", label: "Stage" },
-      { value: "1B", label: "Value" },
+      { value: "$1B", label: "Value" },
       { value: "2017", label: "Founded" },
     ],
     tags: [
@@ -1135,7 +1135,7 @@ const portfolioData = [
     status: "exit",
     metrics: [
       { value: "2024", label: "Exit Date" },
-      { value: "1.5B", label: "Value" },
+      { value: "$1.5B", label: "Value" },
       { value: "2013", label: "Founded" },
     ],
     tags: [
