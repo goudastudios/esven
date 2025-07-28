@@ -1,0 +1,50 @@
+/* --- MOBILE LAYOUT FOR HOME APPROACH SECTION --- */
+@media (max-width: 767px) {
+  /* --- MOBILE LAYOUT FOR HOME APPROACH SECTION --- */
+  .home-approach-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 0rem;
+    position: relative;
+  }
+  .home-approach-timeline::before {
+    display: none !important;
+  }
+  .home-timeline-item {
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 2px 12px 0 rgba(16, 30, 54, 0.08),
+      0 1.5px 6px 0 rgba(16, 30, 54, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.2s;
+    position: relative;
+    width: 100%;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  .home-timeline-icon {
+    font-size: 1.7rem;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  .home-timeline-content {
+    margin-top: -20px !important;
+    padding: 0;
+  }
+  .home-timeline-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .home-timeline-content p {
+    font-size: 0.92rem;
+    color: #444;
+    margin: 0;
+  }
+}
