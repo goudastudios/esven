@@ -18,12 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for special tag filters
     if (activeFilters.tag === 'exit') {
       // Check both status field and tags array for backward compatibility
-      if (itemData.status !== 'Exit' && !itemTags.includes('exit')) return false;
+      if (itemData.status !== 'exit' && !itemTags.includes('exit')) return false;
+    } else if (activeFilters.tag === 'inactive') {
+      if (itemData.status !== 'inactive') return false;
     } else if (activeFilters.tag === 'unicorn') {
       if (!itemTags.includes('unicorn')) return false;
+    } else if (activeFilters.tag === 'soonicorn') {
+      if (!itemTags.includes('soonicorn')) return false;
     } else if (activeFilters.tag === 'funds') {
-      // Check if item has 'funds' in its tags
       if (!itemTags.includes('funds')) return false;
+    } else if (activeFilters.tag === 'public') {
+      if (!itemTags.includes('public')) return false;
     }
     
     // Check category filter

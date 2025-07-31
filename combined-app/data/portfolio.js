@@ -5,10 +5,10 @@ const portfolioData = [
     description:
       "Aether provides a molecular assembler platform that combines high-throughput robotics, machine learning, and synthetic biology to map millions of enzyme-reaction combinations, enabling the engineering of new classes of nanoscale machines using protein building blocks called molecular assemblers.",
     logo: "/assets/images/portfolio/aether.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
+      { value: "$200M", label: "Value" },
       { value: "2017", label: "Founded" },
     ],
     tags: [
@@ -37,7 +37,6 @@ const portfolioData = [
     status: "inactive",
     metrics: [
       { value: "2025", label: "Inactive Date" },
-
       { value: "2017", label: "Founded" },
     ],
     tags: [
@@ -88,7 +87,7 @@ const portfolioData = [
     description:
       "Blockstream is a leading Bitcoin and blockchain technology company that develops infrastructure for the emerging Bitcoin economy. Founded in 2014 by Dr. Adam Back and other Bitcoin developers, Blockstream builds products that enhance the security, privacy, and functionality of Bitcoin, including the Liquid Network (a Bitcoin sidechain), Core Lightning implementation, and enterprise-grade Bitcoin mining solutions.",
     logo: "/assets/images/portfolio/blockstream.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Convertible Note", label: "Stage" },
       { value: "$3.2B", label: "Value" },
@@ -120,7 +119,7 @@ const portfolioData = [
     description:
       "Cart.com is a leading provider of unified commerce and logistics solutions, enabling B2C and B2B companies to manage their entire commerce operations from discovery to delivery. The company offers a comprehensive suite of services including order management, inventory management, fulfillment, and digital commerce solutions, helping over 6,000 brands streamline their operations and enhance customer experiences.",
     logo: "/assets/images/portfolio/cart.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Series D", label: "Stage" },
       { value: "$1.6B", label: "Value" },
@@ -149,7 +148,7 @@ const portfolioData = [
     description:
       "Coffeeseed is a technology company focused on transforming the specialty coffee industry by creating a more accessible and efficient trading platform. The company provides a comprehensive solution that connects coffee buyers and sellers through a digital marketplace, offering tools for quality assessment, transaction management, and trade finance. Coffeeseed's platform aims to streamline the coffee supply chain by replacing traditional, fragmented communication methods with an integrated system that benefits all stakeholders in the specialty coffee value chain.",
     logo: "/assets/images/portfolio/coffeeseed.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Seed", label: "Stage" },
       { value: "$2.5M", label: "Value" },
@@ -174,7 +173,7 @@ const portfolioData = [
     description:
       "Creatify AI is an AI-powered platform that transforms product links into high-performing video advertisements in minutes. The platform automates the entire video ad creation process, from competitive analysis to final export, helping marketers and e-commerce brands scale their creative output. With features like AI avatars, automated scriptwriting, and performance optimization, Creatify enables users to generate dozens of video ad variants optimized for platforms like TikTok, Meta, YouTube, and Snapchat.",
     logo: "/assets/images/portfolio/creatify.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
       { value: "$100M", label: "Value" },
@@ -205,7 +204,7 @@ const portfolioData = [
     description:
       "Darwin Homes is a vertically-integrated real estate investment management platform specializing in single-family rental properties. The company offers a comprehensive, tech-enabled solution for property acquisition, renovation, and management, focusing on making the rental experience seamless for both property owners and residents. Their platform includes features like self-guided tours with smart locks, digital applications, online rent payments, and 24/7 digital support.",
     logo: "/assets/images/portfolio/darwin.jpg",
-    status: "Exit",
+    status: "exit",
     metrics: [
       { value: "2023", label: "Exit Year" },
       { value: "$20M", label: "Value" },
@@ -236,7 +235,7 @@ const portfolioData = [
     description:
       "Delix Therapeutics is a clinical-stage neuroscience company developing a novel class of neuroplasticity-promoting therapeutics called neuroplastogens. These compounds are designed to treat a wide range of neuropsychiatric and neurodegenerative disorders by promoting the growth and repair of neural connections in the brain. The company's approach builds on the discovery that certain compounds can induce neuroplasticity without the hallucinogenic effects of traditional psychedelics, potentially offering safer, more scalable treatment options for conditions like depression, PTSD, addiction, and cognitive impairment.",
     logo: "/assets/images/portfolio/delix.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
       { value: "$400M", label: "Value" },
@@ -263,7 +262,7 @@ const portfolioData = [
     description:
       "Dibs Capital is a financial technology company specializing in the tokenization of real estate and private equity assets. The company provides an end-to-end platform that transforms traditional assets into digital securities, enabling improved liquidity, fractional ownership, and more efficient capital markets. Dibs Capital's distributed investment banking platform leverages blockchain technology to create a compliant ecosystem for issuing, managing, and trading digital securities, with a focus on real estate and other alternative assets.",
     logo: "/assets/images/portfolio/solidblock.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
       { value: "$15M", label: "Valuation" },
@@ -291,7 +290,7 @@ const portfolioData = [
     description:
       "Feel is a wellness company that develops clinically-backed, clean-label nutritional supplements and wellness products. The company focuses on creating high-quality, bioavailable formulas using patented ingredients, botanicals, and plant extracts. Feel's product line includes multivitamins, hair care, skin care, and energy supplements, all designed with a focus on scientific research and clean formulations. The company differentiates itself by avoiding synthetic fillers and using research-backed doses of premium ingredients.",
     logo: "/assets/images/portfolio/feel.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
       { value: "$45M", label: "Valuation" },
@@ -322,7 +321,6 @@ const portfolioData = [
     status: "inactive",
     metrics: [
       { value: "2023", label: "Inactive Date" },
-
       { value: "2016", label: "Founded" },
     ],
     tags: [
@@ -403,13 +401,14 @@ const portfolioData = [
     description:
       "Hologram is a leading cellular connectivity platform for IoT devices, providing global, reliable connectivity solutions for businesses deploying connected devices. The company's platform offers SIM cards and connectivity management tools that enable seamless IoT deployments across 190+ countries through 550+ carrier partners. Hologram's technology powers a wide range of IoT applications, from industrial equipment monitoring to smart city infrastructure. The company raised $65 million in Series B funding led by Tiger Global in 2021 to expand its global network and platform capabilities.",
     logo: "/assets/images/portfolio/hologram.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "2021", label: "Stage" },
       { value: "$500M", label: "Value" },
       { value: "2013", label: "Founded" },
     ],
     tags: [
+      "soonicorn",
       "IoT",
       "Cellular Connectivity",
       "5G",
@@ -430,7 +429,7 @@ const portfolioData = [
     description:
       "Hyperscience is an enterprise AI platform that specializes in intelligent document processing (IDP) and workflow automation. The company's machine learning-powered platform helps organizations transform unstructured content into structured, actionable data with industry-leading accuracy rates of 99.5%. Hyperscience serves federal, state, and local agencies, as well as enterprises across various sectors, by automating document-intensive processes such as mortgage applications, insurance claims, and student visa processing. The company has raised over $400 million in funding and is known for its FedRAMP High authorization, ensuring the highest levels of security and compliance for government and regulated industries.",
     logo: "/assets/images/portfolio/hyperscience.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "Series E", label: "Stage" },
       { value: "$400M", label: "Value" },
@@ -457,7 +456,7 @@ const portfolioData = [
     description:
       "Instil is a modern nonprofit software platform designed to transform donor relationships and maximize social impact. The company provides an intuitive, mobile-friendly donor management system that helps nonprofit organizations manage major gifts, capital campaigns, planned giving, and grant tracking. Instil's platform offers a 360-degree view of donor relationships, enabling fundraisers to make data-driven decisions and improve donor engagement. With a focus on user experience, Instil's tools require minimal training and help nonprofits increase their fundraising effectiveness and operational efficiency.",
     logo: "/assets/images/portfolio/instil.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "2023", label: "Stage" },
       { value: "$18M", label: "Value" },
@@ -1163,7 +1162,7 @@ const portfolioData = [
     description:
       "8-Bit Capital invests in startups that connect people and businesses in new ways. We invest in software tools and platforms that use the power of networksAether provides a molecular assembler platform that combines high-throughput robotics, machine learning, and synthetic biology to map millions of enzyme-reaction combinations, enabling the engineering of new classes of nanoscale machines using protein building blocks called molecular assemblers.",
     logo: "/assets/images/portfolio/8bitcapital.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "28", label: "Portfolio Companies" },
       { value: "Seed - Series A", label: "Investment Stages" },
@@ -1192,7 +1191,7 @@ const portfolioData = [
     description:
       "The Experts on Scale. We partner with tech founders to apply the principles of blitzscaling that we developed at Stanford University with Chris Yeh and Reid Hoffman.",
     logo: "/assets/images/portfolio/blitzscalingventures.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "23", label: "Portfolio Companies" },
       { value: "Pre-Seed - Series B", label: "Investment Stages" },
@@ -1220,7 +1219,7 @@ const portfolioData = [
     description:
       "Champion Hill Ventures seeks founders solving large problems hiding in plain sight. To find them, we look for non-consensus ideas, pre-category behavior, or innovation that is structurally underserved by the capital markets. ",
     logo: "/assets/images/portfolio/championhillventures.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "45", label: "Portfolio Companies" },
       { value: "Seed - Series A", label: "Investment Stages" },
@@ -1255,7 +1254,7 @@ const portfolioData = [
     name: "Frontier Technology Partners",
     description: "Disrupting the Status Quo to Build a Better Future",
     logo: "/assets/images/portfolio/frontures.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "21", label: "Portfolio Companies" },
       { value: "Pre-Seed - Seed", label: "Investment Stages" },
@@ -1282,7 +1281,7 @@ const portfolioData = [
     name: "Fuel Ventures",
     description: "Fueling the growth of ambitious tech companies.",
     logo: "/assets/images/portfolio/fuelventures.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "200+", label: "Portfolio Companies" },
       { value: "Pre-Seed - Series A", label: "Investment Stages" },
@@ -1311,7 +1310,7 @@ const portfolioData = [
     description:
       "Gaingels is amongst the largest investors in the world aiming to show the world that equity of access and representation in venture capital delivers positive returns.",
     logo: "/assets/images/portfolio/gaingels.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "2,000+", label: "Portfolio Companies" },
       { value: "Seed - Pre-IPO", label: "Investment Stages" },
@@ -1351,7 +1350,7 @@ const portfolioData = [
     description:
       "We are a seed-stage fund seeking diverse founding teams leveraging deep tech to solve problems in foundational, global industries from farming to finance.",
     logo: "/assets/images/portfolio/greencowvc.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "10", label: "Portfolio Companies" },
       { value: "Seed", label: "Investment Stages" },
@@ -1379,7 +1378,7 @@ const portfolioData = [
     description:
       "We are a next generation venture capital firm, one that takes a human-first approach to investing. Builders ourselves, we invest in the humans as much as their companies. No matter where we invest, our founders embody the diversity, resilience, and ambition of New York.",
     logo: "/assets/images/portfolio/humanventures.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "60+", label: "Portfolio Companies" },
       { value: "Pre-Seed - Seed", label: "Investment Stages" },
@@ -1407,7 +1406,7 @@ const portfolioData = [
     description:
       "We invest in earliest of pre-seed startups, led by founders outside of typical networks, selling into large and growing markets, with a unique approach or insight.",
     logo: "/assets/images/portfolio/untappedcapital.jpg",
-    status: "Active",
+    status: "active",
     metrics: [
       { value: "27", label: "Portfolio Companies" },
       { value: "Pre-Seed", label: "Investment Stages" },
@@ -1439,6 +1438,811 @@ const portfolioData = [
       "games",
       "infrastructure",
     ],
+  },
+  {
+    id: "upandup",
+    name: "Up & Up",
+    description:
+      "Up&Up is the smartest way for renters to build wealth while they rent. By renting an Up&Up home, renters participate in rental profits from day one, and are completely in control of their home",
+    logo: "/assets/images/portfolio/upandup.svg",
+    status: "active",
+    metrics: [
+      { value: "Series B", label: "Stage" },
+      { value: "$300M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: ["real estate", "rentals", "mortgages"],
+    links: [
+      { text: "Website", url: "https://www.upandup.co/" },
+      {
+        text: "News",
+        url: "https://upandup.co/stories",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "petzey",
+    name: "Petzey",
+    description: "",
+    logo: "/assets/images/portfolio/petzey.jpg",
+    status: "active",
+    metrics: [
+      { value: "Crowdfunding", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://petzey.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: " ",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "aether",
+    name: "Aether",
+    description: "",
+    logo: "/assets/images/portfolio/aether.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$200M+", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "synthetic biology",
+      "enzyme engineering",
+      "machine learning",
+      "robotics",
+      "industrial biotech",
+    ],
+    links: [
+      { text: "Website", url: "https://www.aetherbio.com/" },
+      {
+        text: "News",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["biotech", "ai"],
   },
 ];
 
