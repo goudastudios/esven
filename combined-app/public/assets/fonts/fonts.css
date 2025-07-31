@@ -1,0 +1,18 @@
+/* IBM Plex Mono - Available as a web font */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+/* American Typewriter - Using a system font stack with similar alternatives */
+@font-face {
+  font-family: "American Typewriter";
+  src: local("American Typewriter"), local("AmericanTypewriter"),
+    local("American Typewriter Regular");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base font stack */
+:root {
+  --font-primary: "American Typewriter", "Courier New", "IBM Plex Mono",
+    monospace;
+}

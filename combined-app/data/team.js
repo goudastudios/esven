@@ -7,7 +7,7 @@ const teamData = [
     performance: "12x Avg Return",
     metrics: [
       { value: "25+", label: "Years Experience" },
-      { value: "18", label: "Portfolio Exits" },
+      // { value: "18", label: "Portfolio Exits" },
     ],
     about:
       "My mission is to empower innovative founders and align with ventures that demonstrate clear market potential. My toolkit, honed over a significant tenure as an operator, accelerator mentor and startup advisor, is rich with strategies for digital marketing and networking, making me a valuable asset to our portfolio companies and a trusted advisor in the startup ecosystem.",
@@ -25,7 +25,7 @@ const teamData = [
     performance: "18x Avg Return",
     metrics: [
       { value: "25+", label: "Years Experience" },
-      { value: "15", label: "Portfolio Exits" },
+      // { value: "15", label: "Portfolio Exits" },
     ],
     about:
       "Samir Ghosh is an accomplished entrepreneur and startup coach. He has been deeply involved in 7 startups (3 successful exits, 2 ongoing) and is a top-rated advisor and mentor at leading startup accelerators, including UC Berkeley's SkyDeck and Alchemist Accelerator. Since 2016, Samir has advised thousands of startups that collectively raised $100M's of funding.",
@@ -43,7 +43,7 @@ const teamData = [
     performance: "14x Avg Return",
     metrics: [
       { value: "25+", label: "Years Experience" },
-      { value: "8", label: "Portfolio Exits" },
+      //  { value: "8", label: "Portfolio Exits" },
     ],
     about:
       "20+ years experience working from, “0-60” on B2B/B2C traditional, new media and SaaS launches has equipped Scott with a unique blend of sales tenacity, business development acumen and adaptability to a multitude of industry verticals. Scott's collective experience is enhanced by a broad composite of additional new business experience and skillsets.",
@@ -64,7 +64,7 @@ const teamData = [
     performance: "16x Avg Return",
     metrics: [
       { value: "25+", label: "Years Experience" },
-      { value: "10", label: "Portfolio Exits" },
+      //  { value: "10", label: "Portfolio Exits" },
     ],
     about:
       "A veteran of big brand marketing, multiple technology start-ups including 3 IPO's and social impact investment, Dave is committed to reshaping the specialty coffee value chain around the world.",
@@ -85,7 +85,7 @@ const teamData = [
     performance: "20x Avg Return",
     metrics: [
       { value: "25+", label: "Years Experience" },
-      { value: "25", label: "Portfolio Exits" },
+      //  { value: "25", label: "Portfolio Exits" },
     ],
     about:
       "Throughout a career on both the agency and client side, I bring to the table experience in multiple categories - from software to solar, banks to beverages, non-profit to new-tech, and from computers to counties and countries. I sharpened my entrepreneurial skills while co-founding and running Ozone, a design, strategy and advertising firm in North Beach, for 13 years.",
@@ -103,7 +103,7 @@ const teamData = [
     performance: "15x Avg Return",
     metrics: [
       { value: "25+", label: "Years Experience" },
-      { value: "15", label: "Portfolio Exits" },
+      //   { value: "15", label: "Portfolio Exits" },
     ],
     about:
       "An award-winning, mentally agile, goal oriented, self-driven and decisive individual with over 23 years brand design building, brand and product development, sales and business relationships management experience across sectors and geographies.",

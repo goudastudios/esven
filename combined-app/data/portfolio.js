@@ -1,5 +1,886 @@
 const portfolioData = [
   {
+    id: "upandup",
+    name: "Up & Up",
+    description:
+      "Up&Up is the smartest way for renters to build wealth while they rent. By renting an Up&Up home, renters participate in rental profits from day one, and are completely in control of their home",
+    logo: "/assets/images/portfolio/upandup.png",
+    status: "active",
+    metrics: [
+      { value: "Series B", label: "Stage" },
+      { value: "$300M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: ["real estate", "rentals", "mortgages"],
+    links: [
+      { text: "Website", url: "https://www.upandup.co/" },
+      {
+        text: "News",
+        url: "https://upandup.co/stories",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "petzey",
+    name: "Petzey",
+    description:
+      "Petzey is a provider of on-demand veterinary telehealth consultations, connecting pet owners with licensed veterinary professionals for immediate advice via a mobile app. ",
+    logo: "/assets/images/portfolio/petzey.png",
+    status: "active",
+    metrics: [
+      { value: "Crowdfunding", label: "Stage" },
+      { value: "$2M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: [
+      "Pet Tech",
+      "Veterinary telehealth",
+      "Mobile health",
+      "robotics",
+      "Virtual vets",
+    ],
+    links: [
+      { text: "Website", url: "https://petzey.com/" },
+      {
+        text: "News",
+        url: "https://petzey.com/blog",
+      },
+    ],
+    categories: ["consumer"],
+  },
+
+  {
+    id: "argyle",
+    name: "Argyle",
+    description:
+      "Argyle is a payroll connectivity platform that provides direct-source, consumer-permissioned income and employment verifications for industries like mortgage, lending, tenant screening, and the gig economy.",
+    logo: "/assets/images/portfolio/argyle.png",
+    status: "active",
+    metrics: [
+      { value: "Series C", label: "Stage" },
+      { value: "$300M", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: ["mortgage tech", "payroll", "banking", "big data"],
+    links: [
+      { text: "Website", url: "https://argyle.com/" },
+      {
+        text: "News",
+        url: "https://argyle.com/blog/",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "securitypal",
+    name: "SecurityPal AI",
+    description:
+      "SecurityPal provides AI-powered security review and assessment services, streamlining customer assurance and vendor risk management for enterprises.",
+    logo: "/assets/images/portfolio/securitypalai.png",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$100M", label: "Value" },
+      { value: "2020", label: "Founded" },
+    ],
+    tags: ["security", "cybersecurity", "AI agents"],
+    links: [
+      { text: "Website", url: "https://www.securitypalhq.com/" },
+      {
+        text: "News",
+        url: "https://www.securitypalhq.com/press",
+      },
+    ],
+    categories: ["infrastructure", "enterprise", "ai"],
+  },
+  {
+    id: "sellergeni",
+    name: "SellerGeni",
+    description:
+      "SellerGeni is an AI-powered SaaS platform that helps e-commerce businesses optimize and scale their Amazon advertising and product listings.",
+    logo: "/assets/images/portfolio/sellergeni.png",
+    status: "active",
+    metrics: [
+      { value: "Angel", label: "Stage" },
+      { value: "$7M", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: ["machine learning", "AI agents", "e-commerce", "marketing tech"],
+    links: [
+      { text: "Website", url: "https://www.sellergeni.com/" },
+      {
+        text: "News",
+        url: "https://www.sellergeni.com/success-stories",
+      },
+    ],
+    categories: ["enterprise", "ai"],
+  },
+  {
+    id: "emotive",
+    name: "Emotive",
+    description:
+      "Emotive is a conversational SMS marketing platform for eCommerce brands, using AI and human assistance to drive customer engagement and revenue.",
+    logo: "/assets/images/portfolio/emotive.png",
+    status: "exit",
+    metrics: [
+      { value: "2025", label: "Exit Year" },
+      { value: "$400M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: ["exit", "marketing", "communications", "mobile", "e-commerce"],
+    links: [
+      { text: "Website", url: "https://emotive.io/" },
+      {
+        text: "Exit Article",
+        url: "https://www.privy.com/blog/emotive-joins-privy",
+      },
+    ],
+    categories: ["consumer", "ai"],
+  },
+  {
+    id: "sourcemedium",
+    name: "Source Medium",
+    description:
+      "Source Medium provides a turnkey, enterprise-grade data infrastructure platform that empowers omnichannel e-commerce brands to connect, transform, and activate their data for confident, data-driven growth.",
+    logo: "/assets/images/portfolio/sourcemedium.png",
+    status: "active",
+    metrics: [
+      { value: "Early", label: "Stage" },
+      { value: "$30M", label: "Value" },
+      { value: "2019", label: "Founded" },
+    ],
+    tags: ["big data", "database"],
+    links: [
+      { text: "Website", url: "https://www.sourcemedium.com/" },
+      {
+        text: "Blog",
+        url: "https://www.sourcemedium.com/blog",
+      },
+    ],
+    categories: ["infrastructure", "ai"],
+  },
+  {
+    id: "flourish",
+    name: "Flourish Health",
+    description:
+      "Flourish Health provides in-home and remote behavioral health treatment for children, teens, and young adults with high-acuity mental health conditions.",
+    logo: "/assets/images/portfolio/flourishhealth.png",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$30M", label: "Value" },
+      { value: "2020", label: "Founded" },
+    ],
+    tags: ["healthcare", "Outpatient Services", "mental health"],
+    links: [
+      { text: "Website", url: "https://www.flourish.health/" },
+      {
+        text: "Careers",
+        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
+      },
+    ],
+    categories: ["consumer", "biotech"],
+  },
+  {
+    id: "agvend",
+    name: "AgVend",
+    description:
+      "AgVend develops digital engagement software that streamlines operations and enhances customer relationships for agribusinesses through a unified platform.",
+    logo: "/assets/images/portfolio/agvend.png",
+    status: "active",
+    metrics: [
+      { value: "Series B", label: "Stage" },
+      { value: "$200M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: ["agtech", "retail", "communications"],
+    links: [
+      { text: "Website", url: "https://www.agvend.com/" },
+      {
+        text: "Blog",
+        url: "https://www.agvend.com/blog/",
+      },
+    ],
+    categories: ["consumer", "enterprise"],
+  },
+  {
+    id: "andi",
+    name: "Andi",
+    description:
+      "Andi is a next-generation, ad-free AI search engine that delivers direct, factual answers using generative AI and live web data.",
+    logo: "/assets/images/portfolio/andi.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$20M", label: "Value" },
+      { value: "2021", label: "Founded" },
+    ],
+    tags: ["search engine", "generative ai", "privacy"],
+    links: [
+      { text: "Website", url: "https://www.andi.co/" },
+      {
+        text: "Blog",
+        url: "https://www.andi.co/blog",
+      },
+    ],
+    categories: ["ai"],
+  },
+  {
+    id: "hammock",
+    name: "Hammock",
+    description:
+      "Hammock is an accounting platform that helps UK landlords manage property finances, automate bookkeeping, and track tax statements in real time.",
+    logo: "/assets/images/portfolio/hammock.png",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$20M", label: "Value" },
+      { value: "2019", label: "Founded" },
+    ],
+    tags: ["proptech", "accounting", "bookeeping"],
+    links: [
+      { text: "Website", url: "https://www.usehammock.com/" },
+      {
+        text: "Blog",
+        url: "https://www.usehammock.com/hammock-blog/",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "konvi",
+    name: "Konvi",
+    description:
+      "Konvi is an app-based platform that enables users to invest in fractional ownership of luxury and alternative assets like watches, wines, and exclusive collectibles.",
+    logo: "/assets/images/portfolio/konvi.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$5M", label: "Value" },
+      { value: "2020", label: "Founded" },
+    ],
+    tags: ["fractional investing", "alternative assets"],
+    links: [
+      { text: "Website", url: "https://konvi.app/" },
+      {
+        text: "News",
+        url: "https://drive.google.com/drive/folders/1UU8KwDXy8sKvw949qZZ71sDlZqyRhlfN",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "inspectiv",
+    name: "Inspectiv",
+    description:
+      "Inspectiv provides a unified platform that combines crowdsourced and automated security testing to help enterprises continuously identify, manage, and remediate vulnerabilities in their applications.",
+    logo: "/assets/images/portfolio/inspectiv.png",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$50M", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: ["SaaS", "machine learning", "security"],
+    links: [
+      { text: "Website", url: "https://www.inspectiv.com/" },
+      {
+        text: "Library",
+        url: "https://www.inspectiv.com/resource-center",
+      },
+    ],
+    categories: ["infrastructure", "ai"],
+  },
+  {
+    id: "gavel",
+    name: "Gavel",
+    description:
+      "Gavel is a legal document automation platform that leverages AI to streamline document generation, client intake, and workflow automation for law firms and legal professionals.",
+    logo: "/assets/images/portfolio/gavel.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$40M", label: "Value" },
+      { value: "2019", label: "Founded" },
+    ],
+    tags: ["automation", "legal tech", "SaaS"],
+    links: [
+      { text: "Website", url: "https://www.gavel.io/" },
+      {
+        text: "Learning Center",
+        url: "https://help.gavel.io/",
+      },
+    ],
+    categories: ["enterprise", "ai"],
+  },
+  {
+    id: "instill",
+    name: "Instill AI",
+    description:
+      "Instill AI builds no-code AI agents that help knowledge workers organize, analyze, and extract insights from unstructured data like documents, audio, and video.",
+    logo: "/assets/images/portfolio/instillai.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$15M", label: "Value" },
+      { value: "2020", label: "Founded" },
+    ],
+    tags: ["no-code", "machine learning", "design", "productivity"],
+    links: [
+      { text: "Website", url: "https://www.instill-ai.com//" },
+      {
+        text: "Blog",
+        url: "https://www.instill-ai.com/blog",
+      },
+    ],
+    categories: ["ai"],
+  },
+  {
+    id: "facet",
+    name: "Facet",
+    description:
+      "Facet democratizes access to expert financial advice through a flat-fee membership model, offering personalized financial planning and investment management to help clients achieve economic security and prosperity.",
+    logo: "/assets/images/portfolio/facet.png",
+    status: "soonicorn",
+    metrics: [
+      { value: "Series D", label: "Stage" },
+      { value: "$570M", label: "Value" },
+      { value: "2016", label: "Founded" },
+    ],
+    tags: [
+      "soonicorn",
+      "fintech",
+      "financial planning",
+      "investment management",
+      "personalized advice",
+    ],
+    links: [
+      { text: "Website", url: "https://facet.com//" },
+      {
+        text: "Library",
+        url: "https://facet.com/learn/",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "capchase",
+    name: "Capchase",
+    description:
+      "Capchase provides flexible, non-dilutive financing solutions for SaaS and tech companies, enabling them to access future revenue upfront and optimize cash flow.",
+    logo: "/assets/images/portfolio/capchase.png",
+    status: "unicorn",
+    metrics: [
+      { value: "Series B", label: "Stage" },
+      { value: "$1B", label: "Value" },
+      { value: "2020", label: "Founded" },
+    ],
+    tags: [
+      "unicorn",
+      "fintech",
+      "SaaS",
+      "flexible financing",
+      "non-dilutive financing",
+    ],
+    links: [
+      { text: "Website", url: "https://www.capchase.com/" },
+      {
+        text: "Blog",
+        url: "https://www.capchase.com/blog",
+      },
+    ],
+    categories: ["fintech"],
+  },
+
+  {
+    id: "swan",
+    name: "Swan",
+    description:
+      "Swan Bitcoin is a financial software company that enables easy, recurring Bitcoin purchases and provides educational resources for investors.",
+    logo: "/assets/images/portfolio/swan.png",
+    status: "soonicorn",
+    metrics: [
+      { value: "Series B", label: "Stage" },
+      { value: "$575M", label: "Value" },
+      { value: "2019", label: "Founded" },
+    ],
+    tags: ["soonicorn", "cryptocurrency", "e-commerce", "bitcoin"],
+    links: [
+      { text: "Website", url: "www.swanbitcoin.com" },
+      {
+        text: "News",
+        url: "https://www.swanbitcoin.com/articles/",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "7shifts",
+    name: "7shifts",
+    description:
+      "7shifts provides an all-in-one scheduling, payroll, and team management platform designed to streamline restaurant operations and reduce labor costs. ",
+    logo: "/assets/images/portfolio/7shifts.png",
+    status: "active",
+    metrics: [
+      { value: "Series C", label: "Stage" },
+      { value: "$200M", label: "Value" },
+      { value: "2011", label: "Founded" },
+    ],
+    tags: ["restaurant", "scheduling", "payroll", "team management", "SaaS"],
+    links: [
+      { text: "Website", url: "https://www.7shifts.com/" },
+      {
+        text: "Blog",
+        url: "https://www.7shifts.com/blog/",
+      },
+    ],
+    categories: ["enterprise"],
+  },
+  {
+    id: "eva",
+    name: "Eva",
+    description:
+      "Eva.guru provides AI-powered tools for pricing, advertising, and inventory optimization to help e-commerce brands maximize profits and efficiency on platforms like Amazon, Walmart, and Shopify.",
+    logo: "/assets/images/portfolio/eva.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$10M", label: "Value" },
+      { value: "2019", label: "Founded" },
+    ],
+    tags: ["e-commerce", "AI", "machine learning", "SaaS"],
+    links: [
+      { text: "Website", url: "https://eva.guru/" },
+      {
+        text: "Blog",
+        url: "https://eva.guru/blog/",
+      },
+    ],
+    categories: ["consumer", "ai"],
+  },
+  {
+    id: "iriscx",
+    name: "IrisCX",
+    description:
+      "IrisCX delivers AI-powered video customer engagement solutions, enabling businesses to remotely guide, support, and resolve customer issues through live and self-guided video interactions.",
+    logo: "/assets/images/portfolio/iriscx.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$10M", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: ["customer engagement", "video customer engagement", "AI"],
+    links: [
+      { text: "Website", url: "https://icwhatuc.com/" },
+      {
+        text: "Blog",
+        url: "https://icwhatuc.com/blog",
+      },
+    ],
+    categories: ["enterprise", "ai"],
+  },
+  {
+    id: "gauge",
+    name: "Gauge Automotive",
+    description:
+      "Gauge Automotive operates an AI-powered online marketplace that enables car owners to sell their vehicles quickly and for the highest price by leveraging a competitive bidding process among buyers.",
+    logo: "/assets/images/portfolio/gauge.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$30M", label: "Value" },
+      { value: "2020", label: "Founded" },
+    ],
+    tags: ["marketplace", "SaaS", "automotive"],
+    links: [
+      { text: "Website", url: "https://www.sellgauge.com/" },
+      {
+        text: "Blog",
+        url: "https://www.sellgauge.com/blog",
+      },
+    ],
+    categories: ["consumer"],
+  },
+  {
+    id: "traxyl",
+    name: "Traxyl",
+    description:
+      "TRAXyL is positioned to disrupt traditional fiber installation with a patented, scalable solution that slashes deployment time and cost, targeting the lucrative last-mile connectivity market in telecom infrastructure.",
+    logo: "/assets/images/portfolio/traxyl.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$30M", label: "Value" },
+      { value: "2014", label: "Founded" },
+    ],
+    tags: [
+      "fiber installation",
+      "last-mile connectivity",
+      "telecom infrastructure",
+    ],
+    links: [
+      { text: "Website", url: "https://www.traxyl.com/" },
+      {
+        text: "Media",
+        url: "https://traxyl.com/media/",
+      },
+    ],
+    categories: ["infrastructure"],
+  },
+  {
+    id: "loop",
+    name: "Loop",
+    description:
+      "Loop Digital Frame makes it easy for families to instantly share photos and videos to a high-definition digital frame via text or app, keeping loved ones connected.",
+    logo: "/assets/images/portfolio/loop.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$10M", label: "Value" },
+      { value: "2020", label: "Founded" },
+    ],
+    tags: [
+      "digital frame",
+      "family photos",
+      "video sharing",
+      "social engagement",
+    ],
+    links: [
+      { text: "Website", url: "https://loopfamily.com/" },
+      {
+        text: "Help Center",
+        url: "https://loopfamily.com/pages/help?hcUrl=%2Fen-US",
+      },
+    ],
+    categories: ["consumer"],
+  },
+  {
+    id: "inkshares",
+    name: "InkShares",
+    description:
+      "Inkshares is a publishing and literary rights-management platform where readers, not agents, decide which books get published through a crowdfunding and pre-order model.",
+    logo: "/assets/images/portfolio/inkshares.jpg",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$10M", label: "Value" },
+      { value: "2013", label: "Founded" },
+    ],
+    tags: ["publishing", "literary rights"],
+    links: [
+      { text: "Website", url: "https://www.inkshares.com/" },
+      {
+        text: "News",
+        url: "https://www.inkshares.com/press5",
+      },
+    ],
+    categories: ["consumer"],
+  },
+  {
+    id: "threeships",
+    name: "Three Ships Beauty",
+    description:
+      "Three Ships Beauty is a Toronto-based skincare brand offering affordable, science-backed, natural products with a focus on transparency and sustainability.",
+    logo: "/assets/images/portfolio/threeships.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$10M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: ["skincare", "natural products", "beauty", "sustainability"],
+    links: [
+      { text: "Website", url: "https://www.threeshipsbeauty.com/" },
+      {
+        text: "Blog",
+        url: "https://www.threeshipsbeauty.com/blogs/news",
+      },
+    ],
+    categories: ["consumer"],
+  },
+  {
+    id: "hownow",
+    name: "HowNow",
+    description:
+      "HowNow is an AI-powered platform that helps businesses create, deliver, and measure learning and upskilling for employees, connecting learning directly to business-critical skills.",
+    logo: "/assets/images/portfolio/hownow.webp",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$45M", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: ["learning and upskilling", "business-critical skills"],
+    links: [
+      { text: "Website", url: "https://www.gethownow.com/" },
+      {
+        text: "Blog",
+        url: "https://www.gethownow.com/blog",
+      },
+    ],
+    categories: ["enterprise", "ai"],
+  },
+
+  {
+    id: "curve",
+    name: "Curve Pay",
+    description:
+      "Curve is a fintech platform that unifies all your payment cards into one smart digital wallet, letting you manage spending, avoid foreign transaction fees, and maximize rewards.",
+    logo: "/assets/images/portfolio/curve.png",
+    status: "active",
+    metrics: [
+      { value: "Series C", label: "Stage" },
+      { value: "$23M", label: "Value" },
+      { value: "2015", label: "Founded" },
+    ],
+    tags: ["mobile commerce", "payment cards", "digital wallet"],
+    links: [
+      { text: "Website", url: "https://www.curve.com/" },
+      {
+        text: "Blog",
+        url: "https://www.curve.com/blog",
+      },
+    ],
+    categories: ["fintech"],
+  },
+  {
+    id: "proteinqure",
+    name: "ProteinQure",
+    description:
+      "ProteinQure is a Toronto-based biotech company leveraging AI and computational tools to design novel peptide therapeutics for targeted, tissue-specific drug delivery.",
+    logo: "/assets/images/portfolio/proteinqure.jpg",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$100M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: ["biotech", "ai", "drug delivery"],
+    links: [
+      { text: "Website", url: "https://www.proteinqure.com/" },
+      {
+        text: "News",
+        url: "https://www.proteinqure.com/news/",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "virgo",
+    name: "Virgo",
+    description:
+      "Virgo develops cloud-based AI software that accelerates clinical trial results by enabling high-quality endoscopic video capture, analysis, and patient recruitment for healthcare providers and pharmaceutical companies. ",
+    logo: "/assets/images/portfolio/virgo.png",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$50M", label: "Value" },
+      { value: "2017", label: "Founded" },
+    ],
+    tags: ["diagnostic equipment", "medtech"],
+    links: [
+      { text: "Website", url: "https://virgosvs.com/" },
+      {
+        text: "News",
+        url: "https://virgosvs.com/press/",
+      },
+    ],
+    categories: ["biotech", "ai"],
+  },
+  {
+    id: "begin",
+    name: "Begin AI",
+    description:
+      "Begin AI develops an AI bot platform that automates business tasks like reading documents, tracking inventory, and generating invoices to help small businesses improve efficiency and save time.",
+    logo: "/assets/images/portfolio/begin.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$10M", label: "Value" },
+      { value: "2021", label: "Founded" },
+    ],
+    tags: ["automation", "bots", "SaaS"],
+    links: [
+      { text: "Website", url: "https://begin.ai/" },
+      {
+        text: "News",
+        url: "https://begin.ai/",
+      },
+    ],
+    categories: ["enterprise", "ai"],
+  },
+  {
+    id: "fireside",
+    name: "Fireside Chat",
+    description:
+      "Fireside is a next-generation podcast platform enabling creators to host live, interactive, and virtual shows with real-time audience engagement.",
+    logo: "/assets/images/portfolio/fireside.png",
+    status: "active",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$125M", label: "Value" },
+      { value: "2013", label: "Founded" },
+    ],
+    tags: ["podcasts", "audiotech", "virtual events"],
+    links: [
+      { text: "Website", url: "https://firesidechat.com/" },
+      {
+        text: "Blog",
+        url: "https://blog.fireside.fm/",
+      },
+    ],
+    categories: ["consumer"],
+  },
+  {
+    id: "gilgamesh",
+    name: "Gilgamesh Pharmaceuticals",
+    description:
+      "Gilgamesh Pharmaceuticals develops novel, next-generation compounds for treating mental health and neurological disorders, leveraging advanced chemistry and drug development expertise.",
+    logo: "/assets/images/portfolio/gilgamesh.png",
+    status: "unicorn",
+    metrics: [
+      { value: "Series B", label: "Stage" },
+      { value: "$1B", label: "Value" },
+      { value: "2019", label: "Founded" },
+    ],
+    tags: [
+      "unicorn",
+      "Pharmaceuticals",
+      "healthtech",
+      "life sciences",
+      "drug discovery",
+    ],
+    links: [
+      { text: "Website", url: "https://www.gilgameshpharmaceutical.com/" },
+      {
+        text: "Unicorn News",
+        url: "https://www.bloomberg.com/news/articles/2025-07-30/abbvie-is-said-in-talks-to-acquire-gilgamesh-in-1-billion-deal",
+      },
+    ],
+    categories: ["biotech"],
+  },
+  {
+    id: "bambee",
+    name: "Bambee",
+    description:
+      "Bambee provides small businesses with affordable, outsourced HR management and compliance solutions, including a dedicated HR manager and automated HR practices.",
+    logo: "/assets/images/portfolio/bambee.png",
+    status: "active",
+    metrics: [
+      { value: "Series C", label: "Stage" },
+      { value: "$300M", label: "Value" },
+      { value: "2016", label: "Founded" },
+    ],
+    tags: ["employee onboarding", "hr automation", "performance tracking"],
+    links: [
+      { text: "Website", url: "https://www.bambee.com/" },
+      {
+        text: "Crunchbase",
+        url: "https://www.crunchbase.com/organization/bambee",
+      },
+    ],
+    categories: ["enterprise"],
+  },
+  {
+    id: "unit21",
+    name: "Unit21",
+    description:
+      "Unit21 offers a no-code risk and compliance platform that empowers businesses to detect, prevent, and manage financial crime, fraud, and AML operations in real time.",
+    logo: "/assets/images/portfolio/unit21.png",
+    status: "active",
+    metrics: [
+      { value: "Series C", label: "Stage" },
+      { value: "$300M", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: [
+      "identity verification",
+      "no-code",
+      "transaction monitoring",
+      "risk management",
+      "case management",
+      "operations management",
+      "analytics & reporting",
+    ],
+    links: [
+      { text: "Website", url: "https://www.unit21.ai/" },
+      {
+        text: "News",
+        url: "https://www.unit21.ai/company/newsroom",
+      },
+    ],
+    categories: ["fintech", "ai"],
+  },
+  {
+    id: "unstoppabledomains",
+    name: "Unstoppable Domains",
+    description:
+      "Unstoppable Domains develops a blockchain-based domain platform that replaces crypto addresses with human-readable names, enabling decentralized, censorship-resistant websites and digital identity.",
+    logo: "/assets/images/portfolio/unstoppabledomains.png",
+    status: "unicorn",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$1B", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: ["unicorn", "blockchain", "crypto", "domain platform"],
+    links: [
+      { text: "Website", url: "https://unstoppabledomains.com/" },
+      {
+        text: "Blog",
+        url: "https://unstoppabledomains.com/blog",
+      },
+    ],
+    categories: ["blockchain"],
+  },
+  {
+    id: "monarchmoney",
+    name: "Monarch Money",
+    description:
+      "Monarch Money is a subscription-based personal finance platform that helps users track, budget, and manage all their finances in one place, with a focus on privacy and user experience.",
+    logo: "/assets/images/portfolio/monarch.png",
+    status: "soonicorn",
+    metrics: [
+      { value: "Series A", label: "Stage" },
+      { value: "$850M", label: "Value" },
+      { value: "2018", label: "Founded" },
+    ],
+    tags: ["soonicorn", "investment tracking", "personal finance", "budgeting"],
+    links: [
+      { text: "Website", url: "https://www.monarchmoney.com/" },
+      {
+        text: "News",
+        url: "https://www.monarchmoney.com/press",
+      },
+    ],
+    categories: ["fintech"],
+  },
+
+  {
+    id: "discord",
+    name: "Discord",
+    description:
+      "Discord is a social media platform and community for gamers, creators, and enthusiasts to connect, share, and create content. The platform offers a range of features, including voice and video chat, text-based communication, and a marketplace for in-game purchases. Discord also provides tools for content creators to monetize their content and engage with their audience.",
+    logo: "/assets/images/portfolio/discord.png",
+    status: "unicorn",
+    metrics: [
+      { value: "Series I", label: "Stage" },
+      { value: "$15B", label: "Value" },
+      { value: "2015", label: "Founded" },
+    ],
+    tags: ["unicorn", "social media", "gaming", "SaaS"],
+    links: [
+      { text: "Website", url: "https://discord.com/" },
+      {
+        text: "News",
+        url: "https://discord.com/newsroom",
+      },
+    ],
+    categories: ["consumer", "enterprise"],
+  },
+  {
     id: "aether",
     name: "Aether",
     description:
@@ -29,38 +910,12 @@ const portfolioData = [
   },
 
   {
-    id: "almanac",
-    name: "Almanac",
-    description:
-      "Almanac is a modern document collaboration platform designed for remote teams, offering version control, automated workflows, and structured knowledge management. It serves as a next-generation alternative to traditional office suites, focusing on async collaboration and productivity for distributed teams.",
-    logo: "/assets/images/portfolio/almanac.jpg",
-    status: "inactive",
-    metrics: [
-      { value: "2025", label: "Inactive Date" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "Document Collaboration",
-      "Remote Work",
-      "Productivity",
-      "Knowledge Management",
-      "SaaS",
-    ],
-    links: [
-      { text: "Website", url: "https://get.almanac.io/" },
-
-      { text: "News", url: "https://get.almanac.io/go-forward" },
-    ],
-    categories: ["enterprise"],
-  },
-
-  {
     id: "better-mortgage",
     name: "Better Mortgage",
     description:
       "Better Mortgage is a technology-driven mortgage lender dedicated to simplifying home financing through a fully digital platform. The company was founded in 2014 with the mission to streamline the mortgage process, making it faster, more transparent, and more affordable by eliminating unnecessary fees and leveraging technology to automate traditionally manual processes.",
     logo: "/assets/images/portfolio/better.jpg",
-    status: "exit",
+    status: "public",
     metrics: [
       { value: "$200M", label: "Value" },
       { value: "2023", label: "Exit Year" },
@@ -68,6 +923,7 @@ const portfolioData = [
     ],
     tags: [
       "exit",
+      "public",
       "Fintech",
       "Mortgage",
       "Digital Lending",
@@ -313,27 +1169,29 @@ const portfolioData = [
   },
 
   {
-    id: "fuzzy",
-    name: "Fuzzy",
+    id: "generation-conscious",
+    name: "Generation Conscious",
     description:
-      "Fuzzy is a digital pet care company that provides subscription-based veterinary services through a mobile application. The platform connects pet parents with licensed veterinarians 24/7 for virtual consultations, offering convenient access to pet healthcare. Fuzzy also provides home delivery of medications, supplements, and pet essentials, creating a comprehensive ecosystem for pet wellness. The company aims to make veterinary care more accessible and affordable while reducing strain on traditional veterinary clinics.",
-    logo: "/assets/images/portfolio/fuzzy.jpg",
-    status: "inactive",
+      "Generation Conscious installs zero-waste, plastic-free hygiene product refill stations in university residence halls to promote sustainability and hygiene equity for students.",
+    logo: "/assets/images/portfolio/generationconscious.png",
+    status: "active",
     metrics: [
-      { value: "2023", label: "Inactive Date" },
-      { value: "2016", label: "Founded" },
+      { value: "Series A", label: "Stage" },
+      { value: "$200M", label: "Value" },
+      { value: "2017", label: "Founded" },
     ],
     tags: [
-      "Pet Care",
-      "Veterinary Telemedicine",
-      "Digital Health",
-      "Subscription Service",
-      "Pet Wellness",
-      "Acquired",
+      "Sustainability",
+      "Environmental Justice",
+      "Personal Care",
+      "Zero Waste",
     ],
     links: [
-      { text: "Website", url: "https://www.yourfuzzy.com/" },
-      { text: "News", url: "https://www.crunchbase.com/organization/fuzzy" },
+      { text: "Website", url: "https://generationconscious.co/" },
+      {
+        text: "News",
+        url: "https://generationconscious.co/",
+      },
     ],
     categories: ["consumer"],
   },
@@ -375,7 +1233,7 @@ const portfolioData = [
     description:
       "Grove Collaborative is a digitally native, sustainable consumer products company that offers a curated selection of natural home, personal care, and wellness products. The company operates as a Certified B Corp with a mission to transform the consumer products industry into a force for human and environmental good. Grove's direct-to-consumer platform provides a convenient subscription service for eco-friendly household essentials, including cleaning supplies, personal care items, and pet care products. In 2022, Grove went public through a SPAC merger with Virgin Group Acquisition Corp II, trading on the NYSE under the ticker 'GROV' with a $1.5 billion valuation.",
     logo: "/assets/images/portfolio/grove.jpg",
-    status: "exit",
+    status: "public",
     metrics: [
       { value: "$60M", label: "Value" },
       { value: "2021", label: "Exit Year" },
@@ -383,6 +1241,7 @@ const portfolioData = [
     ],
     tags: [
       "exit",
+      "public",
       "Sustainable Products",
       "E-commerce",
       "B-Corp",
@@ -536,29 +1395,6 @@ const portfolioData = [
   },
 
   {
-    id: "konvi",
-    name: "Konvi",
-    description:
-      "Konvi is a mobile investment platform that democratizes access to alternative assets, including luxury goods, art, and collectibles. Founded in 2020 by Eran Peer and Ioana Surdu-Bob, Konvi enables users to invest in high-value assets that were traditionally accessible only to institutional investors or high-net-worth individuals. The platform offers curated investment opportunities in assets like blue-chip artwork, fine wine, and other alternative investments, with potential returns of 8-35% annually. Konvi's model allows fractional ownership, making these investments accessible to a broader audience while providing portfolio diversification beyond traditional asset classes.",
-    logo: "/assets/images/portfolio/konvi.jpg",
-    status: "active",
-    metrics: [
-      { value: "Seed", label: "Stage" },
-      { value: "$5M", label: "Value" },
-      { value: "2020", label: "Founded" },
-    ],
-    tags: ["active"],
-    links: [
-      { text: "Website", url: "https://konvi.app/" },
-      {
-        text: "News",
-        url: "https://www.crunchbase.com/organization/konvi",
-      },
-    ],
-    categories: ["fintech"],
-  },
-
-  {
     id: "lalo",
     name: "Lalo",
     description:
@@ -574,29 +1410,6 @@ const portfolioData = [
     links: [
       { text: "Website", url: "https://www.meetlalo.com/" },
       { text: "News", url: "https://www.crunchbase.com/organization/lalo" },
-    ],
-    categories: ["consumer"],
-  },
-
-  {
-    id: "lolly",
-    name: "Lolly",
-    description:
-      "Lolly is a social dating platform that revolutionizes online dating through short-form video profiles, allowing users to express their personalities more authentically. Founded in 2020 by Marc Baghadjian and Sacha Schermerhorn, Lolly aims to create more meaningful connections by moving beyond static photos to dynamic video content. The platform focuses on helping users showcase their true selves through creative video profiles, making the online dating experience more engaging and transparent. Lolly has raised funding from multiple investors, including Adven, and has positioned itself as a fresh alternative in the competitive dating app market.",
-    logo: "/assets/images/portfolio/lolly.jpg",
-    status: "inactive",
-    metrics: [
-      { value: "2022", label: "Inactive Date" },
-
-      { value: "2018", label: "Founded" },
-    ],
-    tags: ["Dating", "Social Media", "Gen Z", "Mobile App", "Video"],
-    links: [
-      { text: "Website", url: "https://www.thelollyapp.com/" },
-      {
-        text: "News",
-        url: "https://www.crunchbase.com/organization/skippit",
-      },
     ],
     categories: ["consumer"],
   },
@@ -663,7 +1476,7 @@ const portfolioData = [
     description:
       "Pagaya is financial technology company that enables financial institutions to expand access to more customers through its artificial intelligence network.",
     logo: "/assets/images/portfolio/pagaya.jpg",
-    status: "exit",
+    status: "public",
     metrics: [
       { value: "2022", label: "Exit Date" },
       { value: "$8.5B", label: "Value" },
@@ -671,6 +1484,7 @@ const portfolioData = [
     ],
     tags: [
       "exit",
+      "public",
       "unicorn",
       "IPO",
       "AI",
@@ -778,13 +1592,7 @@ const portfolioData = [
       { value: "$10M", label: "Value" },
       { value: "2021", label: "Founded" },
     ],
-    tags: [
-      "Fintech",
-      "Mortgage",
-      "Digital Lending",
-      "Public Company",
-      "AI-Powered Lending",
-    ],
+    tags: ["Fintech", "Mortgage", "Digital Lending", "AI-Powered Lending"],
     links: [
       { text: "Website", url: "https://quiver.co.uk/" },
       { text: "News", url: "https://quiver.co.uk/about-us" },
@@ -883,7 +1691,7 @@ const portfolioData = [
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
-      { value: "$294M", label: "Value" },
+      { value: "$320M", label: "Value" },
       { value: "2020", label: "Founded" },
     ],
     tags: [
@@ -898,32 +1706,6 @@ const portfolioData = [
       { text: "News", url: "https://secureframe.com/blog" },
     ],
     categories: ["infrastructure"],
-  },
-
-  {
-    id: "seller-geni",
-    name: "SellerGeni",
-    description:
-      "SellerGeni is an Amazon seller software platform that helps e-commerce businesses optimize their Amazon marketplace performance. Founded in 2018 and based in Bangalore, India, the company provides tools for product research, keyword tracking, competition analysis, and sales optimization specifically designed for Amazon sellers. SellerGeni's platform enables businesses to make data-driven decisions to improve their product listings, advertising campaigns, and overall sales performance on Amazon. The company has raised $642,000 across five seed funding rounds, with the largest being $307,000 in December 2021. SellerGeni serves a global customer base of e-commerce sellers looking to scale their Amazon businesses more effectively.",
-    logo: "/assets/images/portfolio/sellergeni.jpg",
-    status: "active",
-    metrics: [
-      { value: "Angel", label: "Stage" },
-      { value: "$6.6M", label: "Value" },
-      { value: "2019", label: "Founded" },
-    ],
-    tags: [
-      "E-commerce",
-      "Amazon Seller Tools",
-      "Marketplace Analytics",
-      "Product Research",
-      "Retail Tech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.sellergeni.com/" },
-      { text: "Website", url: "https://www.sellergeni.com/blog/" },
-    ],
-    categories: ["consumer"],
   },
 
   {
@@ -1036,37 +1818,6 @@ const portfolioData = [
   },
 
   {
-    id: "vialu",
-    name: "Vialu",
-    description:
-      "Vialu (formerly Valiu) is a fintech company that developed financial solutions for emerging markets, with a particular focus on Latin America. The company was founded in 2018 and was based in Bogotá, Colombia. Vialu aimed to create the first crypto-economy in Venezuela, providing digital financial services to help users protect their savings from hyperinflation. The company went through Y Combinator's startup accelerator program and gained significant traction in the region. However, according to reports, Vialu has since shut down its operations. At its peak, the company had 17 employees and was recognized for its innovative approach to financial inclusion in challenging economic environments.",
-    logo: "/assets/images/portfolio/vialu.jpg",
-    status: "inactive",
-    metrics: [
-      { value: "2021", label: "Inactive Date" },
-      { value: "2018", label: "Founded" },
-    ],
-    tags: [
-      "Fintech",
-      "Emerging Markets",
-      "Financial Inclusion",
-      "Crypto",
-      "Latin America",
-    ],
-    links: [
-      {
-        text: "Website",
-        url: "https://valiu.com/",
-      },
-      {
-        text: "News",
-        url: "https://www.crunchbase.com/organization/valiu",
-      },
-    ],
-    categories: ["fintech"],
-  },
-
-  {
     id: "volansi",
     name: "Volansi",
     description:
@@ -1126,56 +1877,17 @@ const portfolioData = [
   },
 
   {
-    id: "wyre",
-    name: "Wyre",
-    description:
-      "Wyre was a cryptocurrency payment infrastructure company that provided APIs for businesses to accept crypto payments, manage digital assets, and facilitate fiat-to-crypto transactions. Founded in 2013 and based in San Francisco, Wyre developed a suite of payment solutions that enabled seamless integration of cryptocurrency transactions for businesses. The company was acquired by RockWallet in 2024, with its customer base being transitioned to the RockWallet platform. Wyre's technology allowed businesses to accept crypto payments, generate unique invoice addresses, and manage digital asset settlements. The company played a significant role in the crypto payment infrastructure space before its acquisition and subsequent shutdown of its original platform in 2023.",
-    logo: "/assets/images/portfolio/wyre.jpg",
-    status: "exit",
-    metrics: [
-      { value: "2024", label: "Exit Date" },
-      { value: "$1.5B", label: "Value" },
-      { value: "2013", label: "Founded" },
-    ],
-    tags: [
-      "exit",
-      "unicorn",
-      "Crypto Payments",
-      "Blockchain",
-      "Fintech",
-      "Digital Assets",
-      "Payment Infrastructure",
-    ],
-    links: [
-      { text: "Website", url: "https://www.sendwyre.com/" },
-
-      {
-        text: "News",
-        url: "https://www.rockwallet.com/blog/rockwallet-to-onboard-former-wyre-users-after-acquisition-of-its-customer-base",
-      },
-    ],
-    categories: ["crypto"],
-  },
-  {
     id: "8bit",
     name: "8-Bit Capital",
     description:
       "8-Bit Capital invests in startups that connect people and businesses in new ways. We invest in software tools and platforms that use the power of networksAether provides a molecular assembler platform that combines high-throughput robotics, machine learning, and synthetic biology to map millions of enzyme-reaction combinations, enabling the engineering of new classes of nanoscale machines using protein building blocks called molecular assemblers.",
     logo: "/assets/images/portfolio/8bitcapital.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "28", label: "Portfolio Companies" },
       { value: "Seed - Series A", label: "Investment Stages" },
     ],
-    tags: [
-      "funds",
-      "AI",
-      "Cloud",
-      "Cybersecurity",
-      "Enterprise",
-      "Fintech",
-      "Social",
-    ],
+    tags: ["funds", "Agree.com", "Hypermode", "Pipedream", "Upstream"],
     links: [
       { text: "Website", url: "https://8bitcapital.com/" },
       {
@@ -1191,18 +1903,19 @@ const portfolioData = [
     description:
       "The Experts on Scale. We partner with tech founders to apply the principles of blitzscaling that we developed at Stanford University with Chris Yeh and Reid Hoffman.",
     logo: "/assets/images/portfolio/blitzscalingventures.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "23", label: "Portfolio Companies" },
       { value: "Pre-Seed - Series B", label: "Investment Stages" },
     ],
     tags: [
       "funds",
-      "machine learning",
-      "marketplaces",
-      "payments",
-      "services",
-      "platforms",
+      "Manus AI",
+      "Crew AI",
+      "Gametime",
+      "Storyboarder",
+      "Flexpa",
+      "Buffalo Market",
     ],
     links: [
       { text: "Website", url: "https://www.blitzscalingvc.com/" },
@@ -1219,19 +1932,12 @@ const portfolioData = [
     description:
       "Champion Hill Ventures seeks founders solving large problems hiding in plain sight. To find them, we look for non-consensus ideas, pre-category behavior, or innovation that is structurally underserved by the capital markets. ",
     logo: "/assets/images/portfolio/championhillventures.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "45", label: "Portfolio Companies" },
       { value: "Seed - Series A", label: "Investment Stages" },
     ],
-    tags: [
-      "funds",
-      "Defense",
-      "Hard Technology",
-      "New Computing",
-      "Digital Sovereignty",
-      "Curveballs",
-    ],
+    tags: ["funds", "Space X", "Andruil", "Flexport"],
     links: [
       { text: "Website", url: "https://www.championhillventures.com/" },
       {
@@ -1254,19 +1960,12 @@ const portfolioData = [
     name: "Frontier Technology Partners",
     description: "Disrupting the Status Quo to Build a Better Future",
     logo: "/assets/images/portfolio/frontures.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "21", label: "Portfolio Companies" },
       { value: "Pre-Seed - Seed", label: "Investment Stages" },
     ],
-    tags: [
-      "funds",
-      "Manufacturing technology",
-      "Software",
-      "Information Technology (IT)",
-      "Engineering sectors",
-      "Payments",
-    ],
+    tags: ["funds", "FreeFuse", "Kanari AI", "Pixel Canvas"],
     links: [
       { text: "Website", url: "https://www.frontures.com/" },
       {
@@ -1281,20 +1980,12 @@ const portfolioData = [
     name: "Fuel Ventures",
     description: "Fueling the growth of ambitious tech companies.",
     logo: "/assets/images/portfolio/fuelventures.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "200+", label: "Portfolio Companies" },
       { value: "Pre-Seed - Series A", label: "Investment Stages" },
     ],
-    tags: [
-      "funds",
-      "B2B",
-      "Marketplaces",
-      "SaaS",
-      "E-commerce",
-      "Marketplaces",
-      "Food & Delivery",
-    ],
+    tags: ["funds", "Wombat", "Prosper", "OnBuy", "Paddle", "Shopwave"],
     links: [
       { text: "Website", url: "https://www.fuel.ventures/" },
       {
@@ -1310,20 +2001,19 @@ const portfolioData = [
     description:
       "Gaingels is amongst the largest investors in the world aiming to show the world that equity of access and representation in venture capital delivers positive returns.",
     logo: "/assets/images/portfolio/gaingels.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "2,000+", label: "Portfolio Companies" },
       { value: "Seed - Pre-IPO", label: "Investment Stages" },
     ],
     tags: [
       "funds",
-      "Digital Assets & Web 3.0",
-      "Climate & Greentech",
-      "Healthcare",
-      "Robotics",
-      "Proptech",
-      "Media & Entertainment",
-      "Space & Aviation",
+      "Airtable",
+      "Clubhouse",
+      "Carta",
+      "Brex",
+      "Notion",
+      "Webflow",
     ],
     links: [
       { text: "Website", url: "https://gaingels.com/" },
@@ -1350,19 +2040,12 @@ const portfolioData = [
     description:
       "We are a seed-stage fund seeking diverse founding teams leveraging deep tech to solve problems in foundational, global industries from farming to finance.",
     logo: "/assets/images/portfolio/greencowvc.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "10", label: "Portfolio Companies" },
       { value: "Seed", label: "Investment Stages" },
     ],
-    tags: [
-      "funds",
-      "Deep Tech",
-      "Robotics",
-      "Financial Services",
-      "Food & Agriculture",
-      "IT Infrastructure",
-    ],
+    tags: ["funds", "CloudAdmin", "Besser.FM", "Bear Flag Robotics"],
     links: [
       { text: "Website", url: "https://www.greencow.vc/" },
       {
@@ -1378,19 +2061,12 @@ const portfolioData = [
     description:
       "We are a next generation venture capital firm, one that takes a human-first approach to investing. Builders ourselves, we invest in the humans as much as their companies. No matter where we invest, our founders embody the diversity, resilience, and ambition of New York.",
     logo: "/assets/images/portfolio/humanventures.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "60+", label: "Portfolio Companies" },
       { value: "Pre-Seed - Seed", label: "Investment Stages" },
     ],
-    tags: [
-      "funds",
-      "Health & Wellness",
-      "Future of Work",
-      "Future of Money",
-      "Community",
-      "Media",
-    ],
+    tags: ["funds", "Capsule", "Girlboss", "Headspace", "The Skimm", "Valance"],
     links: [
       { text: "Website", url: "https://human.vc/" },
       {
@@ -1406,21 +2082,12 @@ const portfolioData = [
     description:
       "We invest in earliest of pre-seed startups, led by founders outside of typical networks, selling into large and growing markets, with a unique approach or insight.",
     logo: "/assets/images/portfolio/untappedcapital.jpg",
-    status: "active",
+    status: "funds",
     metrics: [
       { value: "27", label: "Portfolio Companies" },
       { value: "Pre-Seed", label: "Investment Stages" },
     ],
-    tags: [
-      "funds",
-      "Web 3",
-      "Blockchain",
-      "Deep Tech",
-      "B2B",
-      "Life Sciences",
-      "Healthcare",
-      "E-commmerce",
-    ],
+    tags: ["funds", "Pixels", "Payman", "DocDraft", "Covalent"],
     links: [
       { text: "Website", url: "https://www.untapped.vc/" },
       {
@@ -1438,811 +2105,6 @@ const portfolioData = [
       "games",
       "infrastructure",
     ],
-  },
-  {
-    id: "upandup",
-    name: "Up & Up",
-    description:
-      "Up&Up is the smartest way for renters to build wealth while they rent. By renting an Up&Up home, renters participate in rental profits from day one, and are completely in control of their home",
-    logo: "/assets/images/portfolio/upandup.svg",
-    status: "active",
-    metrics: [
-      { value: "Series B", label: "Stage" },
-      { value: "$300M", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: ["real estate", "rentals", "mortgages"],
-    links: [
-      { text: "Website", url: "https://www.upandup.co/" },
-      {
-        text: "News",
-        url: "https://upandup.co/stories",
-      },
-    ],
-    categories: ["fintech"],
-  },
-  {
-    id: "petzey",
-    name: "Petzey",
-    description: "",
-    logo: "/assets/images/portfolio/petzey.jpg",
-    status: "active",
-    metrics: [
-      { value: "Crowdfunding", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://petzey.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: " ",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
-  },
-  {
-    id: "aether",
-    name: "Aether",
-    description: "",
-    logo: "/assets/images/portfolio/aether.jpg",
-    status: "active",
-    metrics: [
-      { value: "Series A", label: "Stage" },
-      { value: "$200M+", label: "Value" },
-      { value: "2017", label: "Founded" },
-    ],
-    tags: [
-      "synthetic biology",
-      "enzyme engineering",
-      "machine learning",
-      "robotics",
-      "industrial biotech",
-    ],
-    links: [
-      { text: "Website", url: "https://www.aetherbio.com/" },
-      {
-        text: "News",
-        url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
-      },
-    ],
-    categories: ["biotech", "ai"],
   },
 ];
 

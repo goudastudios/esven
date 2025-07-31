@@ -12,6 +12,16 @@ import portfolioData from './data/portfolio.js';
 import teamData from './data/team.js';
 import { calculatePortfolioMetrics } from './utils/portfolioUtils.js';
 
+// Helper function to shuffle an array
+const shuffleArray = (array) => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -49,8 +59,9 @@ app.get("/home.html", (req, res) => {
 
 app.get("/portfolio.html", (req, res) => {
   const metrics = calculatePortfolioMetrics(portfolioData);
+  const shuffledPortfolio = shuffleArray([...portfolioData]);
   res.render("portfolio", { 
-    portfolioCompanies: portfolioData,
+    portfolioCompanies: shuffledPortfolio,
     metrics
   });
 });
