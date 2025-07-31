@@ -262,6 +262,34 @@
   color: #fff;
 }
 
+.company-status.unicorn,
+.company-status.soonicorn,
+.company-status.funds,
+.company-status.public {
+  background: #28a745;
+  color: white;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+}
+
+/* Specific colors for each status type */
+.company-status.unicorn {
+  background: #00274c; /* Purple */
+}
+
+.company-status.soonicorn {
+  background: #014789; /* Blue */
+}
+
+.company-status.funds {
+  background: #ff9800; /* Orange */
+}
+
+.company-status.public {
+  background: #6f42c1; /* Green */
+}
+
 .company-info {
   padding: 1.5rem;
   flex: 1;

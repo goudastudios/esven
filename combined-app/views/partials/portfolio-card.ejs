@@ -9,11 +9,19 @@
 >
   <div class="company-logo-container">
     <img src="<%= company.logo %>" alt="<%= company.name %>" />
-    <% if (company.status) { %>
-      <div class="company-status 
-        <%= company.status === 'exit' ? 'exit' : '' %>
-        <%= company.status.toLowerCase() === 'inactive' ? 'inactive' : '' %>">
-        <%= company.status === 'exit' ? 'Exit' : company.status === 'inactive' ? 'Inactive' : 'Active' %>
+    <% if (company.status) { 
+      const status = company.status.toLowerCase();
+      const statusText = 
+        status === 'exit' ? 'Exit' :
+        status === 'inactive' ? 'Inactive' :
+        status === 'unicorn' ? 'Unicorn ($1B+)' :
+        status === 'soonicorn' ? 'Soonicorn ($500M-$999M)' :
+        status === 'funds' ? 'Investment Fund' :
+        status === 'public' ? 'Public' :
+        'Active';
+    %>
+      <div class="company-status <%= status %>">
+        <%= statusText %>
       </div>
     <% } %>
   </div>
