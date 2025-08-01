@@ -154,11 +154,24 @@
       <section class="portfolio-grid-section">
         <div class="container">
           <div class="portfolio-grid" id="portfolio-grid">
-            <% portfolioCompanies.forEach(company => { %> <%-
-            include('partials/portfolio-card', { company }) %> <% }) %>
+            <!-- Companies will be loaded here via JavaScript -->
+          </div>
+          <div
+            id="loading-indicator"
+            class="text-center my-5"
+            style="display: none"
+          >
+            <div class="spinner-border text-light" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- Portfolio Data (hidden, will be used by JavaScript) -->
+      <script id="portfolio-data" type="application/json">
+        <%- JSON.stringify(portfolioCompanies) %>
+      </script>
     </main>
 
     <%- include('partials/footer') %>

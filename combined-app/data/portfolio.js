@@ -3,7 +3,7 @@ const portfolioData = [
     id: "upandup",
     name: "Up & Up",
     description:
-      "Up&Up is the smartest way for renters to build wealth while they rent. By renting an Up&Up home, renters participate in rental profits from day one, and are completely in control of their home",
+      "Up&Up helps renters build wealth through profit-sharing rentals while maintaining full control of their living situation.",
     logo: "/assets/images/portfolio/upandup.png",
     status: "active",
     metrics: [
@@ -25,7 +25,7 @@ const portfolioData = [
     id: "petzey",
     name: "Petzey",
     description:
-      "Petzey is a provider of on-demand veterinary telehealth consultations, connecting pet owners with licensed veterinary professionals for immediate advice via a mobile app. ",
+      "Petzey offers on-demand video vet consultations through a mobile app, connecting pet owners with licensed veterinarians 24/7.",
     logo: "/assets/images/portfolio/petzey.png",
     status: "active",
     metrics: [
@@ -54,7 +54,7 @@ const portfolioData = [
     id: "argyle",
     name: "Argyle",
     description:
-      "Argyle is a payroll connectivity platform that provides direct-source, consumer-permissioned income and employment verifications for industries like mortgage, lending, tenant screening, and the gig economy.",
+      "Argyle's payroll connectivity platform enables instant income and employment verification for lending, mortgages, and tenant screening with user consent.",
     logo: "/assets/images/portfolio/argyle.png",
     status: "active",
     metrics: [
@@ -76,7 +76,7 @@ const portfolioData = [
     id: "securitypal",
     name: "SecurityPal AI",
     description:
-      "SecurityPal provides AI-powered security review and assessment services, streamlining customer assurance and vendor risk management for enterprises.",
+      "SecurityPal offers AI-driven security compliance solutions that automate risk assessments and streamline vendor security reviews for enterprises.",
     logo: "/assets/images/portfolio/securitypalai.png",
     status: "active",
     metrics: [
@@ -98,7 +98,7 @@ const portfolioData = [
     id: "sellergeni",
     name: "SellerGeni",
     description:
-      "SellerGeni is an AI-powered SaaS platform that helps e-commerce businesses optimize and scale their Amazon advertising and product listings.",
+      "SellerGeni's AI platform optimizes Amazon product listings and advertising campaigns to boost sales and visibility for e-commerce sellers.",
     logo: "/assets/images/portfolio/sellergeni.png",
     status: "active",
     metrics: [
@@ -120,7 +120,7 @@ const portfolioData = [
     id: "emotive",
     name: "Emotive",
     description:
-      "Emotive is a conversational SMS marketing platform for eCommerce brands, using AI and human assistance to drive customer engagement and revenue.",
+      "Emotive combines AI and human touch in SMS marketing to help eCommerce brands increase customer engagement and drive sales.",
     logo: "/assets/images/portfolio/emotive.png",
     status: "exit",
     metrics: [
@@ -142,7 +142,7 @@ const portfolioData = [
     id: "sourcemedium",
     name: "Source Medium",
     description:
-      "Source Medium provides a turnkey, enterprise-grade data infrastructure platform that empowers omnichannel e-commerce brands to connect, transform, and activate their data for confident, data-driven growth.",
+      "Source Medium offers enterprise data infrastructure that helps e-commerce brands unify and leverage their data for growth.",
     logo: "/assets/images/portfolio/sourcemedium.png",
     status: "active",
     metrics: [
@@ -164,7 +164,7 @@ const portfolioData = [
     id: "flourish",
     name: "Flourish Health",
     description:
-      "Flourish Health provides in-home and remote behavioral health treatment for children, teens, and young adults with high-acuity mental health conditions.",
+      "Flourish Health delivers in-home and virtual behavioral health services for children and young adults with complex mental health needs.",
     logo: "/assets/images/portfolio/flourishhealth.png",
     status: "active",
     metrics: [
@@ -186,7 +186,7 @@ const portfolioData = [
     id: "agvend",
     name: "AgVend",
     description:
-      "AgVend develops digital engagement software that streamlines operations and enhances customer relationships for agribusinesses through a unified platform.",
+      "AgVend's digital platform helps agribusinesses manage operations and strengthen customer relationships through unified engagement tools.",
     logo: "/assets/images/portfolio/agvend.png",
     status: "active",
     metrics: [
@@ -208,7 +208,7 @@ const portfolioData = [
     id: "andi",
     name: "Andi",
     description:
-      "Andi is a next-generation, ad-free AI search engine that delivers direct, factual answers using generative AI and live web data.",
+      "Andi is an ad-free AI search engine that provides direct, factual answers using generative AI and real-time web data.",
     logo: "/assets/images/portfolio/andi.png",
     status: "active",
     metrics: [
@@ -230,7 +230,7 @@ const portfolioData = [
     id: "hammock",
     name: "Hammock",
     description:
-      "Hammock is an accounting platform that helps UK landlords manage property finances, automate bookkeeping, and track tax statements in real time.",
+      "Hammock simplifies property accounting for UK landlords with automated bookkeeping and real-time tax tracking.",
     logo: "/assets/images/portfolio/hammock.png",
     status: "active",
     metrics: [
@@ -252,7 +252,7 @@ const portfolioData = [
     id: "konvi",
     name: "Konvi",
     description:
-      "Konvi is an app-based platform that enables users to invest in fractional ownership of luxury and alternative assets like watches, wines, and exclusive collectibles.",
+      "Konvi offers fractional investment in luxury assets like watches, wines, and collectibles through its mobile platform.",
     logo: "/assets/images/portfolio/konvi.png",
     status: "active",
     metrics: [
@@ -274,7 +274,7 @@ const portfolioData = [
     id: "inspectiv",
     name: "Inspectiv",
     description:
-      "Inspectiv provides a unified platform that combines crowdsourced and automated security testing to help enterprises continuously identify, manage, and remediate vulnerabilities in their applications.",
+      "Inspectiv's platform combines crowdsourced and automated security testing to help enterprises find and fix application vulnerabilities.",
     logo: "/assets/images/portfolio/inspectiv.png",
     status: "active",
     metrics: [
@@ -296,7 +296,7 @@ const portfolioData = [
     id: "gavel",
     name: "Gavel",
     description:
-      "Gavel is a legal document automation platform that leverages AI to streamline document generation, client intake, and workflow automation for law firms and legal professionals.",
+      "Gavel uses AI to automate legal document creation, client intake, and workflow management for law firms.",
     logo: "/assets/images/portfolio/gavel.png",
     status: "active",
     metrics: [
@@ -318,7 +318,7 @@ const portfolioData = [
     id: "instill",
     name: "Instill AI",
     description:
-      "Instill AI builds no-code AI agents that help knowledge workers organize, analyze, and extract insights from unstructured data like documents, audio, and video.",
+      "Instill AI creates no-code agents that analyze and extract insights from documents, audio, and video.",
     logo: "/assets/images/portfolio/instillai.png",
     status: "active",
     metrics: [
@@ -340,7 +340,7 @@ const portfolioData = [
     id: "facet",
     name: "Facet",
     description:
-      "Facet democratizes access to expert financial advice through a flat-fee membership model, offering personalized financial planning and investment management to help clients achieve economic security and prosperity.",
+      "Facet provides flat-fee financial planning and investment management to help clients achieve financial security.",
     logo: "/assets/images/portfolio/facet.png",
     status: "soonicorn",
     metrics: [
@@ -368,7 +368,7 @@ const portfolioData = [
     id: "capchase",
     name: "Capchase",
     description:
-      "Capchase provides flexible, non-dilutive financing solutions for SaaS and tech companies, enabling them to access future revenue upfront and optimize cash flow.",
+      "Capchase offers non-dilutive financing for SaaS companies to access future revenue and improve cash flow.",
     logo: "/assets/images/portfolio/capchase.png",
     status: "unicorn",
     metrics: [
@@ -397,7 +397,7 @@ const portfolioData = [
     id: "swan",
     name: "Swan",
     description:
-      "Swan Bitcoin is a financial software company that enables easy, recurring Bitcoin purchases and provides educational resources for investors.",
+      "Swan Bitcoin simplifies recurring Bitcoin purchases and offers investor education tools.",
     logo: "/assets/images/portfolio/swan.png",
     status: "soonicorn",
     metrics: [
@@ -419,7 +419,7 @@ const portfolioData = [
     id: "7shifts",
     name: "7shifts",
     description:
-      "7shifts provides an all-in-one scheduling, payroll, and team management platform designed to streamline restaurant operations and reduce labor costs. ",
+      "7shifts offers an all-in-one platform for restaurant scheduling, payroll, and team management to optimize operations and reduce costs.",
     logo: "/assets/images/portfolio/7shifts.png",
     status: "active",
     metrics: [
@@ -441,7 +441,7 @@ const portfolioData = [
     id: "eva",
     name: "Eva",
     description:
-      "Eva.guru provides AI-powered tools for pricing, advertising, and inventory optimization to help e-commerce brands maximize profits and efficiency on platforms like Amazon, Walmart, and Shopify.",
+      "Eva.guru uses AI to optimize pricing, ads, and inventory for e-commerce brands on Amazon, Walmart, and Shopify.",
     logo: "/assets/images/portfolio/eva.png",
     status: "active",
     metrics: [
@@ -463,7 +463,7 @@ const portfolioData = [
     id: "iriscx",
     name: "IrisCX",
     description:
-      "IrisCX delivers AI-powered video customer engagement solutions, enabling businesses to remotely guide, support, and resolve customer issues through live and self-guided video interactions.",
+      "IrisCX provides AI video tools for businesses to remotely assist and resolve customer issues through live video interactions.",
     logo: "/assets/images/portfolio/iriscx.png",
     status: "active",
     metrics: [
@@ -485,7 +485,7 @@ const portfolioData = [
     id: "gauge",
     name: "Gauge Automotive",
     description:
-      "Gauge Automotive operates an AI-powered online marketplace that enables car owners to sell their vehicles quickly and for the highest price by leveraging a competitive bidding process among buyers.",
+      "Gauge Automotive's AI marketplace helps car owners get top dollar through competitive bidding from verified buyers.",
     logo: "/assets/images/portfolio/gauge.png",
     status: "active",
     metrics: [
@@ -507,7 +507,7 @@ const portfolioData = [
     id: "traxyl",
     name: "Traxyl",
     description:
-      "TRAXyL is positioned to disrupt traditional fiber installation with a patented, scalable solution that slashes deployment time and cost, targeting the lucrative last-mile connectivity market in telecom infrastructure.",
+      "TRAXyL's patented technology reduces fiber installation time and costs for telecom's last-mile connectivity needs.",
     logo: "/assets/images/portfolio/traxyl.png",
     status: "active",
     metrics: [
@@ -533,7 +533,7 @@ const portfolioData = [
     id: "loop",
     name: "Loop",
     description:
-      "Loop Digital Frame makes it easy for families to instantly share photos and videos to a high-definition digital frame via text or app, keeping loved ones connected.",
+      "Loop's digital frame lets families share photos and videos instantly via app or text, keeping loved ones connected.",
     logo: "/assets/images/portfolio/loop.png",
     status: "active",
     metrics: [
@@ -560,7 +560,7 @@ const portfolioData = [
     id: "inkshares",
     name: "InkShares",
     description:
-      "Inkshares is a publishing and literary rights-management platform where readers, not agents, decide which books get published through a crowdfunding and pre-order model.",
+      "Inkshares is a reader-powered publishing platform using crowdfunding to determine which books get published.",
     logo: "/assets/images/portfolio/inkshares.jpg",
     status: "active",
     metrics: [
@@ -582,7 +582,7 @@ const portfolioData = [
     id: "threeships",
     name: "Three Ships Beauty",
     description:
-      "Three Ships Beauty is a Toronto-based skincare brand offering affordable, science-backed, natural products with a focus on transparency and sustainability.",
+      "Three Ships Beauty creates affordable, natural skincare products with a focus on transparency and sustainability.",
     logo: "/assets/images/portfolio/threeships.png",
     status: "active",
     metrics: [
@@ -604,7 +604,7 @@ const portfolioData = [
     id: "hownow",
     name: "HowNow",
     description:
-      "HowNow is an AI-powered platform that helps businesses create, deliver, and measure learning and upskilling for employees, connecting learning directly to business-critical skills.",
+      "HowNow's AI platform helps businesses upskill employees by aligning learning with critical business skills.",
     logo: "/assets/images/portfolio/hownow.webp",
     status: "active",
     metrics: [
@@ -627,7 +627,7 @@ const portfolioData = [
     id: "curve",
     name: "Curve Pay",
     description:
-      "Curve is a fintech platform that unifies all your payment cards into one smart digital wallet, letting you manage spending, avoid foreign transaction fees, and maximize rewards.",
+      "Curve consolidates multiple payment cards into one smart wallet to manage spending, avoid fees, and maximize rewards.",
     logo: "/assets/images/portfolio/curve.png",
     status: "active",
     metrics: [
@@ -649,7 +649,7 @@ const portfolioData = [
     id: "proteinqure",
     name: "ProteinQure",
     description:
-      "ProteinQure is a Toronto-based biotech company leveraging AI and computational tools to design novel peptide therapeutics for targeted, tissue-specific drug delivery.",
+      "ProteinQure uses AI to design targeted peptide therapeutics for precise drug delivery.",
     logo: "/assets/images/portfolio/proteinqure.jpg",
     status: "active",
     metrics: [
@@ -671,7 +671,7 @@ const portfolioData = [
     id: "virgo",
     name: "Virgo",
     description:
-      "Virgo develops cloud-based AI software that accelerates clinical trial results by enabling high-quality endoscopic video capture, analysis, and patient recruitment for healthcare providers and pharmaceutical companies. ",
+      "Virgo's AI software speeds up clinical trials with endoscopic video analysis and patient recruitment tools.",
     logo: "/assets/images/portfolio/virgo.png",
     status: "active",
     metrics: [
@@ -693,7 +693,7 @@ const portfolioData = [
     id: "begin",
     name: "Begin AI",
     description:
-      "Begin AI develops an AI bot platform that automates business tasks like reading documents, tracking inventory, and generating invoices to help small businesses improve efficiency and save time.",
+      "Begin AI's bots automate document processing, inventory tracking, and invoicing to save small businesses time.",
     logo: "/assets/images/portfolio/begin.png",
     status: "active",
     metrics: [
@@ -715,7 +715,7 @@ const portfolioData = [
     id: "fireside",
     name: "Fireside Chat",
     description:
-      "Fireside is a next-generation podcast platform enabling creators to host live, interactive, and virtual shows with real-time audience engagement.",
+      "Fireside lets podcasters host live, interactive shows with real-time audience engagement.",
     logo: "/assets/images/portfolio/fireside.png",
     status: "active",
     metrics: [
@@ -765,7 +765,7 @@ const portfolioData = [
     id: "bambee",
     name: "Bambee",
     description:
-      "Bambee provides small businesses with affordable, outsourced HR management and compliance solutions, including a dedicated HR manager and automated HR practices.",
+      "Bambee offers affordable, outsourced HR management and compliance for small businesses.",
     logo: "/assets/images/portfolio/bambee.png",
     status: "active",
     metrics: [
@@ -787,7 +787,7 @@ const portfolioData = [
     id: "unit21",
     name: "Unit21",
     description:
-      "Unit21 offers a no-code risk and compliance platform that empowers businesses to detect, prevent, and manage financial crime, fraud, and AML operations in real time.",
+      "Unit21's no-code platform helps businesses detect and prevent financial crime and fraud in real time.",
     logo: "/assets/images/portfolio/unit21.png",
     status: "active",
     metrics: [
@@ -817,7 +817,7 @@ const portfolioData = [
     id: "unstoppabledomains",
     name: "Unstoppable Domains",
     description:
-      "Unstoppable Domains develops a blockchain-based domain platform that replaces crypto addresses with human-readable names, enabling decentralized, censorship-resistant websites and digital identity.",
+      "Unstoppable Domains creates blockchain domains that replace crypto addresses with readable names for decentralized websites and digital IDs.",
     logo: "/assets/images/portfolio/unstoppabledomains.png",
     status: "unicorn",
     metrics: [
@@ -839,7 +839,7 @@ const portfolioData = [
     id: "monarchmoney",
     name: "Monarch Money",
     description:
-      "Monarch Money is a subscription-based personal finance platform that helps users track, budget, and manage all their finances in one place, with a focus on privacy and user experience.",
+      "Monarch Money is a privacy-focused personal finance app for tracking, budgeting, and managing all your money in one place.",
     logo: "/assets/images/portfolio/monarch.png",
     status: "soonicorn",
     metrics: [
@@ -862,7 +862,7 @@ const portfolioData = [
     id: "discord",
     name: "Discord",
     description:
-      "Discord is a social media platform and community for gamers, creators, and enthusiasts to connect, share, and create content. The platform offers a range of features, including voice and video chat, text-based communication, and a marketplace for in-game purchases. Discord also provides tools for content creators to monetize their content and engage with their audience.",
+      "Discord is a social platform for communities to connect via voice, video, and text chat, with tools for creators and gamers.",
     logo: "/assets/images/portfolio/discord.png",
     status: "unicorn",
     metrics: [
@@ -884,7 +884,7 @@ const portfolioData = [
     id: "aether",
     name: "Aether",
     description:
-      "Aether provides a molecular assembler platform that combines high-throughput robotics, machine learning, and synthetic biology to map millions of enzyme-reaction combinations, enabling the engineering of new classes of nanoscale machines using protein building blocks called molecular assemblers.",
+      "Aether's molecular assembler platform uses AI and robotics to engineer nanoscale machines from protein building blocks.",
     logo: "/assets/images/portfolio/aether.jpg",
     status: "active",
     metrics: [
@@ -913,7 +913,7 @@ const portfolioData = [
     id: "better-mortgage",
     name: "Better Mortgage",
     description:
-      "Better Mortgage is a technology-driven mortgage lender dedicated to simplifying home financing through a fully digital platform. The company was founded in 2014 with the mission to streamline the mortgage process, making it faster, more transparent, and more affordable by eliminating unnecessary fees and leveraging technology to automate traditionally manual processes.",
+      "Better Mortgage offers a fully digital home lending platform that simplifies and speeds up the mortgage process.",
     logo: "/assets/images/portfolio/better.jpg",
     status: "public",
     metrics: [
@@ -941,7 +941,7 @@ const portfolioData = [
     id: "blockstream",
     name: "Blockstream",
     description:
-      "Blockstream is a leading Bitcoin and blockchain technology company that develops infrastructure for the emerging Bitcoin economy. Founded in 2014 by Dr. Adam Back and other Bitcoin developers, Blockstream builds products that enhance the security, privacy, and functionality of Bitcoin, including the Liquid Network (a Bitcoin sidechain), Core Lightning implementation, and enterprise-grade Bitcoin mining solutions.",
+      "Blockstream develops Bitcoin infrastructure including the Liquid Network, Core Lightning, and enterprise mining solutions.",
     logo: "/assets/images/portfolio/blockstream.jpg",
     status: "active",
     metrics: [
@@ -973,7 +973,7 @@ const portfolioData = [
     id: "cart-com",
     name: "Cart.com",
     description:
-      "Cart.com is a leading provider of unified commerce and logistics solutions, enabling B2C and B2B companies to manage their entire commerce operations from discovery to delivery. The company offers a comprehensive suite of services including order management, inventory management, fulfillment, and digital commerce solutions, helping over 6,000 brands streamline their operations and enhance customer experiences.",
+      "Cart.com provides end-to-end e-commerce solutions including order management, inventory, and fulfillment for 6,000+ brands.",
     logo: "/assets/images/portfolio/cart.jpg",
     status: "active",
     metrics: [
@@ -1027,8 +1027,8 @@ const portfolioData = [
     id: "creatify",
     name: "Creatify AI",
     description:
-      "Creatify AI is an AI-powered platform that transforms product links into high-performing video advertisements in minutes. The platform automates the entire video ad creation process, from competitive analysis to final export, helping marketers and e-commerce brands scale their creative output. With features like AI avatars, automated scriptwriting, and performance optimization, Creatify enables users to generate dozens of video ad variants optimized for platforms like TikTok, Meta, YouTube, and Snapchat.",
-    logo: "/assets/images/portfolio/creatify.jpg",
+      "Creatify AI automates video ad creation from product links, generating optimized ads for TikTok, Meta, and YouTube with AI avatars and scripts.",
+    logo: "/assets/images/portfolio/creatify.png",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
@@ -1058,7 +1058,7 @@ const portfolioData = [
     id: "darwin-homes",
     name: "Darwin Homes",
     description:
-      "Darwin Homes is a vertically-integrated real estate investment management platform specializing in single-family rental properties. The company offers a comprehensive, tech-enabled solution for property acquisition, renovation, and management, focusing on making the rental experience seamless for both property owners and residents. Their platform includes features like self-guided tours with smart locks, digital applications, online rent payments, and 24/7 digital support.",
+      "Darwin Homes offers a tech platform for managing single-family rentals, with digital tools for tours, applications, and rent payments.",
     logo: "/assets/images/portfolio/darwin.jpg",
     status: "exit",
     metrics: [
@@ -1089,7 +1089,7 @@ const portfolioData = [
     id: "delix-therapeutics",
     name: "Delix Therapeutics",
     description:
-      "Delix Therapeutics is a clinical-stage neuroscience company developing a novel class of neuroplasticity-promoting therapeutics called neuroplastogens. These compounds are designed to treat a wide range of neuropsychiatric and neurodegenerative disorders by promoting the growth and repair of neural connections in the brain. The company's approach builds on the discovery that certain compounds can induce neuroplasticity without the hallucinogenic effects of traditional psychedelics, potentially offering safer, more scalable treatment options for conditions like depression, PTSD, addiction, and cognitive impairment.",
+      "Delix Therapeutics develops neuroplastogens, non-hallucinogenic compounds that repair brain connections to treat mental health and cognitive disorders.",
     logo: "/assets/images/portfolio/delix.jpg",
     status: "active",
     metrics: [
@@ -1116,7 +1116,7 @@ const portfolioData = [
     id: "dibs-capital",
     name: "Dibs Capital (formerly Solidblock)",
     description:
-      "Dibs Capital is a financial technology company specializing in the tokenization of real estate and private equity assets. The company provides an end-to-end platform that transforms traditional assets into digital securities, enabling improved liquidity, fractional ownership, and more efficient capital markets. Dibs Capital's distributed investment banking platform leverages blockchain technology to create a compliant ecosystem for issuing, managing, and trading digital securities, with a focus on real estate and other alternative assets.",
+      "Dibs Capital tokenizes real estate and private equity assets, creating digital securities for improved liquidity and fractional ownership.",
     logo: "/assets/images/portfolio/solidblock.jpg",
     status: "active",
     metrics: [
@@ -1144,7 +1144,7 @@ const portfolioData = [
     id: "feel",
     name: "Feel",
     description:
-      "Feel is a wellness company that develops clinically-backed, clean-label nutritional supplements and wellness products. The company focuses on creating high-quality, bioavailable formulas using patented ingredients, botanicals, and plant extracts. Feel's product line includes multivitamins, hair care, skin care, and energy supplements, all designed with a focus on scientific research and clean formulations. The company differentiates itself by avoiding synthetic fillers and using research-backed doses of premium ingredients.",
+      "Feel creates clean-label wellness supplements and personal care products with clinically-backed, plant-based ingredients and no synthetic fillers.",
     logo: "/assets/images/portfolio/feel.jpg",
     status: "active",
     metrics: [
@@ -1172,7 +1172,7 @@ const portfolioData = [
     id: "generation-conscious",
     name: "Generation Conscious",
     description:
-      "Generation Conscious installs zero-waste, plastic-free hygiene product refill stations in university residence halls to promote sustainability and hygiene equity for students.",
+      "Generation Conscious installs plastic-free hygiene refill stations in college dorms to promote sustainability and hygiene access.",
     logo: "/assets/images/portfolio/generationconscious.png",
     status: "active",
     metrics: [
@@ -1200,7 +1200,7 @@ const portfolioData = [
     id: "geologie",
     name: "Geologie",
     description:
-      "Geologie is a direct-to-consumer men's skincare brand that offers personalized skin, hair, and body care products. The company uses a data-driven approach to create customized skincare routines based on individual skin type and concerns. Geologie's product line includes clinically-formulated products such as the Retinol Night Cream, Natural Deodorant, and Tone Control Face Cream. The brand expanded into retail with its Clear System acne care line available in over 900 Target stores. In 2025, Geologie was acquired by Megalabs USA, a pharmaceutical company, to enhance its position in the dermatology and personal care market.",
+      "Geologie is a men's skincare brand offering personalized, clinical-grade products, now available in Target stores and acquired by Megalabs USA.",
     logo: "/assets/images/portfolio/geologie.jpg",
     status: "exit",
     metrics: [
@@ -1231,7 +1231,7 @@ const portfolioData = [
     id: "grove-collaborative",
     name: "Grove Collaborative",
     description:
-      "Grove Collaborative is a digitally native, sustainable consumer products company that offers a curated selection of natural home, personal care, and wellness products. The company operates as a Certified B Corp with a mission to transform the consumer products industry into a force for human and environmental good. Grove's direct-to-consumer platform provides a convenient subscription service for eco-friendly household essentials, including cleaning supplies, personal care items, and pet care products. In 2022, Grove went public through a SPAC merger with Virgin Group Acquisition Corp II, trading on the NYSE under the ticker 'GROV' with a $1.5 billion valuation.",
+      "Grove Collaborative is a sustainable home and personal care brand offering natural products through a direct-to-consumer subscription model, now publicly traded.",
     logo: "/assets/images/portfolio/grove.jpg",
     status: "public",
     metrics: [
@@ -1258,7 +1258,7 @@ const portfolioData = [
     id: "hologram",
     name: "Hologram",
     description:
-      "Hologram is a leading cellular connectivity platform for IoT devices, providing global, reliable connectivity solutions for businesses deploying connected devices. The company's platform offers SIM cards and connectivity management tools that enable seamless IoT deployments across 190+ countries through 550+ carrier partners. Hologram's technology powers a wide range of IoT applications, from industrial equipment monitoring to smart city infrastructure. The company raised $65 million in Series B funding led by Tiger Global in 2021 to expand its global network and platform capabilities.",
+      "Hologram provides global cellular connectivity for IoT devices, offering SIM cards and management tools across 190+ countries through 550+ carrier partners.",
     logo: "/assets/images/portfolio/hologram.jpg",
     status: "active",
     metrics: [
@@ -1286,7 +1286,7 @@ const portfolioData = [
     id: "hyperscience",
     name: "Hyperscience",
     description:
-      "Hyperscience is an enterprise AI platform that specializes in intelligent document processing (IDP) and workflow automation. The company's machine learning-powered platform helps organizations transform unstructured content into structured, actionable data with industry-leading accuracy rates of 99.5%. Hyperscience serves federal, state, and local agencies, as well as enterprises across various sectors, by automating document-intensive processes such as mortgage applications, insurance claims, and student visa processing. The company has raised over $400 million in funding and is known for its FedRAMP High authorization, ensuring the highest levels of security and compliance for government and regulated industries.",
+      "Hyperscience automates document processing with 99.5% accuracy, helping enterprises and government agencies transform unstructured data into actionable insights.",
     logo: "/assets/images/portfolio/hyperscience.jpg",
     status: "active",
     metrics: [
@@ -1313,7 +1313,7 @@ const portfolioData = [
     id: "instil",
     name: "Instil",
     description:
-      "Instil is a modern nonprofit software platform designed to transform donor relationships and maximize social impact. The company provides an intuitive, mobile-friendly donor management system that helps nonprofit organizations manage major gifts, capital campaigns, planned giving, and grant tracking. Instil's platform offers a 360-degree view of donor relationships, enabling fundraisers to make data-driven decisions and improve donor engagement. With a focus on user experience, Instil's tools require minimal training and help nonprofits increase their fundraising effectiveness and operational efficiency.",
+      "Instil offers donor management software for nonprofits, streamlining fundraising, campaign tracking, and donor engagement through an intuitive platform.",
     logo: "/assets/images/portfolio/instil.jpg",
     status: "active",
     metrics: [
@@ -1340,7 +1340,7 @@ const portfolioData = [
     id: "jumbotail",
     name: "Jumbotail",
     description:
-      "Jumbotail is India's leading B2B marketplace and New Retail platform, serving over 250,000 mom & pop stores (\"Kiranas\") across 50+ cities in India. The company operates a full-stack platform that includes a B2B marketplace, supply chain & logistics, fintech solutions, and a retail operating system. Jumbotail's ecosystem helps streamline food and grocery distribution, providing next-day storefront delivery to small retailers. In June 2025, Jumbotail raised $120 million in a funding round led by SC Ventures, bringing its total funding to $263 million, and completed the acquisition of Solv, a B2B agritech platform.",
+      "Jumbotail is India's leading B2B marketplace for mom & pop stores, offering food/grocery distribution, fintech solutions, and next-day delivery services.",
     logo: "/assets/images/portfolio/jumbotail.jpg",
     status: "active",
     metrics: [
@@ -1367,7 +1367,7 @@ const portfolioData = [
     id: "knix",
     name: "Knix",
     description:
-      "Knix is a direct-to-consumer intimate apparel brand known for its innovative, comfortable, and leak-proof underwear and loungewear. Founded in 2012 by Joanna Griffiths, Knix revolutionized the intimate apparel industry with its body-positive approach and proprietary technology for period and bladder leak protection. In July 2022, Knix was acquired by Essity for $400 million, making Essity the global market leader in leakproof apparel. The company continues to operate independently under Essity's ownership, with Joanna Griffiths retaining a 20% stake and remaining as President. Knix's product line includes leakproof underwear, bras, swimwear, and loungewear, all designed with a focus on comfort, functionality, and body positivity.",
+      "Knix is a DTC intimate apparel brand known for leak-proof underwear and loungewear, acquired by Essity in 2022 for $400M.",
     logo: "/assets/images/portfolio/knix.jpg",
     status: "exit",
     metrics: [
@@ -1398,7 +1398,7 @@ const portfolioData = [
     id: "lalo",
     name: "Lalo",
     description:
-      "Lalo is a direct-to-consumer baby and toddler product company that designs and sells high-quality, thoughtfully designed essentials for modern families. Founded by Greg Davidson and Michael Wieder, Lalo focuses on creating durable, safe, and stylish products that grow with children from infancy through toddlerhood. The company emphasizes clean design, non-toxic materials, and thoughtful functionality in its product line, which includes high chairs, play yards, and other nursery essentials. In June 2023, Lalo raised $10.1 million in Series A funding led by Spin Master Ventures, with participation from Babylist and Kevin Durant's Thirty Five Ventures, bringing their total funding to $17.2 million.",
+      "Lalo creates thoughtfully designed, non-toxic baby essentials including high chairs and play yards that grow with children from infancy.",
     logo: "/assets/images/portfolio/lalo.jpg",
     status: "active",
     metrics: [
@@ -1418,7 +1418,7 @@ const portfolioData = [
     id: "metadata",
     name: "Metadata",
     description:
-      "Metadata is a B2B marketing automation platform that leverages AI to optimize and automate digital advertising campaigns across multiple channels including LinkedIn, Google, and Meta. The company's AI-driven platform helps marketing teams scale their demand generation efforts by automating targeting, bidding, and campaign optimization. Metadata's unique approach focuses on driving actual pipeline and revenue rather than just clicks and leads, making it a powerful tool for account-based marketing (ABM) and go-to-market (GTM) strategies. In March 2022, Metadata raised $40 million in Series B funding, bringing its total funding to over $58.5 million from investors including Resolute Ventures and LAUNCH.",
+      "Metadata's AI platform automates and optimizes B2B marketing campaigns across LinkedIn, Google, and Meta to drive pipeline and revenue growth.",
     logo: "/assets/images/portfolio/metadata.jpg",
     status: "active",
     metrics: [
@@ -1444,7 +1444,7 @@ const portfolioData = [
     id: "olvin",
     name: "Olvin",
     description:
-      "Olvin is an analytics platform that provides location-based intelligence and consumer behavior insights for businesses. The company's platform analyzes location data, demographics, and behavioral patterns to offer valuable insights into consumer movements and preferences. Olvin's technology helps businesses understand foot traffic patterns, optimize store locations, and make data-driven decisions about their physical presence. The company raised funding in a seed round in August 2021, with participation from investors including Francisco Crespo and Untapped Capital. Olvin's solutions are particularly valuable for retail, real estate, and consumer-facing businesses looking to enhance their market strategy with location intelligence.",
+      "Olvin provides location analytics and consumer behavior insights to help businesses optimize physical locations and understand foot traffic patterns.",
     logo: "/assets/images/portfolio/olvin.jpg",
     status: "exit",
     metrics: [
@@ -1474,7 +1474,7 @@ const portfolioData = [
     id: "pagaya",
     name: "Pagaya",
     description:
-      "Pagaya is financial technology company that enables financial institutions to expand access to more customers through its artificial intelligence network.",
+      "Pagaya uses AI to help financial institutions expand access to credit and financial services through its intelligent underwriting platform.",
     logo: "/assets/images/portfolio/pagaya.jpg",
     status: "public",
     metrics: [
@@ -1507,7 +1507,7 @@ const portfolioData = [
     id: "passport",
     name: "Passport",
     description:
-      "Passport is a leading international shipping and compliance platform designed specifically for direct-to-consumer (DTC) e-commerce brands. The company provides comprehensive cross-border solutions including international shipping, compliance management, and payment localization to help brands expand globally. Passport's technology handles customs clearance, duties, and taxes while providing a seamless checkout experience for international customers. In January 2022, Passport raised $39 million in Series B funding led by TCV, with participation from Flexport, FJ Labs, and Pure Imagination, bringing their total funding to over $39 million. The platform supports millions of parcels annually across multiple markets and currencies, with clients including BrüMate, Tommy John, and KraveBeauty.",
+      "Passport provides DTC brands with international shipping, compliance, and payment localization to simplify global e-commerce expansion.",
     logo: "/assets/images/portfolio/passport.jpg",
     status: "active",
     metrics: [
@@ -1530,7 +1530,7 @@ const portfolioData = [
     id: "people-ai",
     name: "People.ai",
     description:
-      "People.ai is a leading revenue operations and intelligence platform that leverages artificial intelligence to transform business activity data into actionable insights for sales teams. The company's AI-powered platform helps organizations automate data capture, provide real-time deal intelligence, and optimize revenue operations. People.ai's technology connects to existing tools in a company's tech stack to automatically capture customer interactions and provide visibility into the entire revenue lifecycle. In August 2021, the company achieved unicorn status with a $100 million Series D funding round at a $1.1 billion valuation, co-led by Akkadian Ventures and Mubadala Capital, bringing their total funding to over $200 million.",
+      "People.ai's AI platform transforms sales activity data into actionable insights, helping revenue teams optimize performance and close more deals.",
     logo: "/assets/images/portfolio/peopleai.jpg",
     status: "active",
     metrics: [
@@ -1557,7 +1557,7 @@ const portfolioData = [
     id: "pryon",
     name: "Pryon",
     description:
-      "Pryon is an enterprise AI company that provides a Retrieval as a Service (RaaS) platform designed to accelerate generative and agentic AI adoption in large organizations. The company's technology offers a secure, scalable solution for enterprises to implement Retrieval-Augmented Generation (RAG) systems, enabling instant, verifiable answers from all forms of content. Pryon's platform includes components like the Ingestion Engine, Retrieval Engine, and Generative Engine, which work together to transform enterprise knowledge into actionable insights. In September 2023, Pryon raised $100 million in Series B funding, with participation from the US Innovative Technology Fund and other investors, bringing their total funding to over $130 million.",
+      "Pryon's Retrieval as a Service (RaaS) platform helps enterprises implement AI-powered knowledge management and retrieval-augmented generation.",
     logo: "/assets/images/portfolio/pryon.jpg",
     status: "active",
     metrics: [
@@ -1584,7 +1584,7 @@ const portfolioData = [
     id: "quiver",
     name: "Quiver",
     description:
-      "Quiver is a London-based technology company that provides emissionless same-day delivery services, focusing on quick commerce (q-commerce) solutions. Founded in 2021, Quiver enables brands and retailers to offer fast, sustainable delivery options to their customers. The company's platform leverages electric vehicles and optimized routing to provide a more environmentally friendly alternative to traditional delivery services. Quiver's technology focuses on unlocking speed, customer-centricity, and sustainability in last-mile delivery, helping businesses meet the growing demand for instant, eco-conscious delivery options in urban environments like London.",
+      "Quiver offers emissionless same-day delivery in London using electric vehicles and optimized routing for sustainable quick commerce.",
     logo: "/assets/images/portfolio/quiver.jpg",
     status: "active",
     metrics: [
@@ -1604,7 +1604,7 @@ const portfolioData = [
     id: "republic",
     name: "Republic",
     description:
-      "Republic is a leading investment platform that enables individuals to invest in startups, crypto, real estate, and other alternative assets with as little as $50. Founded in 2013, the company operates one of the largest private investment platforms, having helped raise over $2.6 billion for more than 3,000 companies. Republic's platform provides access to a wide range of investment opportunities, including equity crowdfunding, tokenized assets, and venture funds. The company has played a significant role in democratizing access to private market investments, with notable success stories including Revolut, which saw over 5,000% growth for early investors. Republic also offers services such as community engagement, RWA (Real World Assets) tokenization, and web3 advisory.",
+      "Republic is an investment platform that lets individuals invest in startups, crypto, and real estate with as little as $50.",
     logo: "/assets/images/portfolio/republic.jpg",
     status: "active",
     metrics: [
@@ -1633,7 +1633,7 @@ const portfolioData = [
     id: "rescale",
     name: "Rescale",
     description:
-      "Rescale is a San Francisco-based company that provides a full-stack platform for high-performance computing (HPC) in the cloud. Founded in 2011, Rescale enables engineers and scientists to run complex simulations and perform large-scale computing tasks without the need for on-premises infrastructure. The company's platform offers access to a wide range of cloud-based computing resources, AI/ML tools, and simulation software, making it easier for organizations to accelerate their research and development processes. Rescale has raised $369 million across 10 funding rounds, with backing from prominent investors including Initialized Capital, M12 (Microsoft's venture fund), and Y Combinator. The company serves industries such as aerospace, automotive, biotech, and energy, helping them reduce costs and speed up time-to-market for innovative products.",
+      "Rescale provides a cloud platform for high-performance computing, enabling engineers to run complex simulations without on-premises infrastructure.",
     logo: "/assets/images/portfolio/rescale.jpg",
     status: "active",
     metrics: [
@@ -1660,7 +1660,7 @@ const portfolioData = [
     id: "rise",
     name: "Rise",
     description:
-      "Rise is a tech-focused job platform that connects professionals with opportunities at startups and tech companies. The platform serves as an AI-powered job search copilot, helping candidates find roles in various domains including engineering, product, design, marketing, sales, and operations. Founded to create a more supportive and efficient job search experience, Rise offers a free platform for job seekers to build their digital presence and connect with mission-aligned companies. The company emphasizes remote work opportunities and has built a community around career development in the tech industry. Rise's platform is designed to help both job seekers and employers in the tech ecosystem find better matches through its curated approach to job listings and talent discovery.",
+      "Rise is an AI-powered job platform connecting tech professionals with startup opportunities, focusing on remote work and career development.",
     logo: "/assets/images/portfolio/rise.jpg",
     status: "active",
     metrics: [
@@ -1686,7 +1686,7 @@ const portfolioData = [
     id: "secure-frame",
     name: "Secure Frame",
     description:
-      "Secure Frame is a compliance automation platform that helps organizations achieve and maintain various security and privacy compliance certifications. Founded in 2020 by Shrav Mehta and Natasja Nielsen, the company provides a comprehensive solution for managing compliance with standards such as SOC 2, ISO 27001, PCI DSS, HIPAA, and GDPR. Secure Frame's platform automates the compliance process, including evidence collection, policy management, and risk assessment, significantly reducing the time and resources required for audits. The company has raised $79 million across three funding rounds, with a $56 million Series B led by Accomplice, and serves thousands of businesses including AngelList, Ramp, Remote, and Coda. Secure Frame's mission is to simplify security compliance for companies of all sizes, enabling them to build trust with customers and partners.",
+      "Secure Frame automates security compliance (SOC 2, ISO 27001, GDPR) with tools for evidence collection, policy management, and risk assessment.",
     logo: "/assets/images/portfolio/secureframe.jpg",
     status: "active",
     metrics: [
@@ -1712,7 +1712,7 @@ const portfolioData = [
     id: "skysafe",
     name: "SkySafe",
     description:
-      "SkySafe is a leader in airspace security, providing advanced drone detection and mitigation solutions. The company's cloud-based platform enables organizations to identify, track, and analyze drone activity in real-time, offering protection against potential security threats. SkySafe's technology is used across various sectors including airports, correctional facilities, critical infrastructure, military installations, and major sporting events. The company has raised $49.61 million across 8 funding rounds, with its latest being a Series B round in December 2021. SkySafe's solutions are trusted by organizations like the PGA Tour and Big 10 Stadiums for their ability to provide comprehensive airspace awareness and security against unauthorized drone activities.",
+      "SkySafe provides drone detection and mitigation technology to secure airspace for airports, stadiums, and critical infrastructure.",
     logo: "/assets/images/portfolio/skysafe.jpg",
     status: "active",
     metrics: [
@@ -1737,7 +1737,7 @@ const portfolioData = [
     id: "super-plastic",
     name: "Super Plastic",
     description:
-      "Super Plastic is a character design studio and entertainment company that creates animated celebrities, vinyl toys, and digital collectibles. The company is known for its unique virtual influencers and characters like Janky, Guggimon, and Dayzee, who exist across various digital and physical platforms. Super Plastic combines art, music, fashion, and storytelling to create a new form of entertainment where virtual characters have real-world influence. The company has raised $68.07 million across multiple funding rounds, with investors including The Alexa Fund, Google Ventures, Craft Ventures, and Sony Japan. Super Plastic's characters have collaborated with major brands and artists, appearing in music videos, video games, and exclusive merchandise drops.",
+      "Super Plastic creates virtual influencer characters and digital collectibles that bridge digital and physical entertainment experiences.",
     logo: "/assets/images/portfolio/superplastic.jpg",
     status: "active",
     metrics: [
@@ -1765,8 +1765,8 @@ const portfolioData = [
     id: "swiftly",
     name: "Swiftly",
     description:
-      "Swiftly is a retail technology platform that provides omnichannel tools for regional and independent retailers, helping them compete with larger chains in the digital space. The company's end-to-end digital platform enables retailers to enhance customer engagement, boost sales through personalization, and generate new profit streams. Swiftly also offers a retail media network that connects brands with retailers' customers through targeted advertising. The company achieved unicorn status with a $1 billion+ valuation following a $100 million Series C funding round led by BRV Capital Management. Swiftly's platform is designed to help retailers own the customer journey and leverage data analytics for better business outcomes.",
-    logo: "/assets/images/portfolio/swiftly.jpg",
+      "Swiftly provides omnichannel retail technology that helps independent retailers compete with digital tools, personalization, and advertising solutions.",
+    logo: "/assets/images/portfolio/swiftly.png",
     status: "active",
     metrics: [
       { value: "Series C", label: "Stage" },
@@ -1792,7 +1792,7 @@ const portfolioData = [
     id: "moot-group",
     name: "The MOOT Group",
     description:
-      "The MOOT Group (TMG) is a technology investment firm that partners with transformative technology companies to disrupt markets and shape the future. Specializing in the digital economy, TMG invests in and acquires technology and digital businesses that solve complex challenges and enhance everyday life. With a focus on e-commerce technology, TMG provides end-to-end solutions for retail brands looking to scale their direct-to-consumer offerings across multiple channels and international markets. The company has secured £5 million in seed funding led by Fuel Ventures and has demonstrated rapid growth, with a reported 1300% growth rate and on track to reach £100M in revenue. TMG's portfolio includes partnerships with major retail brands like Sports Direct and The White Company.",
+      "The MOOT Group invests in and scales e-commerce technology companies, partnering with retail brands to expand their digital presence.",
     logo: "/assets/images/portfolio/tmg.jpg",
     status: "active",
     metrics: [
@@ -1821,7 +1821,7 @@ const portfolioData = [
     id: "volansi",
     name: "Volansi",
     description:
-      "Volansi is a developer of autonomous drone delivery solutions specializing in middle-mile logistics. The company focuses on vertical take-off and landing (VTOL) drones for time-critical delivery of parts and medical supplies. Volansi's technology enables automated, on-demand delivery services for industries requiring rapid transportation of essential items. The company has raised significant funding, including a $50 million Series B round led by Icon Ventures, with participation from Lightspeed Venture Partners and other investors. Volansi has partnered with organizations like the North Carolina Department of Transportation to implement commercial middle-mile delivery services. The company's drones are designed to operate in challenging environments and provide reliable delivery solutions for healthcare, industrial, and government sectors.",
+      "Volansi develops autonomous VTOL drones for middle-mile logistics, specializing in time-critical delivery of medical supplies and industrial parts.",
     logo: "/assets/images/portfolio/volansi.jpg",
     status: "exit",
     metrics: [
@@ -1854,7 +1854,7 @@ const portfolioData = [
     id: "wave-sports",
     name: "Wave Sports and Entertainment",
     description:
-      "Wave Sports and Entertainment (WSE) is a leading sports media company that creates and distributes digital content for the next generation of sports fans. The company focuses on building brands, original content, talent, and products for digitally native audiences. WSE produces popular sports shows and podcasts featuring notable athletes and personalities, including 'New Heights with Jason and Travis Kelce' and '7PM in Brooklyn' with Carmelo Anthony. The company has raised $59 million across multiple funding rounds, including a $27 million Series B. Wave Sports and Entertainment works with major brands and athletes to create engaging sports content across various digital platforms, including YouTube and social media.",
+      "Wave Sports creates digital sports content and shows featuring top athletes, distributed across YouTube and social media platforms.",
     logo: "/assets/images/portfolio/wavetv.jpg",
     status: "active",
     metrics: [
@@ -1880,7 +1880,7 @@ const portfolioData = [
     id: "8bit",
     name: "8-Bit Capital",
     description:
-      "8-Bit Capital invests in startups that connect people and businesses in new ways. We invest in software tools and platforms that use the power of networksAether provides a molecular assembler platform that combines high-throughput robotics, machine learning, and synthetic biology to map millions of enzyme-reaction combinations, enabling the engineering of new classes of nanoscale machines using protein building blocks called molecular assemblers.",
+      "8-Bit Capital invests in software tools and platforms that create new connections between people and businesses through network effects.",
     logo: "/assets/images/portfolio/8bitcapital.jpg",
     status: "funds",
     metrics: [
@@ -1901,7 +1901,7 @@ const portfolioData = [
     id: "blitzscaling",
     name: "Blitzscaling Ventures",
     description:
-      "The Experts on Scale. We partner with tech founders to apply the principles of blitzscaling that we developed at Stanford University with Chris Yeh and Reid Hoffman.",
+      "Blitzscaling Ventures partners with tech founders to apply rapid scaling principles developed at Stanford University.",
     logo: "/assets/images/portfolio/blitzscalingventures.jpg",
     status: "funds",
     metrics: [
@@ -1930,7 +1930,7 @@ const portfolioData = [
     id: "championhill",
     name: "Champion Hill Ventures",
     description:
-      "Champion Hill Ventures seeks founders solving large problems hiding in plain sight. To find them, we look for non-consensus ideas, pre-category behavior, or innovation that is structurally underserved by the capital markets. ",
+      "Champion Hill Ventures backs founders tackling overlooked problems with non-consensus ideas and innovations in underserved markets.",
     logo: "/assets/images/portfolio/championhillventures.jpg",
     status: "funds",
     metrics: [
@@ -1958,7 +1958,8 @@ const portfolioData = [
   {
     id: "frontures",
     name: "Frontier Technology Partners",
-    description: "Disrupting the Status Quo to Build a Better Future",
+    description:
+      "Frontier Technology Partners invests in early-stage startups building transformative technology across multiple sectors.",
     logo: "/assets/images/portfolio/frontures.jpg",
     status: "funds",
     metrics: [
@@ -1978,7 +1979,8 @@ const portfolioData = [
   {
     id: "fuel",
     name: "Fuel Ventures",
-    description: "Fueling the growth of ambitious tech companies.",
+    description:
+      "Fuel Ventures provides early-stage funding and support to high-potential technology companies across Europe.",
     logo: "/assets/images/portfolio/fuelventures.jpg",
     status: "funds",
     metrics: [
@@ -1999,7 +2001,7 @@ const portfolioData = [
     id: "gaingels",
     name: "Gaingels",
     description:
-      "Gaingels is amongst the largest investors in the world aiming to show the world that equity of access and representation in venture capital delivers positive returns.",
+      "Gaingels is a leading investment platform focused on supporting diverse founders and promoting equity in venture capital.",
     logo: "/assets/images/portfolio/gaingels.jpg",
     status: "funds",
     metrics: [
@@ -2038,7 +2040,7 @@ const portfolioData = [
     id: "greencow",
     name: "Green Cow Ventures",
     description:
-      "We are a seed-stage fund seeking diverse founding teams leveraging deep tech to solve problems in foundational, global industries from farming to finance.",
+      "Green Cow Ventures is a seed-stage fund backing diverse teams using deep tech to transform global industries like agriculture and finance.",
     logo: "/assets/images/portfolio/greencowvc.jpg",
     status: "funds",
     metrics: [
@@ -2059,7 +2061,7 @@ const portfolioData = [
     id: "humanventures",
     name: "Human Ventures",
     description:
-      "We are a next generation venture capital firm, one that takes a human-first approach to investing. Builders ourselves, we invest in the humans as much as their companies. No matter where we invest, our founders embody the diversity, resilience, and ambition of New York.",
+      "Human Ventures is a human-first VC firm that invests in diverse, resilient founders across consumer and enterprise technology sectors.",
     logo: "/assets/images/portfolio/humanventures.jpg",
     status: "funds",
     metrics: [
@@ -2080,7 +2082,7 @@ const portfolioData = [
     id: "untapped",
     name: "Untapped Capital",
     description:
-      "We invest in earliest of pre-seed startups, led by founders outside of typical networks, selling into large and growing markets, with a unique approach or insight.",
+      "Untapped Capital backs pre-seed startups with unique approaches to large markets, focusing on founders outside traditional networks.",
     logo: "/assets/images/portfolio/untappedcapital.jpg",
     status: "funds",
     metrics: [
