@@ -1002,7 +1002,7 @@ const portfolioData = [
     id: "coffeeseed",
     name: "Coffeeseed",
     description:
-      "Coffeeseed is a technology company focused on transforming the specialty coffee industry by creating a more accessible and efficient trading platform. The company provides a comprehensive solution that connects coffee buyers and sellers through a digital marketplace, offering tools for quality assessment, transaction management, and trade finance. Coffeeseed's platform aims to streamline the coffee supply chain by replacing traditional, fragmented communication methods with an integrated system that benefits all stakeholders in the specialty coffee value chain.",
+      "Coffeeseed is a digital marketplace transforming specialty coffee trading by connecting buyers and sellers with tools for quality assessment, transactions, and supply chain efficiency.",
     logo: "/assets/images/portfolio/coffeeseed.jpg",
     status: "active",
     metrics: [
