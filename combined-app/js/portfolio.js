@@ -31,9 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Store the original companies array for filtering
   const allCompanies = [...companies];
-  // TEMP: Disable randomization for testing
-  // const portfolioData = shuffleArray(allCompanies, seed);
-  const portfolioData = [...allCompanies];
+  // Shuffle initial display for 'All Companies' view
+  const portfolioData = shuffleArray(allCompanies, seed);
 
   // Pagination variables
   let currentPage = 0;
@@ -328,9 +327,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return matches;
     });
 
-    // TEMP: Do not shuffle filtered results for testing
-    // filteredItems = shuffleArray(filtered, seed);
-    filteredItems = [...filtered];
+    // Shuffle filtered results for display
+    filteredItems = shuffleArray(filtered, seed);
 
     console.log("Filtered items count:", filteredItems.length);
 

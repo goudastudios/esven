@@ -99,7 +99,7 @@ const portfolioData = [
     name: "SellerGeni",
     description:
       "SellerGeni's AI platform optimizes Amazon product listings and advertising campaigns to boost sales and visibility for e-commerce sellers.",
-    logo: "/assets/images/portfolio/sellergeni.png",
+    logo: "/assets/images/portfolio/sellergeni.jpg",
     status: "active",
     metrics: [
       { value: "Angel", label: "Stage" },
@@ -1028,7 +1028,7 @@ const portfolioData = [
     name: "Creatify AI",
     description:
       "Creatify AI automates video ad creation from product links, generating optimized ads for TikTok, Meta, and YouTube with AI avatars and scripts.",
-    logo: "/assets/images/portfolio/creatify.png",
+    logo: "/assets/images/portfolio/creatifyai.png",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
