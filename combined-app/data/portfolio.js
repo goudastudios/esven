@@ -943,7 +943,7 @@ const portfolioData = [
     description:
       "Blockstream develops Bitcoin infrastructure including the Liquid Network, Core Lightning, and enterprise mining solutions.",
     logo: "/assets/images/portfolio/blockstream.jpg",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Convertible Note", label: "Stage" },
       { value: "$3.2B", label: "Value" },
@@ -975,7 +975,7 @@ const portfolioData = [
     description:
       "Cart.com provides end-to-end e-commerce solutions including order management, inventory, and fulfillment for 6,000+ brands.",
     logo: "/assets/images/portfolio/cart.jpg",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Series D", label: "Stage" },
       { value: "$1.6B", label: "Value" },
@@ -1532,7 +1532,7 @@ const portfolioData = [
     description:
       "People.ai's AI platform transforms sales activity data into actionable insights, helping revenue teams optimize performance and close more deals.",
     logo: "/assets/images/portfolio/peopleai.jpg",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Series D", label: "Stage" },
       { value: "$1.1B", label: "Value" },
@@ -1635,7 +1635,7 @@ const portfolioData = [
     description:
       "Rescale provides a cloud platform for high-performance computing, enabling engineers to run complex simulations without on-premises infrastructure.",
     logo: "/assets/images/portfolio/rescale.jpg",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Series D", label: "Stage" },
       { value: "$1B", label: "Value" },
@@ -1767,7 +1767,7 @@ const portfolioData = [
     description:
       "Swiftly provides omnichannel retail technology that helps independent retailers compete with digital tools, personalization, and advertising solutions.",
     logo: "/assets/images/portfolio/swiftly.png",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Series C", label: "Stage" },
       { value: "$1B", label: "Value" },

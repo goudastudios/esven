@@ -59,10 +59,12 @@ app.get("/home.html", (req, res) => {
 
 app.get("/portfolio.html", (req, res) => {
   const metrics = calculatePortfolioMetrics(portfolioData);
-  const shuffledPortfolio = shuffleArray([...portfolioData]);
+  // Send the data in a consistent order and let client handle randomization
   res.render("portfolio", { 
-    portfolioCompanies: shuffledPortfolio,
-    metrics
+    portfolioCompanies: [...portfolioData], // Send in original order
+    metrics,
+    // Include a seed for client-side randomization if needed
+    randomSeed: Date.now()
   });
 });
 

@@ -68,7 +68,7 @@
       <!-- Portfolio Filters -->
       <section class="portfolio-filters">
         <div class="filter-container">
-          <!-- Tags (Exits, Unicorns) -->
+          <!-- Tags (Exits, Unicorns, Soonicorns, Funds, Public) -->
           <div class="filter-group">
             <div class="filter-label">Filter by Status:</div>
             <div class="filter-tabs">
@@ -170,7 +170,10 @@
 
       <!-- Portfolio Data (hidden, will be used by JavaScript) -->
       <script id="portfolio-data" type="application/json">
-        <%- JSON.stringify(portfolioCompanies) %>
+        <%- JSON.stringify({
+          companies: portfolioCompanies,
+          seed: randomSeed
+        }) %>
       </script>
     </main>
 
