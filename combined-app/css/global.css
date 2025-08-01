@@ -9,7 +9,12 @@ this will keep all of our css from ever having a duplicate name */
 
 /* Typography Utilities */
 /* Typewriter font for all headings */
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .typewriter,
 .type-text-xl,
 .type-text-lg,
@@ -19,7 +24,7 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #00274C;
+  color: #00274c;
 }
 
 /* Responsive Typewriter Text */
@@ -42,7 +47,6 @@ h1, h2, h3, h4, h5, h6,
   font-size: 0.875rem;
   line-height: 1.5;
 }
-
 
 /* Header and Navigation */
 .header {
@@ -412,7 +416,7 @@ body {
 
 /* Ensure content isn't hidden behind the header */
 main {
-  padding-top: 80px; /* Adjust based on your header height */
+  padding-top: 0px; /* Adjust based on your header height */
 }
 
 .performance-banner {
