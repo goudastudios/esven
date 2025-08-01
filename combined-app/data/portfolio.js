@@ -1880,7 +1880,7 @@ const portfolioData = [
     id: "8bit",
     name: "8-Bit Capital",
     description:
-      "8-Bit Capital invests in software tools and platforms that create new connections between people and businesses through network effects.",
+      "Notable Investments: Agree.com, Hypermode, Pipedream, Upstream",
     logo: "/assets/images/portfolio/8bitcapital.jpg",
     status: "funds",
     metrics: [
@@ -1895,13 +1895,13 @@ const portfolioData = [
         url: "https://jabrams.com/its-all-about-connecting-people/",
       },
     ],
-    categories: ["ai", "consumer", "enterprise", "fintech", "infrastructure"],
+    categories: [""],
   },
   {
     id: "blitzscaling",
     name: "Blitzscaling Ventures",
     description:
-      "Blitzscaling Ventures partners with tech founders to apply rapid scaling principles developed at Stanford University.",
+      "Notable Investments: Manus AI, Crew AI, Gametime, Storyboarder, Flexpa, Buffalo Market ",
     logo: "/assets/images/portfolio/blitzscalingventures.jpg",
     status: "funds",
     metrics: [
@@ -1924,13 +1924,12 @@ const portfolioData = [
         url: "https://www.blitzscalingvc.com/blog",
       },
     ],
-    categories: ["fintech", "ai", "consumer"],
+    categories: [""],
   },
   {
     id: "championhill",
     name: "Champion Hill Ventures",
-    description:
-      "Champion Hill Ventures backs founders tackling overlooked problems with non-consensus ideas and innovations in underserved markets.",
+    description: "Notable Investments: Space X, Andruil, Flexport ",
     logo: "/assets/images/portfolio/championhillventures.jpg",
     status: "funds",
     metrics: [
@@ -1945,21 +1944,12 @@ const portfolioData = [
         url: "https://www.championhillventures.com/insights",
       },
     ],
-    categories: [
-      "ai",
-      "biotech",
-      "consumer",
-      "crypto",
-      "fintech",
-      "infrastructure",
-      "games",
-    ],
+    categories: [""],
   },
   {
     id: "frontures",
     name: "Frontier Technology Partners",
-    description:
-      "Frontier Technology Partners invests in early-stage startups building transformative technology across multiple sectors.",
+    description: "Notable Investments: FreeFuse, Kanari AI, Pixel Canvas",
     logo: "/assets/images/portfolio/frontures.jpg",
     status: "funds",
     metrics: [
@@ -1974,13 +1964,13 @@ const portfolioData = [
         url: "https://frontures.com/blog/",
       },
     ],
-    categories: ["fintech", "ai", "enterprise"],
+    categories: [""],
   },
   {
     id: "fuel",
     name: "Fuel Ventures",
     description:
-      "Fuel Ventures provides early-stage funding and support to high-potential technology companies across Europe.",
+      "Notable Investments: Wombat, Prosper, OnBuy, Paddle, Shopwave",
     logo: "/assets/images/portfolio/fuelventures.jpg",
     status: "funds",
     metrics: [
@@ -1995,13 +1985,13 @@ const portfolioData = [
         url: "https://www.fuel.ventures/news",
       },
     ],
-    categories: ["fintech", "consumer"],
+    categories: [""],
   },
   {
     id: "gaingels",
     name: "Gaingels",
     description:
-      "Gaingels is a leading investment platform focused on supporting diverse founders and promoting equity in venture capital.",
+      "Notable Investments: Airtable, Clubhouse, Carta, Brex, Notion, Webflow",
     logo: "/assets/images/portfolio/gaingels.jpg",
     status: "funds",
     metrics: [
@@ -2024,23 +2014,13 @@ const portfolioData = [
         url: "https://jobs.gaingels.com/jobs",
       },
     ],
-    categories: [
-      "fintech",
-      "ai",
-      "consumer",
-      "games",
-      "enterprise",
-      "infrastructure",
-      "biotech",
-      "crypto",
-      "enterprise",
-    ],
+    categories: [""],
   },
   {
     id: "greencow",
     name: "Green Cow Ventures",
     description:
-      "Green Cow Ventures is a seed-stage fund backing diverse teams using deep tech to transform global industries like agriculture and finance.",
+      "Notable Investments: CloudAdmin, Besser.FM, Bear Flag Robotics",
     logo: "/assets/images/portfolio/greencowvc.jpg",
     status: "funds",
     metrics: [
@@ -2055,13 +2035,13 @@ const portfolioData = [
         url: "https://medium.com/greencowvc",
       },
     ],
-    categories: ["fintech", "ai", "enterprise", "infrastructure", "consumer"],
+    categories: [""],
   },
   {
     id: "humanventures",
     name: "Human Ventures",
     description:
-      "Human Ventures is a human-first VC firm that invests in diverse, resilient founders across consumer and enterprise technology sectors.",
+      "Notable Investments: Capsule, Girlboss, Headspace, The Skimm, Valance",
     logo: "/assets/images/portfolio/humanventures.jpg",
     status: "funds",
     metrics: [
@@ -2076,13 +2056,12 @@ const portfolioData = [
         url: "https://medium.com/human-ventures",
       },
     ],
-    categories: ["ai", "consumer", "enterprise", "fintech"],
+    categories: [""],
   },
   {
     id: "untapped",
     name: "Untapped Capital",
-    description:
-      "Untapped Capital backs pre-seed startups with unique approaches to large markets, focusing on founders outside traditional networks.",
+    description: "Notable Investments: Pixels, Payman, DocDraft, Covalent",
     logo: "/assets/images/portfolio/untappedcapital.jpg",
     status: "funds",
     metrics: [
@@ -2097,16 +2076,7 @@ const portfolioData = [
         url: "https://www.webwire.com/ViewPressRel.asp?aId=309595",
       },
     ],
-    categories: [
-      "ai",
-      "consumer",
-      "fintech",
-      "consumer",
-      "crypto",
-      "enterprise",
-      "games",
-      "infrastructure",
-    ],
+    categories: [""],
   },
 ];
 

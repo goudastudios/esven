@@ -7,6 +7,15 @@ this will keep all of our css from ever having a duplicate name */
 
 /* Global styles for Esven Combined App */
 
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
+
+@media (max-width: 767px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: inline; }
+}
+
+
 /* Typography Utilities */
 /* Typewriter font for all headings */
 h1,
@@ -83,10 +92,16 @@ h6,
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem; /* Larger font for desktop */
   transition: color 0.3s ease;
   font-family: "American Typewriter", "Courier New", "IBM Plex Mono", monospace;
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 767px) {
+  .nav-links a {
+    font-size: 1rem; /* Smaller font for mobile */
+  }
 }
 
 .nav-links a:hover {
@@ -315,7 +330,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   transition: color 0.2s;
   padding: 0.5rem 0;
 }
