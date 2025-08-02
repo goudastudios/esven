@@ -99,7 +99,7 @@ const portfolioData = [
     tags: ["mortgage tech", "payroll", "banking", "big data"],
     links: [
       { text: "Website", url: "https://argyle.com/" },
-      { text: "News", url: "https://argyle.com/blog/" },
+      { text: "Blog", url: "https://argyle.com/blog/" },
     ],
     categories: ["fintech"],
   },
@@ -229,7 +229,7 @@ const portfolioData = [
     name: "Cart.com",
     description:
       "Cart.com provides end-to-end e-commerce solutions including order management, inventory, and fulfillment for 6,000+ brands.",
-    logo: "/assets/images/portfolio/cart.jpg",
+    logo: "/assets/images/portfolio/cart.png",
     status: "unicorn",
     metrics: [
       { value: "Series D", label: "Stage" },
@@ -299,7 +299,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://www.creatify.ai" },
-      { text: "News", url: "https://creatify.ai/blog" },
+      { text: "Blog", url: "https://creatify.ai/blog" },
     ],
     categories: ["ai", "consumer"],
   },
@@ -383,7 +383,7 @@ const portfolioData = [
     name: "Dibs Capital (formerly Solidblock)",
     description:
       "Dibs Capital tokenizes real estate and private equity assets, creating digital securities for improved liquidity and fractional ownership.",
-    logo: "/assets/images/portfolio/solidblock.jpg",
+    logo: "/assets/images/portfolio/dibs.svg",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
@@ -401,7 +401,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://dibscapital.com/" },
-      { text: "News", url: "https://blog.dibscapital.com/" },
+      { text: "Blog", url: "https://blog.dibscapital.com/" },
     ],
     categories: ["fintech"],
   },
@@ -410,7 +410,7 @@ const portfolioData = [
     name: "Discord",
     description:
       "Discord is a social platform for communities to connect via voice, video, and text chat, with tools for creators and gamers.",
-    logo: "/assets/images/portfolio/discord.png",
+    logo: "/assets/images/portfolio/discord.svg",
     status: "unicorn",
     metrics: [
       { value: "Series I", label: "Stage" },
@@ -513,7 +513,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://wearefeel.com/" },
-      { text: "News", url: "https://wearefeel.com/blogs/learn" },
+      { text: "Blog", url: "https://wearefeel.com/blogs/learn" },
     ],
     categories: ["consumer"],
   },
@@ -683,7 +683,7 @@ const portfolioData = [
     name: "Grove Collaborative",
     description:
       "Grove Collaborative is a sustainable home and personal care brand offering natural products through a direct-to-consumer subscription model, now publicly traded.",
-    logo: "/assets/images/portfolio/grove.jpg",
+    logo: "/assets/images/portfolio/grove.png",
     status: "public",
     metrics: [
       { value: "$60M", label: "Value" },
@@ -728,7 +728,7 @@ const portfolioData = [
     name: "Hologram",
     description:
       "Hologram provides global cellular connectivity for IoT devices, offering SIM cards and management tools across 190+ countries through 550+ carrier partners.",
-    logo: "/assets/images/portfolio/hologram.jpg",
+    logo: "/assets/images/portfolio/hologram.png",
     status: "active",
     metrics: [
       { value: "2021", label: "Stage" },
@@ -746,7 +746,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://www.hologram.io/" },
-      { text: "News", url: "https://hologram.io/blog/" },
+      { text: "Blog", url: "https://hologram.io/blog/" },
     ],
     categories: ["infrastructure"],
   },
@@ -855,7 +855,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://www.instil.io/" },
-      { text: "News", url: "https://blog.instil.io/" },
+      { text: "Blog", url: "https://blog.instil.io/" },
     ],
     categories: ["fintech"],
   },
@@ -949,7 +949,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://knix.com/" },
-      { text: "News", url: "https://knix.com/blogs/knix-blog" },
+      { text: "Blog", url: "https://knix.com/blogs/knix-blog" },
     ],
     categories: ["consumer"],
   },
@@ -980,7 +980,7 @@ const portfolioData = [
     name: "Lalo",
     description:
       "Lalo creates thoughtfully designed, non-toxic baby essentials including high chairs and play yards that grow with children from infancy.",
-    logo: "/assets/images/portfolio/lalo.jpg",
+    logo: "/assets/images/portfolio/lalo.avif",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
@@ -1026,7 +1026,7 @@ const portfolioData = [
     name: "Metadata",
     description:
       "Metadata's AI platform automates and optimizes B2B marketing campaigns across LinkedIn, Google, and Meta to drive pipeline and revenue growth.",
-    logo: "/assets/images/portfolio/metadata.jpg",
+    logo: "/assets/images/portfolio/metadata.svg",
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
@@ -1042,7 +1042,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://metadata.io/" },
-      { text: "News", url: "https://metadata.io/resources/blog/" },
+      { text: "Blog", url: "https://metadata.io/resources/blog/" },
     ],
     categories: ["ai", "consumer"],
   },
@@ -1125,7 +1125,7 @@ const portfolioData = [
     name: "Passport",
     description:
       "Passport provides DTC brands with international shipping, compliance, and payment localization to simplify global e-commerce expansion.",
-    logo: "/assets/images/portfolio/passport.jpg",
+    logo: "/assets/images/portfolio/passport.png",
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
@@ -1144,7 +1144,7 @@ const portfolioData = [
     name: "People.ai",
     description:
       "People.ai's AI platform transforms sales activity data into actionable insights, helping revenue teams optimize performance and close more deals.",
-    logo: "/assets/images/portfolio/peopleai.jpg",
+    logo: "/assets/images/portfolio/peopleai.svg",
     status: "unicorn",
     metrics: [
       { value: "Series D", label: "Stage" },
@@ -1186,7 +1186,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://petzey.com/" },
-      { text: "News", url: "https://petzey.com/blog" },
+      { text: "Blog", url: "https://petzey.com/blog" },
     ],
     categories: ["consumer"],
   },
@@ -1338,7 +1338,7 @@ const portfolioData = [
     name: "Secure Frame",
     description:
       "Secure Frame automates security compliance (SOC 2, ISO 27001, GDPR) with tools for evidence collection, policy management, and risk assessment.",
-    logo: "/assets/images/portfolio/secureframe.jpg",
+    logo: "/assets/images/portfolio/secureframe.svg",
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
@@ -1354,7 +1354,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://secureframe.com/" },
-      { text: "News", url: "https://secureframe.com/blog" },
+      { text: "Blog", url: "https://secureframe.com/blog" },
     ],
     categories: ["infrastructure"],
   },
@@ -1417,7 +1417,7 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://www.skysafe.io/" },
-      { text: "News", url: "https://www.skysafe.io/blog" },
+      { text: "Blog", url: "https://www.skysafe.io/blog" },
     ],
     categories: ["infrastructure"],
   },
@@ -1445,7 +1445,7 @@ const portfolioData = [
     name: "Super Plastic",
     description:
       "Super Plastic creates virtual influencer characters and digital collectibles that bridge digital and physical entertainment experiences.",
-    logo: "/assets/images/portfolio/superplastic.jpg",
+    logo: "/assets/images/portfolio/superplastic.avif",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
@@ -1482,7 +1482,7 @@ const portfolioData = [
     ],
     tags: ["soonicorn", "cryptocurrency", "e-commerce", "bitcoin"],
     links: [
-      { text: "Website", url: "www.swanbitcoin.com" },
+      { text: "Website", url: "https://www.swanbitcoin.com/" },
       { text: "News", url: "https://www.swanbitcoin.com/articles/" },
     ],
     categories: ["fintech", "blockchain"],
@@ -1518,7 +1518,7 @@ const portfolioData = [
     name: "The MOOT Group",
     description:
       "The MOOT Group invests in and scales e-commerce technology companies, partnering with retail brands to expand their digital presence.",
-    logo: "/assets/images/portfolio/tmg.jpg",
+    logo: "/assets/images/portfolio/moot.avif",
     status: "active",
     metrics: [
       { value: "Debt Financing", label: "Stage" },
@@ -1704,7 +1704,7 @@ const portfolioData = [
     name: "Wave Sports and Entertainment",
     description:
       "Wave Sports creates digital sports content and shows featuring top athletes, distributed across YouTube and social media platforms.",
-    logo: "/assets/images/portfolio/wavetv.jpg",
+    logo: "/assets/images/portfolio/wavetv.png",
     status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
@@ -1750,7 +1750,7 @@ const portfolioData = [
     name: "Blitzscaling Ventures",
     description:
       "Notable Investments: Manus AI, Crew AI, Gametime, Storyboarder, Flexpa, Buffalo Market ",
-    logo: "/assets/images/portfolio/blitzscalingventures.jpg",
+    logo: "/assets/images/portfolio/blitzscalingventures.png",
     status: "funds",
     metrics: [
       { value: "23", label: "Portfolio Companies" },
@@ -1768,7 +1768,7 @@ const portfolioData = [
     links: [
       { text: "Website", url: "https://www.blitzscalingvc.com/" },
       {
-        text: "News",
+        text: "Blog",
         url: "https://www.blitzscalingvc.com/blog",
       },
     ],
@@ -1778,7 +1778,7 @@ const portfolioData = [
     id: "championhill",
     name: "Champion Hill Ventures",
     description: "Notable Investments: Space X, Andruil, Flexport ",
-    logo: "/assets/images/portfolio/championhillventures.jpg",
+    logo: "/assets/images/portfolio/championhill.svg",
     status: "funds",
     metrics: [
       { value: "45", label: "Portfolio Companies" },
