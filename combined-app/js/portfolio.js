@@ -14,30 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // Simple seeded random function for consistent client-side shuffling
-  const seededRandom = (seed) => {
-    const x = Math.sin(seed++) * 10000;
-    return x - Math.floor(x);
-  };
+  //  const seededRandom = (seed) => {
+  //    const x = Math.sin(seed++) * 10000;
+  //    return x - Math.floor(x);
+  //  };
 
   // Shuffle array using Fisher-Yates algorithm with seed
-  const shuffleArray = (array, seed) => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-      const j = Math.floor(seededRandom(seed + i) * (i + 1));
-      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-  };
+  //  const shuffleArray = (array, seed) => {
+  //    const newArray = [...array];
+  //    for (let i = newArray.length - 1; i > 0; i--) {
+  //      const j = Math.floor(seededRandom(seed + i) * (i + 1));
+  //      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  //    }
+  //    return newArray;
+  //  };
 
-  // Store the original companies array for filtering
+  // Store the companies array - use it directly for display in original order
   const allCompanies = [...companies];
-  // Shuffle initial display for 'All Companies' view
-  const portfolioData = shuffleArray(allCompanies, seed);
+  const portfolioData = [...allCompanies]; // Use original order from data file
 
   // Pagination variables
   let currentPage = 0;
-  const itemsPerPage = 10; // Initial load
-  const itemsPerScroll = 10; // Load 10 more on scroll
+  const itemsPerPage = 24; // Initial load
+  const itemsPerScroll = 18; // Load 10 more on scroll
   let isLoading = false;
   let allItemsLoaded = false;
 
@@ -60,7 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check for special tag filters
     if (activeFilters.tag) {
-      if (activeFilters.tag === "exit") {
+      if (activeFilters.tag === "active") {
+        // Include companies that are active, soonicorns, or unicorns
+        if (!["active", "soonicorn", "unicorn"].includes(item.status)) return false;
+      } else if (activeFilters.tag === "exit") {
         if (item.status !== "exit" && !itemTags.includes("exit")) return false;
       } else if (activeFilters.tag === "inactive") {
         if (item.status !== "inactive") return false;
@@ -327,8 +329,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return matches;
     });
 
-    // Shuffle filtered results for display
-    filteredItems = shuffleArray(filtered, seed);
+    // Use filtered results in original order
+    filteredItems = [...filtered];
 
     console.log("Filtered items count:", filteredItems.length);
 
@@ -350,8 +352,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize the portfolio
   const initPortfolio = () => {
-    // Load initial items
-    loadMoreItems();
+    // Set 'Active' filter by default
+    activeFilters = { tag: 'active', category: null };
+    updateFilteredItems();
+    
+    // Highlight the Active filter button
+    const activeTab = document.querySelector('.filter-tab[data-filter="active"]');
+    if (activeTab) {
+      activeTab.classList.add('active');
+    }
 
     // Add event listeners for infinite scroll with mobile support
     window.addEventListener("scroll", handleScroll, { passive: true });
