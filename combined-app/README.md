@@ -1,6 +1,6 @@
-# Combined Esven App
+# Esalen Ventures - Combined App
 
-This folder contains the new combined HTML app for Esven, built from selected elements of the three design concepts as outlined in `docs/Combined_Design.md`.
+This folder contains the new combined HTML app for Esalen Ventures, built from selected elements of the three design concepts as outlined in `docs/Combined_Design.md`.
 
 ## Structure
 - `views/` — EJS templates for all pages (e.g. `home.ejs`, `team.ejs`, `portfolio.ejs`, `contact.ejs`)

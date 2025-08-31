@@ -78,7 +78,7 @@ app.get("/team.html", (req, res) => {
   try {
     res.render("team", { 
       teamMembers: teamData,
-      title: 'Our Team | Esven'
+      title: 'Our Team | Esalen Ventures'
     });
   } catch (error) {
     console.error('Error rendering team page:', error);
@@ -92,7 +92,7 @@ app.get("/contact.html", (req, res) => {
 
 if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
-    console.log(`Combined Esven App running at http://localhost:${PORT}`);
+    console.log(`Esalen Ventures App running at http://localhost:${PORT}`);
     console.log("Available routes:");
     console.log("  /           - Intro page");
     console.log("  /home.html - Main landing page");
