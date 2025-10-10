@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3 class="company-name">${company.name}</h3>
         <p class="company-description">${company.description}</p>
         
+        <!-- Company Metrics - Commented out for now, keeping for future use
         ${
           company.metrics && company.metrics.length
             ? `
@@ -174,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `
             : ""
         }
+        -->
         
         ${
           company.links && company.links.length
