@@ -109,7 +109,7 @@ const portfolioData = [
     description:
       "Bambee offers affordable, outsourced HR management and compliance for small businesses.",
     logo: "/assets/images/portfolio/bambee.png",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Series C", label: "Stage" },
       { value: "$300M", label: "Value" },
@@ -200,12 +200,31 @@ const portfolioData = [
     categories: ["blockchain"],
   },
   {
+    id: "bottomless",
+    name: "Bottomless",
+    description:
+      "Bottomless makes usage-based, automatic coffee reordering simple with WiFi connected smart scales and containers.",
+    logo: "/assets/images/portfolio/bottomless.png",
+    status: "active",
+    metrics: [
+      { value: "nn", label: "Stage" },
+      { value: "$nn", label: "Value" },
+      { value: "nn", label: "Founded" },
+    ],
+    tags: ["consumer", "enterprise", "IoT", "SaaS"],
+    links: [
+      { text: "Website", url: "https://www.bottomless.com/" },
+      { text: "Blog", url: "https://www.blog.bottomless.com/" },
+    ],
+    categories: ["consumer", "enterprise"],
+  },
+  {
     id: "capchase",
     name: "Capchase",
     description:
       "Capchase offers non-dilutive financing for SaaS companies to access future revenue and improve cash flow.",
     logo: "/assets/images/portfolio/capchase.png",
-    status: "unicorn",
+    status: "active",
     metrics: [
       { value: "Series B", label: "Stage" },
       { value: "$1B", label: "Value" },
@@ -282,7 +301,7 @@ const portfolioData = [
     description:
       "Creatify AI automates video ad creation from product links, generating optimized ads for TikTok, Meta, and YouTube with AI avatars and scripts.",
     logo: "/assets/images/portfolio/creatifyai.png",
-    status: "active",
+    status: "inactive",
     metrics: [
       { value: "Series A", label: "Stage" },
       { value: "$100M", label: "Value" },
@@ -309,7 +328,7 @@ const portfolioData = [
     description:
       "Curve consolidates multiple payment cards into one smart wallet to manage spending, avoid fees, and maximize rewards.",
     logo: "/assets/images/portfolio/curve.png",
-    status: "active",
+    status: "exit",
     metrics: [
       { value: "Series C", label: "Stage" },
       { value: "$23M", label: "Value" },
@@ -346,7 +365,7 @@ const portfolioData = [
     links: [
       { text: "Website", url: "https://www.darwinhomes.com/" },
       {
-        text: "News",
+        text: "Exit Article",
         url: "https://blog.darwinhomes.com/posts/pagaya's-acquisition-of-darwin-homes-powers-premier-tech-enabled-single-family-rental-platform",
       },
     ],
@@ -423,6 +442,25 @@ const portfolioData = [
       { text: "News", url: "https://discord.com/newsroom" },
     ],
     categories: ["consumer", "enterprise"],
+  },
+  {
+    id: "earlybird",
+    name: "EarlyBird",
+    description:
+      "The EarlyBird program uses a game-based assessment to identify potential reading challenges like dyslexia, then gives schools and families the tools they need to intervene.",
+    logo: "/assets/images/portfolio/earlybird.png",
+    status: "active",
+    metrics: [
+      { value: "nn", label: "Stage" },
+      { value: "$nn", label: "Value" },
+      { value: "nn", label: "Founded" },
+    ],
+    tags: ["education", "consumer"],
+    links: [
+      { text: "Website", url: "https://earlybirdeducation.com/" },
+      { text: "News", url: "https://earlybirdeducation.com/news/in-the-news/" },
+    ],
+    categories: ["consumer"],
   },
   {
     id: "emotive",
@@ -656,7 +694,7 @@ const portfolioData = [
     description:
       "Gilgamesh Pharmaceuticals develops novel, next-generation compounds for treating mental health and neurological disorders, leveraging advanced chemistry and drug development expertise.",
     logo: "/assets/images/portfolio/gilgamesh.png",
-    status: "unicorn",
+    status: "exit",
     metrics: [
       { value: "Series B", label: "Stage" },
       { value: "$1B", label: "Value" },
@@ -672,8 +710,8 @@ const portfolioData = [
     links: [
       { text: "Website", url: "https://www.gilgameshpharmaceutical.com/" },
       {
-        text: "Unicorn News",
-        url: "https://www.bloomberg.com/news/articles/2025-07-30/abbvie-is-said-in-talks-to-acquire-gilgamesh-in-1-billion-deal",
+        text: "Exit Article",
+        url: "https://news.abbvie.com/2025-08-25-AbbVie-to-Acquire-Gilgamesh-Pharmaceuticals-Bretisilocin,-a-Novel,-Investigational-Therapy-for-Major-Depressive-Disorder,-Expanding-Psychiatry-Pipeline",
       },
     ],
     categories: ["biotech"],
@@ -722,6 +760,25 @@ const portfolioData = [
       { text: "Blog", url: "https://www.usehammock.com/hammock-blog/" },
     ],
     categories: ["fintech"],
+  },
+  {
+    id: "handl",
+    name: "Handl",
+    description:
+      "Handl helps companies classify and extract data from documents through API using AI.",
+    logo: "/assets/images/portfolio/handl.png",
+    status: "active",
+    metrics: [
+      { value: "nn", label: "Stage" },
+      { value: "$nn", label: "Value" },
+      { value: "nn", label: "Founded" },
+    ],
+    tags: ["documents", "ai", "enterprise"],
+    links: [
+      { text: "Website", url: "https://www.handl.ai/" },
+      { text: "Blog", url: "https://www.usehammock.com/hammock-blog/" },
+    ],
+    categories: ["ai", "enterprise"],
   },
   {
     id: "hologram",
@@ -903,7 +960,7 @@ const portfolioData = [
     description:
       "Jumbotail is India's leading B2B marketplace for mom & pop stores, offering food/grocery distribution, fintech solutions, and next-day delivery services.",
     logo: "/assets/images/portfolio/jumbotail.jpg",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Series D", label: "Stage" },
       { value: "$1B", label: "Value" },
@@ -949,7 +1006,10 @@ const portfolioData = [
     ],
     links: [
       { text: "Website", url: "https://knix.com/" },
-      { text: "Blog", url: "https://knix.com/blogs/knix-blog" },
+      {
+        text: "Exit Article",
+        url: "https://fortune.com/2022/09/26/how-menstrual-underwear-brand-knix-landed-largest-exit-by-female-founder-canadian-history/",
+      },
     ],
     categories: ["consumer"],
   },
@@ -1215,14 +1275,14 @@ const portfolioData = [
     description:
       "Pryon's Retrieval as a Service (RaaS) platform helps enterprises implement AI-powered knowledge management and retrieval-augmented generation.",
     logo: "/assets/images/portfolio/pryon.jpg",
-    status: "soonicorn",
+    status: "unicorn",
     metrics: [
       { value: "Series B", label: "Stage" },
       { value: "$500M", label: "Value" },
       { value: "2017", label: "Founded" },
     ],
     tags: [
-      "soonicorn",
+      "unicorn",
       "Enterprise AI",
       "Retrieval as a Service",
       "Generative AI",
@@ -1240,7 +1300,7 @@ const portfolioData = [
     name: "Quiver",
     description:
       "Quiver offers emissionless same-day delivery in London using electric vehicles and optimized routing for sustainable quick commerce.",
-    logo: "/assets/images/portfolio/quiver.jpg",
+    logo: "/assets/images/portfolio/quiver.svg",
     status: "active",
     metrics: [
       { value: "Seed", label: "Stage" },
@@ -1260,7 +1320,7 @@ const portfolioData = [
     description:
       "Republic is an investment platform that lets individuals invest in startups, crypto, and real estate with as little as $50.",
     logo: "/assets/images/portfolio/republic.jpg",
-    status: "active",
+    status: "unicorn",
     metrics: [
       { value: "Series B", label: "Stage" },
       { value: "$500M", label: "Value" },
@@ -1397,6 +1457,25 @@ const portfolioData = [
     categories: ["enterprise", "ai"],
   },
   {
+    id: "siren",
+    name: "Siren",
+    description:
+      "Siren Care is a comprehensive solution for the management of diabetic foot and other foot complications.",
+    logo: "/assets/images/portfolio/siren.svg",
+    status: "active",
+    metrics: [
+      { value: "nn", label: "Stage" },
+      { value: "$nn", label: "Value" },
+      { value: "nn", label: "Founded" },
+    ],
+    tags: ["consumer"],
+    links: [
+      { text: "Website", url: "https://www.siren.care/" },
+      { text: "Blog", url: "https://www.siren.care/blog" },
+    ],
+    categories: ["consumer"],
+  },
+  {
     id: "skysafe",
     name: "SkySafe",
     description:
@@ -1446,7 +1525,7 @@ const portfolioData = [
     description:
       "Super Plastic creates virtual influencer characters and digital collectibles that bridge digital and physical entertainment experiences.",
     logo: "/assets/images/portfolio/superplastic.avif",
-    status: "active",
+    status: "inactive",
     metrics: [
       { value: "Series A", label: "Stage" },
       { value: "$168M", label: "Value" },
@@ -1705,7 +1784,7 @@ const portfolioData = [
     description:
       "Wave Sports creates digital sports content and shows featuring top athletes, distributed across YouTube and social media platforms.",
     logo: "/assets/images/portfolio/wavetv.png",
-    status: "active",
+    status: "soonicorn",
     metrics: [
       { value: "Series B", label: "Stage" },
       { value: "$100M", label: "Value" },

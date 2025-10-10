@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Pagination variables
   let currentPage = 0;
-  const itemsPerPage = 24; // Initial load
-  const itemsPerScroll = 18; // Load 10 more on scroll
+  const itemsPerPage = 100; // Initial load - increased to show all companies
+  const itemsPerScroll = 50; // Load more on scroll
   let isLoading = false;
   let allItemsLoaded = false;
 
@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (activeFilters.tag) {
       if (activeFilters.tag === "active") {
         // Include companies that are active, soonicorns, or unicorns
-        if (!["active", "soonicorn", "unicorn"].includes(item.status)) return false;
+        if (!["active", "soonicorn", "unicorn"].includes(item.status))
+          return false;
       } else if (activeFilters.tag === "exit") {
         if (item.status !== "exit" && !itemTags.includes("exit")) return false;
       } else if (activeFilters.tag === "inactive") {
@@ -126,9 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
           : status === "inactive"
           ? "Inactive"
           : status === "unicorn"
-          ? "Unicorn ($1B+)"
+          ? "Unicorn"
           : status === "soonicorn"
-          ? "Soonicorn ($500M-$999M)"
+          ? "Soonicorn"
           : status === "funds"
           ? "Investment Fund"
           : status === "public"
@@ -355,13 +356,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize the portfolio
   const initPortfolio = () => {
     // Set 'Active' filter by default
-    activeFilters = { tag: 'active', category: null };
+    activeFilters = { tag: "active", category: null };
     updateFilteredItems();
-    
+
     // Highlight the Active filter button
-    const activeTab = document.querySelector('.filter-tab[data-filter="active"]');
+    const activeTab = document.querySelector(
+      '.filter-tab[data-filter="active"]'
+    );
     if (activeTab) {
-      activeTab.classList.add('active');
+      activeTab.classList.add("active");
+    }
+
+    // Highlight the All category filter button
+    const allCategoryTab = document.querySelector(
+      '.filter-tab[data-type="category"][data-filter="all"]'
+    );
+    if (allCategoryTab) {
+      allCategoryTab.classList.add("active");
     }
 
     // Add event listeners for infinite scroll with mobile support
@@ -430,10 +441,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         // For category filters (sectors)
         else if (filterType === "category") {
+          // If "All" is clicked, reset category filter
+          if (filterValue === "all") {
+            document
+              .querySelectorAll('.filter-tab[data-type="category"]')
+              .forEach((t) => {
+                t.classList.remove("active");
+              });
+            this.classList.add("active");
+            activeFilters.category = null;
+          }
           // Toggle active state and update filters
-          if (this.classList.contains("active")) {
+          else if (this.classList.contains("active")) {
             this.classList.remove("active");
             activeFilters.category = null;
+            // Activate the "All" button when deselecting
+            const allCategoryTab = document.querySelector(
+              '.filter-tab[data-type="category"][data-filter="all"]'
+            );
+            if (allCategoryTab) allCategoryTab.classList.add("active");
           } else {
             // First deactivate all category filters
             document
