@@ -747,7 +747,7 @@ const portfolioData = [
     name: "Hammock",
     description:
       "Hammock simplifies property accounting for UK landlords with automated bookkeeping and real-time tax tracking.",
-    logo: "/assets/images/portfolio/hammock.png",
+    logo: "/assets/images/portfolio/hammock.svg",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
@@ -1040,7 +1040,7 @@ const portfolioData = [
     name: "Lalo",
     description:
       "Lalo creates thoughtfully designed, non-toxic baby essentials including high chairs and play yards that grow with children from infancy.",
-    logo: "/assets/images/portfolio/lalo.avif",
+    logo: "/assets/images/portfolio/lalo.jpg",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
@@ -1059,7 +1059,7 @@ const portfolioData = [
     name: "Loop",
     description:
       "Loop's digital frame lets families share photos and videos instantly via app or text, keeping loved ones connected.",
-    logo: "/assets/images/portfolio/loop.png",
+    logo: "/assets/images/portfolio/loop.svg",
     status: "active",
     metrics: [
       { value: "Seed", label: "Stage" },
@@ -1732,7 +1732,7 @@ const portfolioData = [
     name: "Virgo",
     description:
       "Virgo's AI software speeds up clinical trials with endoscopic video analysis and patient recruitment tools.",
-    logo: "/assets/images/portfolio/virgo.png",
+    logo: "/assets/images/portfolio/virgo.svg",
     status: "active",
     metrics: [
       { value: "Series A", label: "Stage" },
