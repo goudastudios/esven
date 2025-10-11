@@ -467,7 +467,7 @@ const portfolioData = [
     name: "Emotive",
     description:
       "Emotive combines AI and human touch in SMS marketing to help eCommerce brands increase customer engagement and drive sales.",
-    logo: "/assets/images/portfolio/emotive.png",
+    logo: "/assets/images/portfolio/emotive.svg",
     status: "exit",
     metrics: [
       { value: "2025", label: "Exit Year" },
@@ -921,7 +921,7 @@ const portfolioData = [
     name: "Instill AI",
     description:
       "Instill AI creates no-code agents that analyze and extract insights from documents, audio, and video.",
-    logo: "/assets/images/portfolio/instillai.png",
+    logo: "/assets/images/portfolio/instillai.svg",
     status: "active",
     metrics: [
       { value: "Seed", label: "Stage" },
@@ -1505,7 +1505,7 @@ const portfolioData = [
     name: "Source Medium",
     description:
       "Source Medium offers enterprise data infrastructure that helps e-commerce brands unify and leverage their data for growth.",
-    logo: "/assets/images/portfolio/sourcemedium.png",
+    logo: "/assets/images/portfolio/sourcemedium.svg",
     status: "active",
     metrics: [
       { value: "Early", label: "Stage" },
@@ -1667,7 +1667,7 @@ const portfolioData = [
     name: "Unit21",
     description:
       "Unit21's no-code platform helps businesses detect and prevent financial crime and fraud in real time.",
-    logo: "/assets/images/portfolio/unit21.png",
+    logo: "/assets/images/portfolio/unit21.svg",
     status: "active",
     metrics: [
       { value: "Series C", label: "Stage" },
