@@ -561,7 +561,7 @@ const portfolioData = [
     description:
       "Fireside lets podcasters host live, interactive shows with real-time audience engagement.",
     logo: "/assets/images/portfolio/fireside.png",
-    status: "active",
+    status: "inactive",
     metrics: [
       { value: "Series A", label: "Stage" },
       { value: "$125M", label: "Value" },
@@ -896,7 +896,7 @@ const portfolioData = [
     description:
       "Instil offers donor management software for nonprofits, streamlining fundraising, campaign tracking, and donor engagement through an intuitive platform.",
     logo: "/assets/images/portfolio/instil.jpg",
-    status: "active",
+    status: "inactive",
     metrics: [
       { value: "2023", label: "Stage" },
       { value: "$18M", label: "Value" },
