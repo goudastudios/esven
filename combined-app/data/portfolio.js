@@ -1107,6 +1107,25 @@ const portfolioData = [
     categories: ["ai", "consumer"],
   },
   {
+    id: "mobly",
+    name: "Mobly",
+    description:
+      "GTM teams use Mobly to capture leads intelligently, enrich them with AI, and maximize every single in-person interaction.",
+    logo: "/assets/images/portfolio/mobly.png",
+    status: "active",
+    metrics: [
+      { value: "Seed", label: "Stage" },
+      { value: "$46.5M", label: "Value" },
+      { value: "2023", label: "Founded" },
+    ],
+    tags: ["AI", "Enterprise"],
+    links: [
+      { text: "Website", url: "https://www.getmobly.com" },
+      { text: "Blog", url: "https://www.getmobly.com/resources" },
+    ],
+    categories: ["ai", "enterprise"],
+  },
+  {
     id: "monarchmoney",
     name: "Monarch Money",
     description:

@@ -208,7 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       if (websiteLink) {
         item.style.cursor = "pointer";
-        item.addEventListener("click", () => {
+        item.addEventListener("click", (e) => {
+          if (e.target.closest("a")) return;
           window.open(websiteLink.url, "_blank");
         });
       }
