@@ -621,7 +621,7 @@ const portfolioData = [
     description:
       "Gavel uses AI to automate legal document creation, client intake, and workflow management for law firms.",
     logo: "/assets/images/portfolio/gavel.png",
-    status: "active",
+    status: "exit",
     metrics: [
       { value: "Seed", label: "Stage" },
       { value: "$40M", label: "Value" },
@@ -630,7 +630,7 @@ const portfolioData = [
     tags: ["automation", "legal tech", "SaaS"],
     links: [
       { text: "Website", url: "https://www.gavel.io/" },
-      { text: "Learning Center", url: "https://help.gavel.io/" },
+      { text: "Exit Article", url: "https://www.relativity.com/news-events/relativity-acquires-gavel-to-extend-its-ai-platform-for-legal-data-intelligence-into-microsoft-word/" },
     ],
     categories: ["enterprise", "ai"],
   },
@@ -1205,7 +1205,7 @@ const portfolioData = [
     description:
       "Passport provides DTC brands with international shipping, compliance, and payment localization to simplify global e-commerce expansion.",
     logo: "/assets/images/portfolio/passport.png",
-    status: "active",
+    status: "exit",
     metrics: [
       { value: "Series B", label: "Stage" },
       { value: "$200M", label: "Value" },
@@ -1214,7 +1214,7 @@ const portfolioData = [
     tags: ["ecommerce", "logistics", "cross-border", "fintech"],
     links: [
       { text: "Website", url: "https://passportglobal.com/" },
-      { text: "News", url: "https://passportglobal.com/news-and-articles/" },
+      { text: "Exit Article", url: "https://investors.global-e.com/news-releases/news-release-details/global-e-closes-acquisition-passport-us-based-e-commerce" },
     ],
     categories: ["infrastructure"],
   },
